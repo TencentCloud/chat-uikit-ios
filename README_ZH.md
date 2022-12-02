@@ -15,6 +15,7 @@
 
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
+
 ## 步骤1：创建应用
 1. 登录即时通信 IM [控制台](https://console.cloud.tencent.com/avc)。
 > 如果您已有应用，请记录其 SDKAppID 并 [配置应用](#step2)。
@@ -32,7 +33,7 @@
 
 ## 步骤3：下载并配置 Demo 源码
 
-1. 从 [Github](https://github.com/tencentyun/TIMSDK) 克隆即时通信 IM Demo 工程。
+1. 从 [Github](https://github.com/TencentCloud/chat-uikit-ios) 克隆即时通信 IM Demo 工程。
 2. 打开所属终端目录的工程，找到对应的`GenerateTestUserSig`文件。
 <table>
 <tr>
@@ -47,28 +48,11 @@
 <td>iOS</td>   
 <td>iOS/Demo/TUIKitDemo/Private/GenerateTestUserSig.h</td>
 </tr> 
-<tr>      
-<td>Mac</td>   
-<td>Mac/Demo/TUIKitDemo/Debug/GenerateTestUserSig.h</td>   
-</tr>  
-<tr>      
-<td>Windows</td>   
-<td>Windows/Demo/IMApp/GenerateTestUserSig.h</td>   
-</tr>  
-<tr>      
-<td>Web（通用）</td>   
-<td>Web/Demo/public/debug/GenerateTestUserSig.js</td>   
-</tr>  
-<tr>      
-<td>小程序</td>   
-<td>MiniProgram/Demo/static/utils/GenerateTestUserSig.js</td>   
-</tr>  
 </table>
 
 
 3. 设置`GenerateTestUserSig`文件中的相关参数：
 
-> 本文以使用 Android Studio 打开 Android 工程为例。
 
 - SDKAPPID：请设置为 [步骤1](#step1) 中获取的实际应用 SDKAppID。
 - SECRETKEY：请设置为 [步骤2](#step2) 中获取的实际密钥信息。

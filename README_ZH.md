@@ -4,10 +4,15 @@
 对于其他平台，请参考文档：
 
 [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
+
 [**chat-uikit-flutter**](https://github.com/TencentCloud/chat-uikit-flutter)
+
 [**chat-uikit-vue**](https://github.com/TencentCloud/chat-uikit-vue)
+
 [**chat-uikit-react**](https://github.com/TencentCloud/chat-uikit-react)
+
 [**chat-uikit-uniapp**](https://github.com/TencentCloud/chat-uikit-uniapp)
+
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
 ## 步骤1：创建应用

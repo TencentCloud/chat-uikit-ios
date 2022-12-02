@@ -1,0 +1,1362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48DF2C46253FE1B800BC522F /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DF2C45253FE1B800BC522F /* NotificationService.m */; };
+		48DF2C4A253FE1B800BC522F /* pushservice.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 48DF2C42253FE1B800BC522F /* pushservice.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		935F7C67293615770033D099 /* LaunchScreen.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935F7BF1293615760033D099 /* LaunchScreen.strings */; };
+		935F7C68293615770033D099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935F7BF3293615760033D099 /* LaunchScreen.storyboard */; };
+		935F7C69293615770033D099 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935F7BF5293615760033D099 /* Main.strings */; };
+		935F7C6A293615770033D099 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935F7BF7293615760033D099 /* Localizable.strings */; };
+		935F7C6B293615770033D099 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 935F7BF9293615760033D099 /* InfoPlist.strings */; };
+		935F7C6C293615770033D099 /* TUIBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C04293615760033D099 /* TUIBadgeView.m */; };
+		935F7C6D293615770033D099 /* TUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C05293615760033D099 /* TUIKit.m */; };
+		935F7C6E293615770033D099 /* TUIWarningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C06293615760033D099 /* TUIWarningView.m */; };
+		935F7C6F293615770033D099 /* TUICommonAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C08293615760033D099 /* TUICommonAvatarCell.m */; };
+		935F7C70293615770033D099 /* TUIDateEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C0E293615760033D099 /* TUIDateEditController.m */; };
+		935F7C71293615770033D099 /* PAirSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C0F293615760033D099 /* PAirSandbox.m */; };
+		935F7C72293615770033D099 /* TUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C11293615760033D099 /* TUITabBarController.m */; };
+		935F7C73293615770033D099 /* TPopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C14293615760033D099 /* TPopCell.m */; };
+		935F7C74293615770033D099 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C15293615760033D099 /* Aspects.m */; };
+		935F7C75293615770033D099 /* TCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C16293615760033D099 /* TCUtil.m */; };
+		935F7C76293615770033D099 /* TPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C1A293615760033D099 /* TPopView.m */; };
+		935F7C77293615770033D099 /* TUILoginCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C1B293615760033D099 /* TUILoginCache.m */; };
+		935F7C78293615770033D099 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C1F293615760033D099 /* ContactsController.m */; };
+		935F7C79293615770033D099 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C23293615760033D099 /* SettingController.m */; };
+		935F7C7A293615770033D099 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C24293615760033D099 /* ProfileController.m */; };
+		935F7C7B293615770033D099 /* ConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C26293615760033D099 /* ConversationController.m */; };
+		935F7C7C293615770033D099 /* TUIFoldListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C27293615760033D099 /* TUIFoldListViewController.m */; };
+		935F7C7D293615770033D099 /* TUIDemo_Minimalist.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C2B293615760033D099 /* TUIDemo_Minimalist.bundle */; };
+		935F7C7E293615770033D099 /* TUIDemo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C2C293615760033D099 /* TUIDemo.bundle */; };
+		935F7C7F293615770033D099 /* TUIDemoTheme_Minimalist.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C2D293615760033D099 /* TUIDemoTheme_Minimalist.bundle */; };
+		935F7C80293615770033D099 /* TUIDemoTheme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C2E293615760033D099 /* TUIDemoTheme.bundle */; };
+		935F7C81293615770033D099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C2F293615770033D099 /* Assets.xcassets */; };
+		935F7C82293615770033D099 /* 00.caf in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C31293615770033D099 /* 00.caf */; };
+		935F7C83293615770033D099 /* 01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C32293615770033D099 /* 01.caf */; };
+		935F7C84293615770033D099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C34293615770033D099 /* Main.storyboard */; };
+		935F7C85293615770033D099 /* AppDelegate+Redpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C36293615770033D099 /* AppDelegate+Redpoint.m */; };
+		935F7C86293615770033D099 /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C38293615770033D099 /* GenerateTestUserSig.m */; };
+		935F7C87293615770033D099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C3E293615770033D099 /* main.m */; };
+		935F7C88293615770033D099 /* TUIAboutSettingObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C41293615770033D099 /* TUIAboutSettingObj.m */; };
+		935F7C89293615770033D099 /* TUIAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C44293615770033D099 /* TUIAboutUsViewController.m */; };
+		935F7C8A293615770033D099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C45293615770033D099 /* AppDelegate.m */; };
+		935F7C8F293615770033D099 /* CustomFaceResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 935F7C4C293615770033D099 /* CustomFaceResource.bundle */; };
+		935F7C90293615770033D099 /* ThemeSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C4E293615770033D099 /* ThemeSelectController.m */; };
+		935F7C91293615770033D099 /* StyleSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C4F293615770033D099 /* StyleSelectViewController.m */; };
+		935F7C92293615770033D099 /* TCLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C50293615770033D099 /* TCLoginModel.m */; };
+		935F7C93293615770033D099 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C51293615770033D099 /* LoginController.m */; };
+		935F7C94293615770033D099 /* LanguageSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C52293615770033D099 /* LanguageSelectController.m */; };
+		935F7C95293615770033D099 /* ContactsController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C5A293615770033D099 /* ContactsController_Minimalist.m */; };
+		935F7C96293615770033D099 /* ProfileController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C5D293615770033D099 /* ProfileController_Minimalist.m */; };
+		935F7C97293615770033D099 /* SettingController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C5E293615770033D099 /* SettingController_Minimalist.m */; };
+		935F7C98293615770033D099 /* TUIFoldListViewController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C62293615770033D099 /* TUIFoldListViewController_Minimalist.m */; };
+		935F7C99293615770033D099 /* ConversationController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C65293615770033D099 /* ConversationController_Minimalist.m */; };
+		BCF739AA621A7AF4B48F1525 /* libPods-TUIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BCBC0335EEFE4307055DBB /* libPods-TUIKitDemo.a */; };
+		CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0BDFA8221D53C60083E1B0 /* Bugly.framework */; };
+		CE48482027019FC800F53B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48481F27019FC800F53B16 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48DF2C48253FE1B800BC522F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF01447A216E1A4900C12E35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48DF2C41253FE1B800BC522F;
+			remoteInfo = pushservice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48DF2C4F253FE1B800BC522F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				48DF2C4A253FE1B800BC522F /* pushservice.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE48481B27019FC800F53B16 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		30722D34BE1DD45B2ACBD3BB /* Pods-TUIKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUIKitDemo.release.xcconfig"; path = "Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+		480C761722DCA3C3007495EC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImSDK.framework; path = ../ImSDK/Framework/ImSDK.framework; sourceTree = "<group>"; };
+		48DF2C42253FE1B800BC522F /* pushservice.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = pushservice.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		48DF2C44253FE1B800BC522F /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		48DF2C45253FE1B800BC522F /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		48DF2C47253FE1B800BC522F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D757F7318DC3B846A870603 /* Pods-TUIKitDemo.dailybuild.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUIKitDemo.dailybuild.xcconfig"; path = "Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo.dailybuild.xcconfig"; sourceTree = "<group>"; };
+		935F7BF2293615760033D099 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		935F7BF4293615760033D099 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		935F7BF6293615760033D099 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		935F7BF8293615760033D099 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		935F7BFA293615760033D099 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		935F7BFB293615760033D099 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		935F7BFC293615760033D099 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		935F7BFD293615760033D099 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		935F7BFE293615760033D099 /* AppDelegate+Redpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Redpoint.h"; sourceTree = "<group>"; };
+		935F7BFF293615760033D099 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		935F7C00293615760033D099 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		935F7C01293615760033D099 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		935F7C02293615760033D099 /* TUIKitDemo.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TUIKitDemo.entitlements; sourceTree = "<group>"; };
+		935F7C04293615760033D099 /* TUIBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIBadgeView.m; sourceTree = "<group>"; };
+		935F7C05293615760033D099 /* TUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIKit.m; sourceTree = "<group>"; };
+		935F7C06293615760033D099 /* TUIWarningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIWarningView.m; sourceTree = "<group>"; };
+		935F7C07293615760033D099 /* TUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUITabBarController.h; sourceTree = "<group>"; };
+		935F7C08293615760033D099 /* TUICommonAvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUICommonAvatarCell.m; sourceTree = "<group>"; };
+		935F7C09293615760033D099 /* TCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCUtil.h; sourceTree = "<group>"; };
+		935F7C0A293615760033D099 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		935F7C0B293615760033D099 /* TPopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPopCell.h; sourceTree = "<group>"; };
+		935F7C0C293615760033D099 /* TUILoginCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUILoginCache.h; sourceTree = "<group>"; };
+		935F7C0D293615760033D099 /* TPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPopView.h; sourceTree = "<group>"; };
+		935F7C0E293615760033D099 /* TUIDateEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIDateEditController.m; sourceTree = "<group>"; };
+		935F7C0F293615760033D099 /* PAirSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAirSandbox.m; sourceTree = "<group>"; };
+		935F7C10293615760033D099 /* TUIBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIBadgeView.h; sourceTree = "<group>"; };
+		935F7C11293615760033D099 /* TUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUITabBarController.m; sourceTree = "<group>"; };
+		935F7C12293615760033D099 /* TUIWarningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIWarningView.h; sourceTree = "<group>"; };
+		935F7C13293615760033D099 /* TUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIKit.h; sourceTree = "<group>"; };
+		935F7C14293615760033D099 /* TPopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPopCell.m; sourceTree = "<group>"; };
+		935F7C15293615760033D099 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		935F7C16293615760033D099 /* TCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCUtil.m; sourceTree = "<group>"; };
+		935F7C17293615760033D099 /* TUICommonAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUICommonAvatarCell.h; sourceTree = "<group>"; };
+		935F7C18293615760033D099 /* PAirSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAirSandbox.h; sourceTree = "<group>"; };
+		935F7C19293615760033D099 /* TUIDateEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIDateEditController.h; sourceTree = "<group>"; };
+		935F7C1A293615760033D099 /* TPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPopView.m; sourceTree = "<group>"; };
+		935F7C1B293615760033D099 /* TUILoginCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUILoginCache.m; sourceTree = "<group>"; };
+		935F7C1E293615760033D099 /* ContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsController.h; sourceTree = "<group>"; };
+		935F7C1F293615760033D099 /* ContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsController.m; sourceTree = "<group>"; };
+		935F7C21293615760033D099 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		935F7C22293615760033D099 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		935F7C23293615760033D099 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		935F7C24293615760033D099 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
+		935F7C26293615760033D099 /* ConversationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationController.m; sourceTree = "<group>"; };
+		935F7C27293615760033D099 /* TUIFoldListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIFoldListViewController.m; sourceTree = "<group>"; };
+		935F7C28293615760033D099 /* ConversationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationController.h; sourceTree = "<group>"; };
+		935F7C29293615760033D099 /* TUIFoldListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIFoldListViewController.h; sourceTree = "<group>"; };
+		935F7C2B293615760033D099 /* TUIDemo_Minimalist.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIDemo_Minimalist.bundle; sourceTree = "<group>"; };
+		935F7C2C293615760033D099 /* TUIDemo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIDemo.bundle; sourceTree = "<group>"; };
+		935F7C2D293615760033D099 /* TUIDemoTheme_Minimalist.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIDemoTheme_Minimalist.bundle; sourceTree = "<group>"; };
+		935F7C2E293615760033D099 /* TUIDemoTheme.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TUIDemoTheme.bundle; sourceTree = "<group>"; };
+		935F7C2F293615770033D099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		935F7C31293615770033D099 /* 00.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 00.caf; sourceTree = "<group>"; };
+		935F7C32293615770033D099 /* 01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01.caf; sourceTree = "<group>"; };
+		935F7C33293615770033D099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		935F7C35293615770033D099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		935F7C36293615770033D099 /* AppDelegate+Redpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Redpoint.m"; sourceTree = "<group>"; };
+		935F7C38293615770033D099 /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
+		935F7C39293615770033D099 /* TCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConstants.h; sourceTree = "<group>"; };
+		935F7C3A293615770033D099 /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
+		935F7C3E293615770033D099 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		935F7C41293615770033D099 /* TUIAboutSettingObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIAboutSettingObj.m; sourceTree = "<group>"; };
+		935F7C42293615770033D099 /* TUIAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIAboutUsViewController.h; sourceTree = "<group>"; };
+		935F7C43293615770033D099 /* TUIAboutSettingObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIAboutSettingObj.h; sourceTree = "<group>"; };
+		935F7C44293615770033D099 /* TUIAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIAboutUsViewController.m; sourceTree = "<group>"; };
+		935F7C45293615770033D099 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		935F7C46293615770033D099 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		935F7C4C293615770033D099 /* CustomFaceResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CustomFaceResource.bundle; sourceTree = "<group>"; };
+		935F7C4E293615770033D099 /* ThemeSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeSelectController.m; sourceTree = "<group>"; };
+		935F7C4F293615770033D099 /* StyleSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleSelectViewController.m; sourceTree = "<group>"; };
+		935F7C50293615770033D099 /* TCLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCLoginModel.m; sourceTree = "<group>"; };
+		935F7C51293615770033D099 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		935F7C52293615770033D099 /* LanguageSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageSelectController.m; sourceTree = "<group>"; };
+		935F7C53293615770033D099 /* ThemeSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeSelectController.h; sourceTree = "<group>"; };
+		935F7C54293615770033D099 /* TCLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCLoginModel.h; sourceTree = "<group>"; };
+		935F7C55293615770033D099 /* StyleSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSelectViewController.h; sourceTree = "<group>"; };
+		935F7C56293615770033D099 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		935F7C57293615770033D099 /* LanguageSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageSelectController.h; sourceTree = "<group>"; };
+		935F7C5A293615770033D099 /* ContactsController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsController_Minimalist.m; sourceTree = "<group>"; };
+		935F7C5B293615770033D099 /* ContactsController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsController_Minimalist.h; sourceTree = "<group>"; };
+		935F7C5D293615770033D099 /* ProfileController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController_Minimalist.m; sourceTree = "<group>"; };
+		935F7C5E293615770033D099 /* SettingController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController_Minimalist.m; sourceTree = "<group>"; };
+		935F7C5F293615770033D099 /* ProfileController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController_Minimalist.h; sourceTree = "<group>"; };
+		935F7C60293615770033D099 /* SettingController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController_Minimalist.h; sourceTree = "<group>"; };
+		935F7C62293615770033D099 /* TUIFoldListViewController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIFoldListViewController_Minimalist.m; sourceTree = "<group>"; };
+		935F7C63293615770033D099 /* ConversationController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationController_Minimalist.h; sourceTree = "<group>"; };
+		935F7C64293615770033D099 /* TUIFoldListViewController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIFoldListViewController_Minimalist.h; sourceTree = "<group>"; };
+		935F7C65293615770033D099 /* ConversationController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationController_Minimalist.m; sourceTree = "<group>"; };
+		935F7C66293615770033D099 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0BDFA8221D53C60083E1B0 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		CE2D5CCC248E1B4E000E53E7 /* TUIKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUIKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE48481D27019FC800F53B16 /* publishToGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = publishToGit; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE48481F27019FC800F53B16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF014482216E1A4900C12E35 /* TUIKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUIKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1BCBC0335EEFE4307055DBB /* libPods-TUIKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TUIKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA1E52ABCCAE78D060D1E3D /* Pods-TUIKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TUIKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48DF2C3F253FE1B800BC522F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE48481A27019FC800F53B16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF01447F216E1A4900C12E35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */,
+				BCF739AA621A7AF4B48F1525 /* libPods-TUIKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EAC6405FA3E1068F8C9B7B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFA1E52ABCCAE78D060D1E3D /* Pods-TUIKitDemo.debug.xcconfig */,
+				30722D34BE1DD45B2ACBD3BB /* Pods-TUIKitDemo.release.xcconfig */,
+				8D757F7318DC3B846A870603 /* Pods-TUIKitDemo.dailybuild.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		48DF2C43253FE1B800BC522F /* pushservice */ = {
+			isa = PBXGroup;
+			children = (
+				48DF2C44253FE1B800BC522F /* NotificationService.h */,
+				48DF2C45253FE1B800BC522F /* NotificationService.m */,
+				48DF2C47253FE1B800BC522F /* Info.plist */,
+			);
+			path = pushservice;
+			sourceTree = "<group>";
+		};
+		935F7BF0293615760033D099 /* TUIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C37293615770033D099 /* Private */,
+				935F7C02293615760033D099 /* TUIKitDemo.entitlements */,
+				935F7C1C293615760033D099 /* Classic */,
+				935F7C58293615770033D099 /* Minimalist */,
+				935F7C3F293615770033D099 /* CommonUI */,
+				935F7C03293615760033D099 /* Util */,
+				935F7C2A293615760033D099 /* Resources */,
+				935F7C30293615770033D099 /* PushSound */,
+				935F7C4D293615770033D099 /* Login */,
+				935F7C34293615770033D099 /* Main.storyboard */,
+				935F7C3E293615770033D099 /* main.m */,
+				935F7BFF293615760033D099 /* AppDelegate.h */,
+				935F7C45293615770033D099 /* AppDelegate.m */,
+				935F7BFE293615760033D099 /* AppDelegate+Redpoint.h */,
+				935F7C36293615770033D099 /* AppDelegate+Redpoint.m */,
+				935F7BF1293615760033D099 /* LaunchScreen.strings */,
+				935F7BF3293615760033D099 /* LaunchScreen.storyboard */,
+				935F7BF5293615760033D099 /* Main.strings */,
+				935F7BF7293615760033D099 /* Localizable.strings */,
+				935F7BF9293615760033D099 /* InfoPlist.strings */,
+				935F7C46293615770033D099 /* PrefixHeader.pch */,
+				935F7C2F293615770033D099 /* Assets.xcassets */,
+				935F7C4C293615770033D099 /* CustomFaceResource.bundle */,
+				935F7C66293615770033D099 /* Info.plist */,
+			);
+			path = TUIKitDemo;
+			sourceTree = "<group>";
+		};
+		935F7C03293615760033D099 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C04293615760033D099 /* TUIBadgeView.m */,
+				935F7C05293615760033D099 /* TUIKit.m */,
+				935F7C06293615760033D099 /* TUIWarningView.m */,
+				935F7C07293615760033D099 /* TUITabBarController.h */,
+				935F7C08293615760033D099 /* TUICommonAvatarCell.m */,
+				935F7C09293615760033D099 /* TCUtil.h */,
+				935F7C0A293615760033D099 /* Aspects.h */,
+				935F7C0B293615760033D099 /* TPopCell.h */,
+				935F7C0C293615760033D099 /* TUILoginCache.h */,
+				935F7C0D293615760033D099 /* TPopView.h */,
+				935F7C0E293615760033D099 /* TUIDateEditController.m */,
+				935F7C0F293615760033D099 /* PAirSandbox.m */,
+				935F7C10293615760033D099 /* TUIBadgeView.h */,
+				935F7C11293615760033D099 /* TUITabBarController.m */,
+				935F7C12293615760033D099 /* TUIWarningView.h */,
+				935F7C13293615760033D099 /* TUIKit.h */,
+				935F7C14293615760033D099 /* TPopCell.m */,
+				935F7C15293615760033D099 /* Aspects.m */,
+				935F7C16293615760033D099 /* TCUtil.m */,
+				935F7C17293615760033D099 /* TUICommonAvatarCell.h */,
+				935F7C18293615760033D099 /* PAirSandbox.h */,
+				935F7C19293615760033D099 /* TUIDateEditController.h */,
+				935F7C1A293615760033D099 /* TPopView.m */,
+				935F7C1B293615760033D099 /* TUILoginCache.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		935F7C1C293615760033D099 /* Classic */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C1D293615760033D099 /* Contact */,
+				935F7C20293615760033D099 /* Setting */,
+				935F7C25293615760033D099 /* Conversation */,
+			);
+			path = Classic;
+			sourceTree = "<group>";
+		};
+		935F7C1D293615760033D099 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C1E293615760033D099 /* ContactsController.h */,
+				935F7C1F293615760033D099 /* ContactsController.m */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		935F7C20293615760033D099 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C21293615760033D099 /* SettingController.h */,
+				935F7C22293615760033D099 /* ProfileController.h */,
+				935F7C23293615760033D099 /* SettingController.m */,
+				935F7C24293615760033D099 /* ProfileController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		935F7C25293615760033D099 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C26293615760033D099 /* ConversationController.m */,
+				935F7C27293615760033D099 /* TUIFoldListViewController.m */,
+				935F7C28293615760033D099 /* ConversationController.h */,
+				935F7C29293615760033D099 /* TUIFoldListViewController.h */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		935F7C2A293615760033D099 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C2B293615760033D099 /* TUIDemo_Minimalist.bundle */,
+				935F7C2C293615760033D099 /* TUIDemo.bundle */,
+				935F7C2D293615760033D099 /* TUIDemoTheme_Minimalist.bundle */,
+				935F7C2E293615760033D099 /* TUIDemoTheme.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		935F7C30293615770033D099 /* PushSound */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C31293615770033D099 /* 00.caf */,
+				935F7C32293615770033D099 /* 01.caf */,
+			);
+			path = PushSound;
+			sourceTree = "<group>";
+		};
+		935F7C37293615770033D099 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C39293615770033D099 /* TCConstants.h */,
+				935F7C3A293615770033D099 /* GenerateTestUserSig.h */,
+				935F7C38293615770033D099 /* GenerateTestUserSig.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		935F7C3F293615770033D099 /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C40293615770033D099 /* AboutUs */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		935F7C40293615770033D099 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C41293615770033D099 /* TUIAboutSettingObj.m */,
+				935F7C42293615770033D099 /* TUIAboutUsViewController.h */,
+				935F7C43293615770033D099 /* TUIAboutSettingObj.h */,
+				935F7C44293615770033D099 /* TUIAboutUsViewController.m */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		935F7C4D293615770033D099 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C4E293615770033D099 /* ThemeSelectController.m */,
+				935F7C4F293615770033D099 /* StyleSelectViewController.m */,
+				935F7C50293615770033D099 /* TCLoginModel.m */,
+				935F7C51293615770033D099 /* LoginController.m */,
+				935F7C52293615770033D099 /* LanguageSelectController.m */,
+				935F7C53293615770033D099 /* ThemeSelectController.h */,
+				935F7C54293615770033D099 /* TCLoginModel.h */,
+				935F7C55293615770033D099 /* StyleSelectViewController.h */,
+				935F7C56293615770033D099 /* LoginController.h */,
+				935F7C57293615770033D099 /* LanguageSelectController.h */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		935F7C58293615770033D099 /* Minimalist */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C59293615770033D099 /* Contact */,
+				935F7C5C293615770033D099 /* Setting */,
+				935F7C61293615770033D099 /* Conversation */,
+			);
+			path = Minimalist;
+			sourceTree = "<group>";
+		};
+		935F7C59293615770033D099 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C5A293615770033D099 /* ContactsController_Minimalist.m */,
+				935F7C5B293615770033D099 /* ContactsController_Minimalist.h */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		935F7C5C293615770033D099 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C5D293615770033D099 /* ProfileController_Minimalist.m */,
+				935F7C5E293615770033D099 /* SettingController_Minimalist.m */,
+				935F7C5F293615770033D099 /* ProfileController_Minimalist.h */,
+				935F7C60293615770033D099 /* SettingController_Minimalist.h */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		935F7C61293615770033D099 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				935F7C62293615770033D099 /* TUIFoldListViewController_Minimalist.m */,
+				935F7C63293615770033D099 /* ConversationController_Minimalist.h */,
+				935F7C64293615770033D099 /* TUIFoldListViewController_Minimalist.h */,
+				935F7C65293615770033D099 /* ConversationController_Minimalist.m */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		CE48481E27019FC800F53B16 /* publishToGit */ = {
+			isa = PBXGroup;
+			children = (
+				CE48481F27019FC800F53B16 /* main.m */,
+			);
+			path = publishToGit;
+			sourceTree = "<group>";
+		};
+		CF014479216E1A4900C12E35 = {
+			isa = PBXGroup;
+			children = (
+				935F7BF0293615760033D099 /* TUIKitDemo */,
+				48DF2C43253FE1B800BC522F /* pushservice */,
+				CE48481E27019FC800F53B16 /* publishToGit */,
+				CF014483216E1A4900C12E35 /* Products */,
+				CF0144A1216E1A6400C12E35 /* Frameworks */,
+				0EAC6405FA3E1068F8C9B7B0 /* Pods */,
+				CE2D5CCC248E1B4E000E53E7 /* TUIKitDemo-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		CF014483216E1A4900C12E35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF014482216E1A4900C12E35 /* TUIKitDemo.app */,
+				48DF2C42253FE1B800BC522F /* pushservice.appex */,
+				CE48481D27019FC800F53B16 /* publishToGit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF0144A1216E1A6400C12E35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				480C761722DCA3C3007495EC /* ImSDK.framework */,
+				CE0BDFA8221D53C60083E1B0 /* Bugly.framework */,
+				D1BCBC0335EEFE4307055DBB /* libPods-TUIKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48DF2C41253FE1B800BC522F /* pushservice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48DF2C4B253FE1B800BC522F /* Build configuration list for PBXNativeTarget "pushservice" */;
+			buildPhases = (
+				48DF2C3E253FE1B800BC522F /* Sources */,
+				48DF2C3F253FE1B800BC522F /* Frameworks */,
+				48DF2C40253FE1B800BC522F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pushservice;
+			productName = pushservice;
+			productReference = 48DF2C42253FE1B800BC522F /* pushservice.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CE48481C27019FC800F53B16 /* publishToGit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE48482127019FC800F53B16 /* Build configuration list for PBXNativeTarget "publishToGit" */;
+			buildPhases = (
+				CE48481927019FC800F53B16 /* Sources */,
+				CE48481A27019FC800F53B16 /* Frameworks */,
+				CE48481B27019FC800F53B16 /* CopyFiles */,
+				CE4848252701A03000F53B16 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = publishToGit;
+			productName = publishToGit;
+			productReference = CE48481D27019FC800F53B16 /* publishToGit */;
+			productType = "com.apple.product-type.tool";
+		};
+		CF014481216E1A4900C12E35 /* TUIKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF014498216E1A4B00C12E35 /* Build configuration list for PBXNativeTarget "TUIKitDemo" */;
+			buildPhases = (
+				05E68FCE07287CBFE592C0E9 /* [CP] Check Pods Manifest.lock */,
+				CF01447E216E1A4900C12E35 /* Sources */,
+				CF01447F216E1A4900C12E35 /* Frameworks */,
+				CF014480216E1A4900C12E35 /* Resources */,
+				48DF2C4F253FE1B800BC522F /* Embed App Extensions */,
+				A15B15EAD25E5927BA6CD470 /* [CP] Embed Pods Frameworks */,
+				E2087E99F4A5E0DC06409893 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48DF2C49253FE1B800BC522F /* PBXTargetDependency */,
+			);
+			name = TUIKitDemo;
+			productName = TUIKitDemo;
+			productReference = CF014482216E1A4900C12E35 /* TUIKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF01447A216E1A4900C12E35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Tencent;
+				TargetAttributes = {
+					48DF2C41253FE1B800BC522F = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					CE48481C27019FC800F53B16 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					CF014481216E1A4900C12E35 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1150;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CF01447D216E1A4900C12E35 /* Build configuration list for PBXProject "TUIKitDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"en-GB",
+			);
+			mainGroup = CF014479216E1A4900C12E35;
+			productRefGroup = CF014483216E1A4900C12E35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF014481216E1A4900C12E35 /* TUIKitDemo */,
+				48DF2C41253FE1B800BC522F /* pushservice */,
+				CE48481C27019FC800F53B16 /* publishToGit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48DF2C40253FE1B800BC522F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF014480216E1A4900C12E35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935F7C7D293615770033D099 /* TUIDemo_Minimalist.bundle in Resources */,
+				935F7C82293615770033D099 /* 00.caf in Resources */,
+				935F7C80293615770033D099 /* TUIDemoTheme.bundle in Resources */,
+				935F7C7E293615770033D099 /* TUIDemo.bundle in Resources */,
+				935F7C69293615770033D099 /* Main.strings in Resources */,
+				935F7C81293615770033D099 /* Assets.xcassets in Resources */,
+				935F7C6A293615770033D099 /* Localizable.strings in Resources */,
+				935F7C84293615770033D099 /* Main.storyboard in Resources */,
+				935F7C83293615770033D099 /* 01.caf in Resources */,
+				935F7C67293615770033D099 /* LaunchScreen.strings in Resources */,
+				935F7C68293615770033D099 /* LaunchScreen.storyboard in Resources */,
+				935F7C7F293615770033D099 /* TUIDemoTheme_Minimalist.bundle in Resources */,
+				935F7C6B293615770033D099 /* InfoPlist.strings in Resources */,
+				935F7C8F293615770033D099 /* CustomFaceResource.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05E68FCE07287CBFE592C0E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TUIKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A15B15EAD25E5927BA6CD470 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4848252701A03000F53B16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd TUIKitDemo/Util\nsed -i \"\" \"s/public_SDKAPPID =.*/public_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/singapore_SDKAPPID =.*/singapore_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/korea_SDKAPPID.*/korea_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/germany_SDKAPPID.*/germany_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/public_SECRETKEY.*/public_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/singapore_SECRETKEY.*/singapore_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/korea_SECRETKEY.*/korea_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/germany_SECRETKEY.*/germany_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\n\nsed -i \"\" \"s/kHttpServerAddr.*/kHttpServerAddr @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsImageAddr.*/kHttpSmsImageAddr @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsLoginAddr_public.*/kHttpSmsLoginAddr_public @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsLoginAddr_singapore.*/kHttpSmsLoginAddr_singapore @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/DEFAULT_ELK_HOST.*/DEFAULT_ELK_HOST @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/LicenceURL.*/LicenceURL @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/LicenceKey.*/LicenceKey @\\\"\\\"/\" TCConstants.h\n";
+		};
+		E2087E99F4A5E0DC06409893 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48DF2C3E253FE1B800BC522F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48DF2C46253FE1B800BC522F /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE48481927019FC800F53B16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE48482027019FC800F53B16 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF01447E216E1A4900C12E35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935F7C96293615770033D099 /* ProfileController_Minimalist.m in Sources */,
+				935F7C8A293615770033D099 /* AppDelegate.m in Sources */,
+				935F7C75293615770033D099 /* TCUtil.m in Sources */,
+				935F7C97293615770033D099 /* SettingController_Minimalist.m in Sources */,
+				935F7C77293615770033D099 /* TUILoginCache.m in Sources */,
+				935F7C7C293615770033D099 /* TUIFoldListViewController.m in Sources */,
+				935F7C88293615770033D099 /* TUIAboutSettingObj.m in Sources */,
+				935F7C7B293615770033D099 /* ConversationController.m in Sources */,
+				935F7C89293615770033D099 /* TUIAboutUsViewController.m in Sources */,
+				935F7C98293615770033D099 /* TUIFoldListViewController_Minimalist.m in Sources */,
+				935F7C73293615770033D099 /* TPopCell.m in Sources */,
+				935F7C95293615770033D099 /* ContactsController_Minimalist.m in Sources */,
+				935F7C85293615770033D099 /* AppDelegate+Redpoint.m in Sources */,
+				935F7C90293615770033D099 /* ThemeSelectController.m in Sources */,
+				935F7C6C293615770033D099 /* TUIBadgeView.m in Sources */,
+				935F7C86293615770033D099 /* GenerateTestUserSig.m in Sources */,
+				935F7C74293615770033D099 /* Aspects.m in Sources */,
+				935F7C94293615770033D099 /* LanguageSelectController.m in Sources */,
+				935F7C70293615770033D099 /* TUIDateEditController.m in Sources */,
+				935F7C87293615770033D099 /* main.m in Sources */,
+				935F7C79293615770033D099 /* SettingController.m in Sources */,
+				935F7C92293615770033D099 /* TCLoginModel.m in Sources */,
+				935F7C99293615770033D099 /* ConversationController_Minimalist.m in Sources */,
+				935F7C93293615770033D099 /* LoginController.m in Sources */,
+				935F7C91293615770033D099 /* StyleSelectViewController.m in Sources */,
+				935F7C78293615770033D099 /* ContactsController.m in Sources */,
+				935F7C72293615770033D099 /* TUITabBarController.m in Sources */,
+				935F7C76293615770033D099 /* TPopView.m in Sources */,
+				935F7C6E293615770033D099 /* TUIWarningView.m in Sources */,
+				935F7C7A293615770033D099 /* ProfileController.m in Sources */,
+				935F7C71293615770033D099 /* PAirSandbox.m in Sources */,
+				935F7C6F293615770033D099 /* TUICommonAvatarCell.m in Sources */,
+				935F7C6D293615770033D099 /* TUIKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48DF2C49253FE1B800BC522F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48DF2C41253FE1B800BC522F /* pushservice */;
+			targetProxy = 48DF2C48253FE1B800BC522F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		935F7BF1293615760033D099 /* LaunchScreen.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7BF2293615760033D099 /* zh-Hans */,
+				935F7C00293615760033D099 /* en-GB */,
+			);
+			name = LaunchScreen.strings;
+			sourceTree = "<group>";
+		};
+		935F7BF3293615760033D099 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7BF4293615760033D099 /* zh-Hans */,
+				935F7C33293615770033D099 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		935F7BF5293615760033D099 /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7BF6293615760033D099 /* zh-Hans */,
+				935F7BFB293615760033D099 /* en */,
+				935F7C01293615760033D099 /* en-GB */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		935F7BF7293615760033D099 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7BF8293615760033D099 /* zh-Hans */,
+				935F7BFC293615760033D099 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		935F7BF9293615760033D099 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7BFA293615760033D099 /* zh-Hans */,
+				935F7BFD293615760033D099 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		935F7C34293615770033D099 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				935F7C35293615770033D099 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48DF2C4C253FE1B800BC522F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F8A3GH6Q4W;
+				INFOPLIST_FILE = pushservice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.xa.pushservice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = impushservice;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = impushservice;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48DF2C4D253FE1B800BC522F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				INFOPLIST_FILE = pushservice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.xa.pushservice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = impushservice;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		48DF2C4E253FE1B800BC522F /* DailyBuild */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				INFOPLIST_FILE = pushservice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.pushservice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DailyBuild;
+		};
+		CE48482227019FC800F53B16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GHU44CJHG;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE48482327019FC800F53B16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GHU44CJHG;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CE48482427019FC800F53B16 /* DailyBuild */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GHU44CJHG;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = DailyBuild;
+		};
+		CEE33A982319258300E0E717 /* DailyBuild */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = DailyBuild;
+		};
+		CEE33A992319258300E0E717 /* DailyBuild */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D757F7318DC3B846A870603 /* Pods-TUIKitDemo.dailybuild.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TUIKitDemo/TUIKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
+				CODE_SIGN_STYLE = Manual;
+				COMPRESS_PNG_FILES = NO;
+				CURRENT_PROJECT_VERSION = 1.1.1.1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HKB8WPFBR9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ENABLECALL=1",
+					"ENABLELIVE=0",
+					"PUBLISHGIT=1",
+					"ENABLETPNS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../TUIKit/TUIKit/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/IMMessageExt/include/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/ImSDK/include/**",
+				);
+				INFOPLIST_FILE = TUIKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云IM";
+				INFOPLIST_KEY_NSCameraUsageDescription = "云通讯IM需要访问您的相机权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "云通讯IM需要访问您的麦克风权限，开启后才能发送语音";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "云通讯IM需要访问您的相册权限，开启后保存图片或视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "云通讯IM需要访问您的相册权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.db;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "com.tencent.tuikit.demo.db InHouse";
+				STRIP_PNG_TEXT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TUIKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"${SRCROOT}",
+					"\"$(SRCROOT)/../ImSDK/Framework/ImSDK.framework/Headers\"/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/Headers/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/**",
+				);
+			};
+			name = DailyBuild;
+		};
+		CF014496216E1A4B00C12E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF014497216E1A4B00C12E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF014499216E1A4B00C12E35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA1E52ABCCAE78D060D1E3D /* Pods-TUIKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TUIKitDemo/TUIKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMPRESS_PNG_FILES = NO;
+				CURRENT_PROJECT_VERSION = 1.1.1.1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ENABLECALL=1",
+					"ENABLELIVE=0",
+					"PUBLISHGIT=1",
+					"ENABLETPNS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../TUIKit/TUIKit/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/IMMessageExt/include/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/ImSDK/include/**",
+				);
+				INFOPLIST_FILE = TUIKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云IM";
+				INFOPLIST_KEY_NSCameraUsageDescription = "云通讯IM需要访问您的相机权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "云通讯IM需要访问您的麦克风权限，开启后才能发送语音";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "云通讯IM需要访问您的相册权限，开启后保存图片或视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "云通讯IM需要访问您的相册权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.xa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = tuikitdemo_dev;
+				STRIP_PNG_TEXT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TUIKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"${SRCROOT}",
+					"\"$(SRCROOT)/../ImSDK/Framework/ImSDK.framework/Headers\"/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/Headers/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/**",
+				);
+			};
+			name = Debug;
+		};
+		CF01449A216E1A4B00C12E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30722D34BE1DD45B2ACBD3BB /* Pods-TUIKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TUIKitDemo/TUIKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				COMPRESS_PNG_FILES = NO;
+				CURRENT_PROJECT_VERSION = 1.1.1.1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ENABLECALL=1",
+					"ENABLELIVE=0",
+					"PUBLISHGIT=1",
+					"ENABLETPNS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../TUIKit/TUIKit/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/IMMessageExt/include/**",
+					"$(SRCROOT)/../../../source/project/ios/imsdk/ImSDK/include/**",
+				);
+				INFOPLIST_FILE = TUIKitDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "腾讯云IM";
+				INFOPLIST_KEY_NSCameraUsageDescription = "云通讯IM需要访问您的相机权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "云通讯IM需要访问您的麦克风权限，开启后才能发送语音";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "云通讯IM需要访问您的相册权限，开启后保存图片或视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "云通讯IM需要访问您的相册权限，开启后才能发送图片或视频";
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.tuikit.demo.xa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = tuikitdemo_dev;
+				STRIP_PNG_TEXT = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "TUIKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"${SRCROOT}",
+					"\"$(SRCROOT)/../ImSDK/Framework/ImSDK.framework/Headers\"/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/Headers/**",
+					"/Users/changqing/Documents/iOS_git/TUIKit_iOS/ImSDK/Framework/ImSDK.framework/**",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48DF2C4B253FE1B800BC522F /* Build configuration list for PBXNativeTarget "pushservice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48DF2C4C253FE1B800BC522F /* Debug */,
+				48DF2C4D253FE1B800BC522F /* Release */,
+				48DF2C4E253FE1B800BC522F /* DailyBuild */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE48482127019FC800F53B16 /* Build configuration list for PBXNativeTarget "publishToGit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE48482227019FC800F53B16 /* Debug */,
+				CE48482327019FC800F53B16 /* Release */,
+				CE48482427019FC800F53B16 /* DailyBuild */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF01447D216E1A4900C12E35 /* Build configuration list for PBXProject "TUIKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF014496216E1A4B00C12E35 /* Debug */,
+				CF014497216E1A4B00C12E35 /* Release */,
+				CEE33A982319258300E0E717 /* DailyBuild */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF014498216E1A4B00C12E35 /* Build configuration list for PBXNativeTarget "TUIKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF014499216E1A4B00C12E35 /* Debug */,
+				CF01449A216E1A4B00C12E35 /* Release */,
+				CEE33A992319258300E0E717 /* DailyBuild */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF01447A216E1A4900C12E35 /* Project object */;
+}

@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  TUIKitDemo
+
+  Created by wyl on 2022/2/11.
+  Copyright © 2022 Tencent. All rights reserved.
+*/
+
+
+"NSCameraUsageDescription"  =  "In order to facilitate you to send the photos or videos you have taken to friends, and to make video calls, please allow us to access the camera to take photos and videos.";
+"NSMicrophoneUsageDescription" = "In order to facilitate you to send voice messages and make audio and video calls, please allow us to use the microphone for recording.";
+"NSPhotoLibraryAddUsageDescription" = "In order for you to save photos and videos to your device, please allow us to write photos and videos to your device.";
+"CFBundleDisplayName" = "Tencent IM";

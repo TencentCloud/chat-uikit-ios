@@ -1,0 +1,259 @@
+/*
+  Localizable.strings
+  TUIKitDemo
+
+  Created by harvy on 2020/10/16.
+  Copyright © 2020 Tencent. All rights reserved.
+*/
+
+"cancel" = "Cancel";
+"Cancel" = "Cancel";
+"Send" = "Send";
+"Alia" = "Remark";
+"Group" = "List";
+"OK" = "OK";
+"Accept" = "Agree";
+"Decline" = "Decline";
+"Password" = "Password";
+
+"done" = "OK";
+"Done" = "OK";
+
+"logout" = "Log Out";
+"login" = "Log In";
+
+"Male" = "Male";
+"Female" = "Female";
+
+"confirm" = "OK";
+
+"save" = "Save";
+"Save" = "Save";
+
+"None" = "None";
+
+"confirm_log_out" = "Leave now?";
+"no_personal_signature" = "No status";
+"no_set" = "Not set";
+
+"choose_avatar_for_you" = "The App randomly assigns you a system avatar.";
+
+"AppLoginSucc" = "Successfully logged in";
+"AppGetAccessAddressFail" = "The service is abnormal. Please check the network and try again";
+"AppOfflineTitle" = "Account Offline";
+"AppOfflineDesc" = "Your account is logged in on another mobile phone";
+"AppCancelRelogin" = "Logout";
+"AppConfirmRelogin" = "Login again";
+
+"AppMainTitle" = "TencentCloud·IM";
+"AppMainConnectingTitle" = "Connecting…";
+"AppMainDisconnectTitle" = "TencentCloud·IM (not connected)";
+
+"TabBarItemMessageText" = "Message";
+"TabBarItemContactText" = "Contacts";
+"TabBarItemMeText"      = "Me";
+"TabBarItemLiveText"    = "Video Live Stream";
+"TabBarItemLiveConnectingText" = "Connecting…";
+"TabBarItemLiveDisconnectText" = "Video Live Stream (not connected)";
+
+"ChatsNewChatText"    = "New Chat";
+"ChatsNewPrivateGroupText"   = "Create Discussion Group";
+"ChatsNewGroupText"  = "Create Group Chat";
+"ChatsNewChatRoomText" = "Create Chat Room";
+"ChatsNewCommunityText" = "Create Community";
+
+"ChatsCreateFailed" = "Create Group Failed";
+
+"ChatsSelectContact" = "Select Contact";
+"ChatSecurityWarning" = "[Security Reminder] This App is only used to experience the features of Tencent Cloud IM products, and cannot be used for business negotiation and expansion. Please do not trust remittance, winning the lottery and other information related to money, do not easily make strange phone calls, beware of being deceived.";
+"ChatSecurityWarningReport" = "Report";
+
+"ContactsAddFriends" = "Add to Contacts";
+"ContactsJoinGroup"  = "Add Group";
+
+"MeFriendRequest" = "Friend Request";
+"MeFriendRequestMethodAgreeAll" = "Allow any user to add you as friend";
+"MeFriendRequestMethodNeedConfirm" = "Anyone upon Request";
+"MeFriendRequestMethodDenyAll" = "Decline friend request from any user";
+
+"MeAbout" = "About TencentCloud·IM";
+"MeDevelop" = "Develop and Debug";
+"MeReportMemoryLeak" = "Report Memory Leak";
+
+"MeSwitchSkin" = "Change Skin";
+"MeSwitchLaunguage" = "Change Launguage";
+"MeMessageReadStatus" = "Message read status";
+"MeMessageReadStatusOpenDesc" = "If disabled, the message read status is hidden for all your messages and for all the messages sent by members in a chat.";
+"MeMessageReadStatusCloseDesc" = "If enabled, the message read status is displayed for all your messages and for all the messages sent by members in a chat.";
+
+"ProfilePhoto" = "Profile Photo";
+"ProfileName"  = "Name";
+"ProfileAccount" = "Account";
+"ProfileSignature" = "Status";
+"ProfileGender" = "Gender";
+"ProfileEditName" = "Name";
+"ProfileEditNameDesc" = "Only letters, digits, underscores, and Chinese characters.";
+"ProfileEditSignture" = "Status";
+"ProfileEditGender" = "Gender";
+"ProfileEditAlia" = "Alias";
+"ProfileDetails" = "Details";
+"ProfileAlia" = "Alias";
+"ProfileBlocked" = "Block";
+"ProfileMessageDoNotDisturb" = "Mute Notifications";
+"ProfileStickyonTop" = "Pin";
+"ProfileSendMessages" = "Send Message";
+"ProfileDeleteFirend" = "Delete Friend";
+
+"LiveDropRefresh" = "Swipe down to refresh";
+"LiveRefreshing" = "Refreshing...";
+"LiveOnlineCountFormat" = "%ld is online.";
+
+"GroupRequestJoinGroupFormat" = "%@ requests to join group chat.";
+"GroupJoin" = "Add Group";
+
+"FriendRequestFormat" = "I'm %@";
+"FriendRequestFillInfo" = "Add Friend";
+"FriendOneWay" = "One-way Friend";
+"FriendAddResultSuccessWait" = "Sent successfully. Wait for approval.";
+"FriendAddResultForbid" = "The other user disabled friend request.";
+"FriendAddResultSuccess" = "Added to friend list";
+"FriendAddResultExists" = "You're already friends.";
+"FriendAddVerificationMessage" = "Verification Message";
+"FriendAddTitle" = "Add Friend";
+
+"SearchGroupPlaceholder" = "User ID";
+
+"GroupMember" = "Group Members";
+"GroupAddFirend" = "Add Contact";
+"GroupDeleteFriend" = "Delete Contact";
+
+"ErrrorTipsCreate" = "Creation failed";
+"ErrorTipsDestory" = "Termination failed";
+"ErrirTipsHeart" = "Heartbeat failed";
+"ErrorTipsParamtersValid" = "Parameter conversion failed";
+"ErrorTipsServerRequest" = "Service request failed";
+"ErrorTipsOpFailed" = "Operation failed. Check network.";
+"ErrorTipsInvalidUser" = "Invalid username format";
+"ErrorTIpsInvalidUserPwd" = "Invalid username or password";
+"ErrorTipsUsernameExists" = "Username already exists.";
+"ErrorTipsServer" = "Server error";
+"ErrorTipsUsernameNull" = "User does not exist.";
+"ErrorTipsPwdError" = "Incorrect password";
+
+"TipsCheckCodeHasSent" = "Verification code sent";
+"TipsGetCheckcode" = "Send Code";
+"TipsCheckCodeFailedFormat" = "Failed to get verification code. ErrorCode: %d. ErrorMsg: %@";
+"TipsPhoneCodeNotNull" = "Mobile number and verification code are required.";
+"TipsPhoneNotMatch" = "This mobile number is not the one that receives the verification code. Please confirm.";
+"TipsLoginErrorWithUserIdfailed" = "Login failed. Failed to get userId or userSig.";
+"TipsLoginErrorFormat" = "Login failed. ErrorCode: %d. ErrorMsg: %@";
+"TipsLoginWithAccountPassword" = "Log in via password";
+"TipsLoginWithAccountDirectly" = "Log in without password";
+"TipsOldVersionRegisterAccount" =  "Users who use older versions and have a registered account can log in by directly entering the account name and password.";
+
+"exclued_from_unread_count" = "IgnoreReadCountMsg";
+
+"birthday" = "Birthday";
+
+// ---- 2021-04-22 新增
+"TipsPhoneNotNull" = "Mobile number is required.";
+
+"GetSmsErrorFormat" = "Failed to get verifcation code！(%@)";
+
+"MarkAllMessageAsReadSucc" = "Success to mark all as read";
+"MarkAllMessageAsReadErrFormat" = "Error, %d, %@";
+
+"ChooseNationOrRegion" = "Choose Nation or Region";
+
+"MessageTipsYouRecallMessage" = "You recalled a message.";
+"MessageTipsOthersRecallMessageFormat" = "\"%@\" recalled a message.";
+"MessageTipsOthersRecallMessage" = "The other user recalled a message.";
+"SignatureFormat" = "Status:%@";
+
+"ChangeStyle" = "Style";
+"ChangeSkin" = "Theme";
+"ChangeLanguage" = "Language";
+"SimpleChinese" = "Chinese,Simplified";
+"English" = "English";
+"CurrentLanguage" = "English";
+"Classic" = "Classic";
+"Minimalist" = "Minimalist";
+
+"ThemeNameSerious" = "Solemn";
+"ThemeNameLight" = "Light";
+"ThemeNameLivey" = "Lively";
+"ThemeNameDark" = "Dark";
+"ThemeNameSystem" = "System";
+
+"TUIKitAboutUsSDKVersion" = "SDK Version";
+"TUIKitAboutUsPrivacyRegulations" = "Privacy Policy";
+"TUIKitAboutUsUserAgreement" = "User Agreement";
+"TUIKitAboutUsDisclaimer" = "Disclaimer";
+"TUIKitAboutUsPersonalInformationCollectionList" = "Personal Information Collected";
+"TUIKitAboutUs3PartySharingList" = "Information Shared with Third Parties";
+"TUIKitAboutUsCloseAccount" = "Cancel Account";
+"TUIKitAboutUsContactUs" = "Contact Us";
+"TUIKitAboutUsDisclaimerText" = "Tencent Cloud Instant Messaging APP  (\"this product\") is a test product provided by Tencent Cloud, and Tencent Cloud enjoys the copyright and ownership of this product. This product is only used for functional experience and must not be used for any commercial purposes. In order to comply with the regulatory requirements of relevant departments, any pornography, abusive, violent, and politically related content is strictly prohibited during use.";
+"TUIKitAboutUsCloseAccountDescribe" =  "After canceling this account, you will be unable to use it, and related data will be permanently deleted. Current account:%@";
+"TUIKitAboutUsCloseAccountAlterMsg" = "Are you sure you want to cancel this account?";
+"TUIKitAboutUsCloseAccountAlterAction1" = "Confirm";
+"TUIKitAboutUsCloseAccountError1" = "Cancellation failed. No token or mobile number associated with the current account is detected. Please log in with your mobile number.";
+"TUIKitAboutUsCloseAccountSuccessful" = "Account cancelled successfully";
+"TUIKitAboutUsCloseAccountFailed" = "Account cancelled failed";
+
+"TUIPrivateProtocolAlertMsg" = " Welcome to Tencent Cloud Instant Messaging. To protect your personal information, we have updated the \"Privacy Policy\", involving improving the specific contents and purposes of collecting user information, and adding third-party SDKs.\n\n Please carefully read the \"User Agreement\",\"Summary of Privacy Policy\",\"Privacy Policy\",\"Personal Information Collected\" and \"Information Shared with Third Parties\", and tap Agree and Continue to use our products and services if you agree to them.";
+"TUIPrivateProtocolHighlight1" = "\"User Agreement\"";
+"TUIPrivateProtocolHighlight2" = "\"Privacy Policy\"";
+"TUIPrivateProtocolHighlight3" = "\"Personal Information Collected\"";
+"TUIPrivateProtocolHighlight4" = "\"Information Shared with Third Parties\"";
+"TUIPrivateProtocolHighlight5" = "\"Summary of Privacy Policy\"";
+"TUIPrivateProtocolAlertActionAgree" = "Agree and Continue";
+"TUIPrivateProtocolAlertActionDisagree" = "Disagree and Exit";
+
+"TipsSystemVerifyError" = "Failed to verify user actions or parameter";
+"TipsSystemError" = "System unknown error occurred";
+"TipsServiceUnavailable" = "Service is unavailable";
+"TipsServiceResponseInvalid" = "Response is invalid";
+"TipsServiceSmsFailed" = "Failed to send SMS message";
+"TipsServiceDBFailed" = "Service DB error occurred";
+"TipsServiceUnknownError" = "Service unknown error occurred";
+"TipsUserCodeInvalid" = "SMS verification code is invalid";
+"TipsUserCodeExpired" = "SMS verification code is expired";
+"TipsUserCodeConsumed" = "The verification code has already been used";
+"TipsUserTokenExpired" = "User token is expired, please login again";
+"TipsUserTokenInvalid" = "User token is invalid, please login again";
+"TipsUseInfoEmpty" = "User's info is empty";
+"TipsUserNotExists" = "User does not exist";
+"TipsUserEmailInvalid" = "User's email is invalid";
+"TipsUserQueryParams" = "Query parameter is error";
+"TipsUserQueryLimit" = "Too much query data, flow restriction is triggered";
+"TipsUserOAuthParams" = "User OAuth parameter is error";
+
+//未翻译---start
+"TUIThemeNameSystemFollowTitle" = "Automatic";
+"TUIThemeNameSystemFollowSubTitle" = "After this function is enabled, only the default skin (light/dark) will be displayed. Other skin styles cannot be switched";
+
+"UpgradeNow" = "Upgrade";
+
+"ShowOnlineStatus" = "Display online status";
+"ShowOnlineStatusOpenDesc" = "If disabled, the users' online status will not displayed in your session and contact list.";
+"ShowOnlineStatusCloseDesc" = "If enabled, the users' online status will displayed in your session and contact list.";
+"OnlineStatus" = "Online status";
+"ShowPackageToast" = "This is the feature of ultimate edition";
+
+
+
+
+
+
+//----------------Mini begin------------
+"Chat" = "Chat";
+"TabBarItemMessageText_mini" = "Chats";
+"TabBarItemContactText_mini" = "Contact";
+"TabBarItemSettingText_mini"      = "Settings";
+"ReadAll" = "Read All";
+"Hide"    = "Hide";
+"Delete"    = "Delete";
+"MarkAsRead"= "Mark As Read";
+"TUIKitDone" = "Done";
+//----------------Mini end------------

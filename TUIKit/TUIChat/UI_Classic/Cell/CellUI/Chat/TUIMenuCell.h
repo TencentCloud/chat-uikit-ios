@@ -1,0 +1,16 @@
+#import <UIKit/UIKit.h>
+#import "TUIMenuCellData.h"
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+//                             TUIMenuCell
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+@interface TUIMenuCell : UICollectionViewCell
+
+@property (nonatomic, strong) UIImageView *menu;
+
+- (void)setData:(TUIMenuCellData *)data;
+
+@end

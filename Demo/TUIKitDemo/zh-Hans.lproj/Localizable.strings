@@ -1,0 +1,260 @@
+/*
+  Localizable.strings
+  TUIKitDemo
+
+  Created by harvy on 2020/10/16.
+  Copyright © 2020 Tencent. All rights reserved.
+*/
+
+"cancel" = "取消";
+"Cancel" = "取消";
+"Send" = "发送";
+"Alia" = "备注";
+"Group" = "分组";
+"OK" = "好";
+"Accept" = "同意";
+"Decline" = "拒绝";
+"Password" = "密码";
+
+"done" = "完成";
+"Done" = "完成";
+
+"logout" = "退出登录";
+"login" = "登录";
+
+"Male" = "男";
+"Female" = "女";
+
+"confirm" = "确定";
+
+"save" = "保存";
+"Save" = "保存";
+
+"None" = "无";
+
+"confirm_log_out" = "确定退出吗";
+"no_personal_signature" = "暂无个性签名";
+"no_set" = "未设置";
+
+"choose_avatar_for_you" = "App随机为您分配一个系统头像";
+
+"AppLoginSucc" = "已成功登录";
+"AppGetAccessAddressFail" = "服务异常，请检查网络后重试";
+"AppOfflineTitle" = "下线通知";
+"AppOfflineDesc" = "您的帐号于另一台手机上登录";
+"AppCancelRelogin" = "退出";
+"AppConfirmRelogin" = "重新登录";
+
+"AppMainTitle" = "腾讯云·IM";
+"AppMainConnectingTitle" = "连接中...";
+"AppMainDisconnectTitle" = "腾讯云·IM(未连接)";
+
+"TabBarItemMessageText" = "消息";
+"TabBarItemContactText" = "通讯录";
+"TabBarItemMeText"      = "我";
+"TabBarItemLiveText"    = "视频直播";
+"TabBarItemLiveConnectingText" = "连接中...";
+"TabBarItemLiveDisconnectText" = "视频直播(未连接)";
+
+"ChatsNewChatText"    = "发起会话";
+"ChatsNewPrivateGroupText"   = "创建讨论组";
+"ChatsNewGroupText"  = "创建群聊";
+"ChatsNewChatRoomText" = "创建聊天室";
+"ChatsNewCommunityText" = "创建社群";
+
+
+"ChatsCreateFailed" = "创建群失败";
+
+"ChatsSelectContact" = "选择联系人";
+
+"ChatSecurityWarning" = "【安全提示】本 APP 仅用于体验腾讯云即时通信 IM 产品功能，不可用于业务洽谈与拓展。请勿轻信汇款、中奖等涉及钱款的信息，勿轻易拨打陌生电话，谨防上当受骗。";
+"ChatSecurityWarningReport" = "点此举报";
+
+"ContactsAddFriends" = "添加好友";
+"ContactsJoinGroup"  = "添加群聊";
+
+"MeFriendRequest" = "加我为好友时";
+"MeFriendRequestMethodAgreeAll" = "同意任何用户加好友";
+"MeFriendRequestMethodNeedConfirm" = "需要验证";
+"MeFriendRequestMethodDenyAll" = "拒绝任何人加好友";
+
+"MeAbout" = "关于腾讯云·IM";
+"MeDevelop" = "开发调试";
+"MeReportMemoryLeak" = "内存泄漏上报";
+
+"MeSwitchSkin" = "更换主题";
+"MeSwitchLaunguage" = "切换语言";
+"MeMessageReadStatus" = "消息阅读状态";
+"MeMessageReadStatusOpenDesc" = "关闭后，您收发的消息均不带消息阅读状态，您将无法看到对方是否已读，同时对方也无法看到您是否已读。";
+"MeMessageReadStatusCloseDesc" = "开启后，您在群聊中收发的消息均带有消息阅读状态，并且可以看到对方是否已读。与您单聊的好友若也开启了消息阅读状态，您与好友在单聊中收发的消息也将带有消息阅读状态。";
+
+"ProfilePhoto" = "头像";
+"ProfileName"  = "昵称";
+"ProfileAccount" = "账号";
+"ProfileSignature" = "个性签名";
+"ProfileGender" = "性别";
+"ProfileEditName" = "修改昵称";
+"ProfileEditNameDesc" = "仅限中文、字母、数字和下划线";
+"ProfileEditSignture" = "修改个性签名";
+"ProfileEditGender" = "修改性别";
+"ProfileEditAlia" = "修改备注";
+"ProfileDetails" = "详细资料";
+"ProfileAlia" = "备注名";
+"ProfileBlocked" = "加入黑名单";
+"ProfileMessageDoNotDisturb" = "消息免打扰";
+"ProfileStickyonTop" = "置顶聊天";
+"ProfileSendMessages" = "发送消息";
+"ProfileDeleteFirend" = "删除好友";
+
+"LiveDropRefresh" = "下拉刷新";
+"LiveRefreshing" = "刷新中...";
+"LiveOnlineCountFormat" = "%ld在线";
+
+"GroupRequestJoinGroupFormat" = "%@ 申请加入群聊";
+"GroupJoin" = "添加群组";
+
+"FriendRequestFormat" = "我是%@";
+"FriendRequestFillInfo" = "添加好友";
+"FriendOneWay" = "单向好友";
+"FriendAddResultSuccessWait" = "发送成功,等待审核同意";
+"FriendAddResultForbid" = "对方禁止添加";
+"FriendAddResultSuccess" = "已添加到好友列表";
+"FriendAddResultExists" = "对方已是您的好友";
+"FriendAddVerificationMessage" = "验证消息";
+"FriendAddTitle" = "加好友";
+
+"SearchGroupPlaceholder" = "用户ID";
+
+"GroupMember" = "群成员";
+"GroupAddFirend" = "添加联系人";
+"GroupDeleteFriend" = "删除联系人";
+
+"ErrrorTipsCreate" = "创建失败";
+"ErrorTipsDestory" = "销毁失败"; 
+"ErrirTipsHeart" = "心跳失败";
+"ErrorTipsParamtersValid" = "参数失败";
+"ErrorTipsServerRequest" = "服务请求失败";
+"ErrorTipsOpFailed" = "操作失败，请检查网络";
+"ErrorTipsInvalidUser" = "用户名格式错误";
+"ErrorTIpsInvalidUserPwd" = "用户名或密码不合法";
+"ErrorTipsUsernameExists" = "用户名已存在";
+"ErrorTipsServer" = "服务器错误";
+"ErrorTipsUsernameNull" = "用户不存在";
+"ErrorTipsPwdError" = "密码错误";
+
+"TipsCheckCodeHasSent" = "验证码已发出";
+"TipsGetCheckcode" = "获取验证码";
+"TipsCheckCodeFailedFormat" = "获取验证码失败。错误码：%d。错误信息：%@";
+"TipsPhoneCodeNotNull" = "手机号和验证码不能为空";
+"TipsPhoneNotMatch" = "当前手机号与获取验证码手机号不一致，请确认";
+"TipsLoginErrorWithUserIdfailed" = "登录失败，userId or userSig 获取失败";
+"TipsLoginErrorFormat" = "登录失败。错误码：%d。错误信息：%@";
+"TipsLoginWithAccountPassword" = "账号密码登录";
+"TipsLoginWithAccountDirectly" = "账号直接登录";
+"TipsOldVersionRegisterAccount" =  "老版本用户如果注册了账号密码，可以直接输入账号密码登录";
+
+"exclued_from_unread_count" = "不计入未读数消息";
+
+"birthday" = "生日";
+
+// ---- 2021-04-22 新增
+"TipsPhoneNotNull" = "手机号不能为空";
+
+"GetSmsErrorFormat" = "获取验证码错误，请刷新重试！(%@)";
+
+"MarkAllMessageAsReadSucc" = "清空未读成功";
+"MarkAllMessageAsReadErrFormat" = "清空未读失败, %d, %@";
+
+"ChooseNationOrRegion" = "选择国家或地区";
+
+"MessageTipsYouRecallMessage" = "你撤回了一条消息";
+"MessageTipsOthersRecallMessageFormat" = "\"%@\" 撤回了一条消息";
+"MessageTipsOthersRecallMessage" = "对方撤回了一条消息";
+"SignatureFormat" = "个性签名:%@";
+
+"ChangeStyle" = "切换风格";
+"ChangeSkin" = "切换皮肤";
+"ChangeLanguage" = "切换语言";
+"SimpleChinese" = "简体中文";
+"English" = "英语(English)";
+"CurrentLanguage" = "简体中文";
+"Classic" = "经典版";
+"Minimalist" = "简约版";
+
+
+"ThemeNameSerious" = "深沉";
+"ThemeNameLight" = "轻量";
+"ThemeNameLivey" = "活泼";
+"ThemeNameDark" = "深色";
+"ThemeNameSystem" = "跟随系统";
+
+"TUIKitAboutUsSDKVersion" = "SDK版本";
+"TUIKitAboutUsPrivacyRegulations" = "隐私条例";
+"TUIKitAboutUsUserAgreement" = "用户协议";
+"TUIKitAboutUsDisclaimer" = "免责声明";
+"TUIKitAboutUsPersonalInformationCollectionList" = "个人信息收集清单";
+"TUIKitAboutUs3PartySharingList" = "第三方信息共享清单";
+"TUIKitAboutUsCloseAccount" = "注销账户";
+"TUIKitAboutUsContactUs" = "联系我们";
+"TUIKitAboutUsDisclaimerText" = "腾讯云IM APP（“本产品”）是由腾讯云提供的一款测试产品，腾讯云享有本产品的著作权和所有权。本产品仅用于功能体验，不得用于任何商业用途。为配合相关部门监管要求，严禁在使用中有任何色情、辱骂、暴恐、涉政等违法内容传播。";
+
+"TUIKitAboutUsCloseAccountDescribe" =  "注销后，您将无法使用当前账号，相关数据也将删除无法找回。当前账号ID:%@";
+"TUIKitAboutUsCloseAccountAlterMsg" = "确认注销账号吗?";
+"TUIKitAboutUsCloseAccountAlterAction1" = "注销";
+"TUIKitAboutUsCloseAccountError1" = "注销失败,当前账号未查到token或手机号，请使用手机号登录";
+"TUIKitAboutUsCloseAccountSuccessful" = "注销成功";
+"TUIKitAboutUsCloseAccountFailed" = "注销失败";
+
+//隐私弹窗协议
+"TUIPrivateProtocolAlertMsg" = "欢迎使用腾讯云即时通信 IM，为保护您的个人信息安全，我们更新了《隐私政策》，主要完善了收集用户信息的具体内容和目的、增加了第三方SDK使用等方面的内容。\n请您点击 《用户协议》、《隐私政策摘要》、《隐私政策》、《个人信息收集清单》和《第三方信息共享清单》并仔细阅读，如您同意以上内容，请点击“同意并继续”，开始使用我们的产品与服务！";
+"TUIPrivateProtocolHighlight1" = "《用户协议》";
+"TUIPrivateProtocolHighlight2" = "《隐私政策》";
+"TUIPrivateProtocolHighlight3" = "《个人信息收集清单》";
+"TUIPrivateProtocolHighlight4" = "《第三方信息共享清单》";
+"TUIPrivateProtocolHighlight5" = "《隐私政策摘要》";
+"TUIPrivateProtocolAlertActionAgree" = "同意并继续";
+"TUIPrivateProtocolAlertActionDisagree" = "不同意并退出";
+
+"TipsSystemVerifyError" = "验证用户操作或参数错误";
+"TipsSystemError" = "后端未知的系统错误";
+"TipsServiceUnavailable" = "后端依赖的服务不可用";
+"TipsServiceResponseInvalid" = "后端服务返回的结果不符合规范";
+"TipsServiceSmsFailed" = "SMS发送短信服务失败";
+"TipsServiceDBFailed" = "后端服务DB错误，SQL语句执行失败";
+"TipsServiceUnknownError" = "服务未知错误";
+"TipsUserCodeInvalid" = "用户登录失败，错误的验证码";
+"TipsUserCodeExpired" = "用户登录失败，验证码已过期";
+"TipsUserCodeConsumed" = "验证码已经使用过了，请重新获取";
+"TipsUserTokenExpired" = "用户Token已经过期，请重新登录";
+"TipsUserTokenInvalid" = "用户Token不正确，请重新登录";
+"TipsUseInfoEmpty" = "用户的信息为空";
+"TipsUserNotExists" = "用户不存在";
+"TipsUserEmailInvalid" = "给用户发送邮件时参数错误";
+"TipsUserQueryParams" = "用户查询时参数错误";
+"TipsUserQueryLimit" = "用户查询数据过多，触发限流";
+"TipsUserOAuthParams" = "用户OAuth参数异常";
+
+"TUIThemeNameSystemFollowTitle" = "跟随系统自动切换";
+"TUIThemeNameSystemFollowSubTitle" = "开启后仅展示默认皮肤 (轻快/深色)，不可切换其他皮肤样式";
+
+"UpgradeNow" = "立即升级";
+
+"ShowOnlineStatus" = "显示在线状态";
+"ShowOnlineStatusOpenDesc" = "关闭后，您将不可以在会话列表和通讯录中看到好友在线或离线的状态提示。";
+"ShowOnlineStatusCloseDesc" = "开启后，您将可以在会话列表和通讯录中看到好友在线或离线的状态提示。";
+"OnlineStatus" = "在线状态";
+"ShowPackageToast" = "该功能为旗舰版功能";
+
+//----------------Mini begin------------
+"Chat" = "聊天";
+"TabBarItemMessageText_mini" = "聊天";
+"TabBarItemContactText_mini" = "联系人";
+"TabBarItemSettingText_mini" = "设置";
+
+"ReadAll" = "全部已读";
+"Hide"    = "隐藏";
+"Delete"    = "删除";
+"MarkAsRead"= "标记已读";
+"TUIKitDone" = "完成";
+
+//----------------Mini end------------

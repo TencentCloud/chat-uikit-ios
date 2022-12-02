@@ -15,6 +15,7 @@ For the other platforms, please refer to document：
 
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
+
 ## Step 1. Create an App
 1. Log in to the [IM console](https://intl.cloud.tencent.com/login).
 > If you already have an app, record its SDKAppID and [configure the app](#step2).
@@ -30,7 +31,7 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 ## Step 3: Download and Configure the Demo Source Code
 
-1. Clone the IM demo project from [GitHub](https://github.com/tencentyun/TIMSDK).
+1. Clone the IM demo project from [GitHub](https://github.com/TencentCloud/chat-uikit-ios).
 2. Open the project in the terminal directory and find the `GenerateTestUserSig` file.
 <table>
 <tr>
@@ -45,28 +46,10 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 <td>iOS</td>   
 <td>iOS/Demo/TUIKitDemo/Private/GenerateTestUserSig.h</td>
 </tr> 
-<tr>      
-<td>macOS</td>   
-<td>Mac/Demo/TUIKitDemo/Debug/GenerateTestUserSig.h</td>   
-</tr>  
-<tr>      
-<td>Windows</td>   
-<td>Windows/Demo/IMApp/GenerateTestUserSig.h</td>   
-</tr>  
-<tr>      
-<td>Web (general)</td>   
-<td>Web/Demo/public/debug/GenerateTestUserSig.js</td>   
-</tr>  
-<tr>      
-<td>Mini Program</td>   
-<td>MiniProgram/Demo/static/utils/GenerateTestUserSig.js</td>   
-</tr>  
 </table>
 
 
 3. Set relevant parameters in the `GenerateTestUserSig` file:
-
-> In this document, an Android project is opened by using Android Studio as an example.
 
 - SDKAPPID: set it to the SDKAppID obtained in [Step 1](#step1).
 - SECRETKEY: enter the key obtained in [Step 2](#step2).
@@ -119,11 +102,15 @@ After the preceding steps are completed, the audio and video call entries in the
 
 The conversation UIs before and after TUICallKit masking are as follows:
 
-<img src="https://qcloudimg.tencent-cloud.cn/raw/bc84e5278199bdd29320218ca6dc1f62.png" style="zoom:70%;" /> <img src="https://qcloudimg.tencent-cloud.cn/raw/5f9f5cca47deac0ceb490e09361699de.png" style="zoom:70%;" />
+| before | After |
+|---------|---------|
+| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ChatIncludeCallMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ChatExcludeCallMinimalist.png"  width="300px"/>
 
 The contact profile UIs before and after TUICallKit masking are as follows:
 
-<img src="https://qcloudimg.tencent-cloud.cn/raw/b46981fc2d51ef2c4d8a75c2909fb651.png" style="zoom:70%;" />  <img src="https://qcloudimg.tencent-cloud.cn/raw/18be475fada3f04da1d99483111dc9d8.png" style="zoom:70%;" />
+| before | After |
+|---------|---------|
+| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ContactIncludeCallMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ContactExcludeCallMinimalist.png" width="300px"/> 
 
 > The above only shows how to remove the audio/video call feature from the demo. Developers can customize the demo according to their business requirements.
 
@@ -138,6 +125,8 @@ After the preceding steps are completed, the message search box in the demo is h
 
 The message UIs before and after TUISearch masking are as follows:
 
-<img src="https://sdk-im-1252463788.cos.ap-hongkong.myqcloud.com/tools/resource/officialwebsite/readme/international/ios/conversation_search.png" style="zoom:75%;" />  <img src="https://sdk-im-1252463788.cos.ap-hongkong.myqcloud.com/tools/resource/officialwebsite/readme/international/ios/conversation.PNG" style="zoom:75%;" />
+| before | After |
+|---------|---------|
+| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ConversationIncludeSearchMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ConversationExcludeSearchMinimalist.png" width="300px"/>
 
 > The above only shows how to remove the search feature from the demo. Developers can customize the demo according to their business requirements.

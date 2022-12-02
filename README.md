@@ -3,16 +3,12 @@ English | [简体中文](./README_ZH.md)
 This document introduces how to quickly run through the IM demo on the iOS platform.
 For the other platforms, please refer to document：
 
-<table>
-  <tr>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-android">android</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-flutter">flutter</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-vue">vue</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-react">react</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-uniapp">uniapp</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-wechat">wechat</th>
-  </tr>
-</table>
+[**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
+[**chat-uikit-flutter**](https://github.com/TencentCloud/chat-uikit-flutter)
+[**chat-uikit-vue**](https://github.com/TencentCloud/chat-uikit-vue)
+[**chat-uikit-react**](https://github.com/TencentCloud/chat-uikit-react)
+[**chat-uikit-uniapp**](https://github.com/TencentCloud/chat-uikit-uniapp)
+[**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
 ## Step 1. Create an App
 1. Log in to the [IM console](https://intl.cloud.tencent.com/login).

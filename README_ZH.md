@@ -3,16 +3,12 @@
 本文介绍如何快速跑通 iOS 平台即时通信 IM 的体验 Demo。
 对于其他平台，请参考文档：
 
-<table>
-  <tr>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-android">android</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-flutter">flutter</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-vue">vue</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-react">react</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-uniapp">uniapp</th>
-    <th width="100px" style="text-align:center"><a href="https://github.com/TencentCloud/chat-uikit-wechat">wechat</th>
-  </tr>
-</table>
+[**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
+[**chat-uikit-flutter**](https://github.com/TencentCloud/chat-uikit-flutter)
+[**chat-uikit-vue**](https://github.com/TencentCloud/chat-uikit-vue)
+[**chat-uikit-react**](https://github.com/TencentCloud/chat-uikit-react)
+[**chat-uikit-uniapp**](https://github.com/TencentCloud/chat-uikit-uniapp)
+[**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
 ## 步骤1：创建应用
 1. 登录即时通信 IM [控制台](https://console.cloud.tencent.com/avc)。

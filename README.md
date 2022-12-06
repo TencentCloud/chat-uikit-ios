@@ -53,7 +53,8 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 - SDKAPPID: set it to the SDKAppID obtained in [Step 1](#step1).
 - SECRETKEY: enter the key obtained in [Step 2](#step2).
-![ ](https://qcloudimg.tencent-cloud.cn/raw/487fe57e41ae261f3bbf86c830584afa.png)
+![487fe57e41ae261f3bbf86c830584afa](https://user-images.githubusercontent.com/19159722/205883730-913bb5fd-e8bd-4b54-97db-e7e6161112a2.png)
+
 
 
 >! In this document, the method to obtain UserSig is to configure a SECRETKEY in the client code. In this method, the SECRETKEY is vulnerable to decompilation and reverse engineering. Once your SECRETKEY is leaked, attackers can steal your Tencent Cloud traffic. Therefore, **this method is only suitable for locally running a demo project and feature debugging**.
@@ -104,13 +105,14 @@ The conversation UIs before and after TUICallKit masking are as follows:
 
 | before | After |
 |---------|---------|
-| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ChatIncludeCallMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ChatExcludeCallMinimalist.png"  width="300px"/>
+|<img width="390" alt="GitHub_ChatIncludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884017-f7ab8c73-a3bf-414a-9801-00ba82b5285b.png">|<img width="390" alt="GitHub_ChatExcludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884361-582e40fe-9232-479e-9924-39732841dfa1.png">
+
 
 The contact profile UIs before and after TUICallKit masking are as follows:
 
 | before | After |
 |---------|---------|
-| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ContactIncludeCallMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ContactExcludeCallMinimalist.png" width="300px"/> 
+|<img width="390" alt="GitHub_ContactIncludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884529-29b75f55-fddb-449f-aa4a-1444503901d0.png"> |<img width="390" alt="GitHub_ContactExcludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884777-3adc36da-a1c6-4e18-b3e9-d425e050aa49.png">
 
 > The above only shows how to remove the audio/video call feature from the demo. Developers can customize the demo according to their business requirements.
 
@@ -127,6 +129,6 @@ The message UIs before and after TUISearch masking are as follows:
 
 | before | After |
 |---------|---------|
-| <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ConversationIncludeSearchMinimalist.png" width="300px"/> | <img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/GitHub_ConversationExcludeSearchMinimalist.png" width="300px"/>
+| <img width="390" alt="GitHub_ConversationIncludeSearchMinimalist" src="https://user-images.githubusercontent.com/19159722/205884953-20496c4d-33d2-48b4-92c4-9c8a108ba489.png"> | <img width="390" alt="GitHub_ConversationExcludeSearchMinimalist" src="https://user-images.githubusercontent.com/19159722/205892412-9c7556bf-a1b6-4eae-b5c2-329b009e3db2.png">
 
 > The above only shows how to remove the search feature from the demo. Developers can customize the demo according to their business requirements.

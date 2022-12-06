@@ -103,11 +103,15 @@ pod repo update
 
 会话界面屏蔽 TUICallKit 前后的效果：
 
-![](https://qcloudimg.tencent-cloud.cn/raw/11d6846dc76aedcda15f6f70b78c59c7.png) ![](https://qcloudimg.tencent-cloud.cn/raw/ca116e25894a6ba72d49e2507cc213ba.png)
+| before | After |
+|---------|---------|
+|<img width="390" alt="GitHub_ChatIncludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884017-f7ab8c73-a3bf-414a-9801-00ba82b5285b.png">|<img width="390" alt="GitHub_ChatExcludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884361-582e40fe-9232-479e-9924-39732841dfa1.png">
+
 
 联系人资料界面屏蔽 TUICallKit 前后的效果：
-
-![](https://qcloudimg.tencent-cloud.cn/raw/98df67c187384445432d490f6c0f7847.png)  ![](https://qcloudimg.tencent-cloud.cn/raw/b604eeac45f0a2cf5924d23567c69090.png)
+| before | After |
+|---------|---------|
+|<img width="390" alt="GitHub_ContactIncludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884529-29b75f55-fddb-449f-aa4a-1444503901d0.png"> |<img width="390" alt="GitHub_ContactExcludeCallMinimalist" src="https://user-images.githubusercontent.com/19159722/205884777-3adc36da-a1c6-4e18-b3e9-d425e050aa49.png">
 
 > 以上演示的仅仅是 Demo 对移除音视频通话功能的处理，开发者可以按照业务要求自定义。
 
@@ -122,6 +126,8 @@ pod repo update
 
 消息界面屏蔽 TUISearch 前后的效果：
 
-![](https://qcloudimg.tencent-cloud.cn/raw/e099c8fe41f3c908cd88573dad6dc820.png)  ![](https://qcloudimg.tencent-cloud.cn/raw/c501170cbb23923d6bacff893b30fdbb.png)
+| before | After |
+|---------|---------|
+| <img width="390" alt="GitHub_ConversationIncludeSearchMinimalist" src="https://user-images.githubusercontent.com/19159722/205884953-20496c4d-33d2-48b4-92c4-9c8a108ba489.png"> | <img width="390" alt="GitHub_ConversationExcludeSearchMinimalist" src="https://user-images.githubusercontent.com/19159722/205892412-9c7556bf-a1b6-4eae-b5c2-329b009e3db2.png">
 
 > 以上演示的仅仅是 Demo 对移除搜索功能的处理，开发者可以按照业务要求自定义。

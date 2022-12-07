@@ -1,5 +1,23 @@
 English | [简体中文](./README_ZH.md)
 
+# Instant Messaging
+## Product Introduction
+Build real-time social messaging capabilities with all the features into your applications and websites based on powerful and feature-rich chat APIs, SDKs and UIKit components.
+
+<table style="text-align:center; vertical-align:middle; width:200px">
+  <tr>
+    <th style="text-align:center;" width="200px">iOS Experience App</th>
+  </tr>
+  <tr>
+    <td><img style="width:200px" src="https://qcloudimg.tencent-cloud.cn/raw/b1ea5318e1cfce38e4ef6249de7a4106.png"/></td>
+   </tr>
+</table>
+
+TUIKit is a UI component library based on Tencent Cloud IM SDK. It provides universal UI components to offer features such as conversation, chat, search, relationship chain, group, and audio/video call features.
+
+<img src="https://qcloudimg.tencent-cloud.cn/raw/9c893f1a9c6368c82d44586907d5293d.png" style="zoom:50%;"/>
+
+## Run through Demo
 This document introduces how to quickly run through the IM demo on the iOS platform.
 For the other platforms, please refer to document：
 

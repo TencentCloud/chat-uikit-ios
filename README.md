@@ -106,7 +106,7 @@ pod repo update
 ```
 4. Go to the iOS/Demo folder and open `TUIKitDemo.xcworkspace` to compile and run the demo.
 
-## Step 5: Compile and Run the Demo (Removing the Audio/Video Call Feature)
+### Step 5: Compile and Run the Demo (Removing the Audio/Video Call Feature)
 If you do not need the audio/video call feature, remote it as follows:
 1. Go to the `iOS/Demo` folder, comment out the TUICallKit pod in the Podfile, and run the `pod install` command.
 ```
@@ -135,7 +135,7 @@ The contact profile UIs before and after TUICallKit masking are as follows:
 > The above only shows how to remove the audio/video call feature from the demo. Developers can customize the demo according to their business requirements.
 
 
-## Step 6: Compile and Run the Demo (Removing the Search Feature)
+### Step 6: Compile and Run the Demo (Removing the Search Feature)
 Go to the `iOS/Demo` folder, comment out the TUISearch pod in the Podfile, and run the `pod install` command.
 ```
 #  pod 'TUISearch' (Stop integrating the library)

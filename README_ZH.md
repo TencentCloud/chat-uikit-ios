@@ -1,5 +1,22 @@
 [English](./README.md) | 简体中文
 
+# 即时通信 IM
+## 产品简介
+即时通信 IM（Instant Messaging）基于 QQ 底层 IM 能力开发，仅需植入 IM SDK 即可轻松集成聊天、会话、群组、资料管理和直播弹幕能力，也支持通过信令消息与白板等其他产品打通，全面覆盖您的业务场景，支持各大平台小程序接入使用，全面满足通信需要。
+
+<table style="text-align:center; vertical-align:middle; width:200px">
+  <tr>
+    <th style="text-align:center;" width="200px">iOS 体验 App</th>
+  </tr>
+  <tr>
+    <td><img style="width:200px" src="https://qcloudimg.tencent-cloud.cn/raw/b1ea5318e1cfce38e4ef6249de7a4106.png"/></td>
+</table>
+
+我们提供了一套基于 IM SDK 的 TUIKit 组件库，组件库包含了会话、聊天、搜索、关系链、群组、音视频通话等功能。基于 UI 组件您可以像搭积木一样快速搭建起自己的业务逻辑。
+
+<img src="https://qcloudimg.tencent-cloud.cn/raw/9c893f1a9c6368c82d44586907d5293d.png" style="zoom:50%;"/>
+
+## 跑通 Demo
 本文介绍如何快速跑通 iOS 平台即时通信 IM 的体验 Demo。
 对于其他平台，请参考文档：
 

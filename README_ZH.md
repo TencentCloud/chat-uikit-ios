@@ -33,14 +33,14 @@
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
 
-## 步骤1：创建应用
+### 步骤1：创建应用
 1. 登录即时通信 IM [控制台](https://console.cloud.tencent.com/avc)。
 > 如果您已有应用，请记录其 SDKAppID 并 [配置应用](#step2)。
 2. 在【应用列表】页，单击【创建应用接入】。
 3. 在【创建新应用】对话框中，填写新建应用的信息，单击【确认】。
 应用创建完成后，自动生成一个应用标识 SDKAppID，请记录 SDKAppID 信息。
 
-## 步骤2：获取密钥信息
+### 步骤2：获取密钥信息
 
 1. 单击目标应用所在行的【应用配置】，进入应用详情页面。
 3. 单击**帐号体系集成**右侧的【编辑】，配置**帐号管理员**信息，单击【保存】。
@@ -48,7 +48,7 @@
 4. 单击【查看密钥】，拷贝并保存密钥信息。
 > 请妥善保管密钥信息，谨防泄露。
 
-## 步骤3：下载并配置 Demo 源码
+### 步骤3：下载并配置 Demo 源码
 
 1. 从 [Github](https://github.com/TencentCloud/chat-uikit-ios) 克隆即时通信 IM Demo 工程。
 2. 打开所属终端目录的工程，找到对应的`GenerateTestUserSig`文件。
@@ -79,7 +79,7 @@
 > !本文提到的获取 UserSig 的方案是在客户端代码中配置 SECRETKEY，该方法中 SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 Demo 和功能调试**。
 >正确的 UserSig 签发方式是将 UserSig 的计算代码集成到您的服务端，并提供面向 App 的接口，在需要 UserSig 时由您的 App 向业务服务器发起请求获取动态 UserSig。更多详情请参见 [服务端生成 UserSig](https://cloud.tencent.com/document/product/269/32688#GeneratingdynamicUserSig)。
 
-## 步骤4：编译运行（全部功能）
+### 步骤4：编译运行（全部功能）
 1. 终端执行以下命令，检查 pod 版本。
 ```objectivec
 pod --version
@@ -109,7 +109,7 @@ pod repo update
 
 > **注意：Demo 默认集成了音视频通话组件，由于音视频通话组件依赖的音视频 SDK 暂不支持模拟器，请使用真机调试/运行 Demo**
 
-## 步骤5：编译运行（移除音视频通话功能）
+### 步骤5：编译运行（移除音视频通话功能）
 如果您不想集成音视频通话功能，可以按照下面的步骤移除:
 1. 进入 iOS/Demo 文件夹，修改 `Podfile` 文件，屏蔽 `TUICallKit pod  集成，然后执行 `pod install` 命令。
 ```
@@ -133,7 +133,7 @@ pod repo update
 > 以上演示的仅仅是 Demo 对移除音视频通话功能的处理，开发者可以按照业务要求自定义。
 
 
-## 步骤6：编译运行（移除搜索功能）
+### 步骤6：编译运行（移除搜索功能）
 进入 iOS/Demo 文件夹，修改 `Podfile` 文件，屏蔽 `TUISearch` pod  集成，然后执行 `pod install` 命令。
 ```
 #  pod 'TUISearch' （不需要再集成该库）

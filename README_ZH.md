@@ -73,7 +73,7 @@
 
 - SDKAPPID：请设置为 [步骤1](#step1) 中获取的实际应用 SDKAppID。
 - SECRETKEY：请设置为 [步骤2](#step2) 中获取的实际密钥信息。
-![](https://main.qcloudimg.com/raw/bfbe25b15b7aa1cc34be76d7388562aa.png)
+![](https://user-images.githubusercontent.com/19159722/206385492-63e73f81-d8a1-4d9f-8fc2-956bc30c545f.png)
 
 
 > !本文提到的获取 UserSig 的方案是在客户端代码中配置 SECRETKEY，该方法中 SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 Demo 和功能调试**。
@@ -105,7 +105,11 @@ pod install
 ```
 pod repo update
 ```
-4. 进入 iOS/Demo 文件夹，打开 `TUIKitDemo.xcworkspace` 编译运行。
+4. 执行以下命令，更新组件库的Pod版本
+```
+pod update
+```
+5. 进入 iOS/Demo 文件夹，打开 `TUIKitDemo.xcworkspace` 编译运行。
 
 > **注意：Demo 默认集成了音视频通话组件，由于音视频通话组件依赖的音视频 SDK 暂不支持模拟器，请使用真机调试/运行 Demo**
 

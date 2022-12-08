@@ -104,7 +104,11 @@ pod install
 ```
 pod repo update
 ```
-4. Go to the iOS/Demo folder and open `TUIKitDemo.xcworkspace` to compile and run the demo.
+4. Execute the following command to update the Pod version of the component library:
+```
+pod update
+```
+5. Go to the iOS/Demo folder and open `TUIKitDemo.xcworkspace` to compile and run the demo.
 
 ### Step 5: Compile and Run the Demo (Removing the Audio/Video Call Feature)
 If you do not need the audio/video call feature, remote it as follows:

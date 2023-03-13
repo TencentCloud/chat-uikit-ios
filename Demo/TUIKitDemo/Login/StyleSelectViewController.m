@@ -275,7 +275,7 @@
     }
     else {
         //First Init
-        NSString * initStyleID = @"Minimalist";
+        NSString * initStyleID = kTUIKitFirstInitAppStyleID;
         [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
         [NSUserDefaults.standardUserDefaults synchronize];
         return initStyleID;

@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'TXIMSDK_Plus_Pro_iOS'
-  spec.version      = '6.9.3557'
+  spec.version      = '7.2.4123'
   spec.platform     = :ios 
   spec.ios.deployment_target = '8.0'
   spec.license      = { :type => 'Proprietary',
@@ -16,12 +16,12 @@ Pod::Spec.new do |spec|
   
   spec.requires_arc = true
 
-  spec.source = { :http => 'https://im.sdk.qcloud.com/download/plus/6.9.3557/ImSDK_Plus_Pro_6.9.3557.framework.zip'}
+  spec.source = { :http => 'https://im.sdk.qcloud.com/download/plus/7.2.4123/ImSDK_Plus_Pro_7.2.4123.framework.zip'}
   spec.preserve_paths = '**/ImSDK_Plus_Pro.framework'
-  spec.source_files = '**/ImSDK_Plus_Pro.framework/Headers/*.h'
-  spec.public_header_files = '**/ImSDK_Plus_Pro.framework/Headers/*.h'
+  spec.source_files = '**/ImSDK_Plus_Pro.framework/Headers/*.h', '**/ImSDK_Plus_Pro.framework/cpluscplus/include/*.h'
+  spec.public_header_files = '**/ImSDK_Plus_Pro.framework/Headers/*.h', '**/ImSDK_Plus_Pro.framework/cpluscplus/include/*.h'
   spec.vendored_frameworks = '**/ImSDK_Plus_Pro.framework'
-  spec.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/TXIMSDK_Plus_Pro_iOS/ImSDK_Plus_Pro.framework/Headers/'}
+  spec.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/TXIMSDK_Plus_Pro_iOS/ImSDK_Plus.framework/Headers/, ${PODS_ROOT}/TXIMSDK_Plus_Pro_iOS/ImSDK_Plus.framework/cpluscplus/include/'}
   spec.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }

@@ -79,15 +79,11 @@
 
 - (void)configFirstInitStyleSelectID {
     NSString *styleID = [[NSUserDefaults standardUserDefaults] objectForKey:@"StyleSelectkey"];
-    if (IS_NOT_EMPTY_NSSTRING(styleID)) {
-        return ;
-    }
-    else {
+    if (!IS_NOT_EMPTY_NSSTRING(styleID)) {
         //First Init
         NSString * initStyleID = @"Minimalist";
         [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
         [NSUserDefaults.standardUserDefaults synchronize];
-        return initStyleID;
     }
 }
 - (UIViewController *)getLoginController {

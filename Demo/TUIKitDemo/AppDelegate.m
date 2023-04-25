@@ -57,9 +57,7 @@
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     //init
-    NSString * initStyleID = @"Minimalist";
-    [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
-    [NSUserDefaults.standardUserDefaults synchronize];
+    [self configFirstInitStyleSelectID];
     
     TUIRegisterThemeResourcePath(TUIDemoThemePath, TUIThemeModuleDemo);
     [TUIThemeSelectController applyLastTheme];
@@ -79,6 +77,19 @@
     return app;
 }
 
+- (void)configFirstInitStyleSelectID {
+    NSString *styleID = [[NSUserDefaults standardUserDefaults] objectForKey:@"StyleSelectkey"];
+    if (IS_NOT_EMPTY_NSSTRING(styleID)) {
+        return ;
+    }
+    else {
+        //First Init
+        NSString * initStyleID = @"Minimalist";
+        [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
+        [NSUserDefaults.standardUserDefaults synchronize];
+        return initStyleID;
+    }
+}
 - (UIViewController *)getLoginController {
    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
    LoginController *login = [board instantiateViewControllerWithIdentifier:@"LoginController"];

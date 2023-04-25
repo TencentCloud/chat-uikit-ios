@@ -48,9 +48,9 @@
 		93C8365629F7CA06007F2557 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363929F7CA06007F2557 /* ContactsController.m */; };
 		93C8365729F7CA06007F2557 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363C29F7CA06007F2557 /* SettingController.m */; };
 		93C8365829F7CA06007F2557 /* ConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363E29F7CA06007F2557 /* ConversationController.m */; };
-		BCF739AA621A7AF4B48F1525 /* libPods-TUIKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BCBC0335EEFE4307055DBB /* libPods-TUIKitDemo.a */; };
 		CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0BDFA8221D53C60083E1B0 /* Bugly.framework */; };
 		CE48482027019FC800F53B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48481F27019FC800F53B16 /* main.m */; };
+		DB74980ADA8B5D39DD7A27F5 /* Pods_TUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6D5FC6689E7035C0A2D6CE /* Pods_TUIKitDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */,
-				C439FE45AA54FF92EE50FF64 /* Pods_TUIKitDemo.framework in Frameworks */,
+				DB74980ADA8B5D39DD7A27F5 /* Pods_TUIKitDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,7 +514,6 @@
 				CF014480216E1A4900C12E35 /* Resources */,
 				48DF2C4F253FE1B800BC522F /* Embed App Extensions */,
 				A15B15EAD25E5927BA6CD470 /* [CP] Embed Pods Frameworks */,
-				E2087E99F4A5E0DC06409893 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -663,21 +662,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd TUIKitDemo/Util\nsed -i \"\" \"s/public_SDKAPPID =.*/public_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/singapore_SDKAPPID =.*/singapore_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/korea_SDKAPPID.*/korea_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/germany_SDKAPPID.*/germany_SDKAPPID = 0;/\" GenerateTestUserSig.h\nsed -i \"\" \"s/public_SECRETKEY.*/public_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/singapore_SECRETKEY.*/singapore_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/korea_SECRETKEY.*/korea_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\nsed -i \"\" \"s/germany_SECRETKEY.*/germany_SECRETKEY = @\\\"\\\";/\" GenerateTestUserSig.h\n\nsed -i \"\" \"s/kHttpServerAddr.*/kHttpServerAddr @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsImageAddr.*/kHttpSmsImageAddr @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsLoginAddr_public.*/kHttpSmsLoginAddr_public @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/kHttpSmsLoginAddr_singapore.*/kHttpSmsLoginAddr_singapore @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/DEFAULT_ELK_HOST.*/DEFAULT_ELK_HOST @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/LicenceURL.*/LicenceURL @\\\"\\\"/\" TCConstants.h\nsed -i \"\" \"s/LicenceKey.*/LicenceKey @\\\"\\\"/\" TCConstants.h\n";
-		};
-		E2087E99F4A5E0DC06409893 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TUIKitDemo/Pods-TUIKitDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 

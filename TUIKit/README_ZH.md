@@ -18,9 +18,9 @@
 
 [最新 TUIOfflinePush 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/7.2.4123/ios/TUIOfflinePush.zip)
 
-
 [最新 TUICore 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/7.2.4123/ios/TUICore.zip)
 
+[最新 TUITranslation 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/7.2.4123/ios/TUITranslation.zip)
 
 ## 交流&反馈
 

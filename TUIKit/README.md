@@ -18,4 +18,6 @@ English | [简体中文](./README_ZH.md)
 
 [Latest TUICore download](https://im.sdk.cloud.tencent.cn/download/tuikit/7.2.4123/ios/TUICore.zip)
 
+[Latest TUITranslation download](https://im.sdk.cloud.tencent.cn/download/tuikit/7.2.4123/ios/TUITranslation.zip)
+
 If you encounter a TUIKit bug, please submit a pull request. After successful merging, we will update the TUIKit library for pod integration in time.

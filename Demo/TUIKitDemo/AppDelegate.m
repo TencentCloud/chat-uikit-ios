@@ -493,6 +493,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
         [self setupConfig_Classic];
     }
     else {
+        [TUIThemeSelectController applyTheme:@"light"];
         [self setupConfig_Minimalist];
     }
 }

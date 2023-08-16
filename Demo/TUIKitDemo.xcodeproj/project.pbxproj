@@ -24,6 +24,7 @@
 		935F7C8A293615770033D099 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C45293615770033D099 /* AppDelegate.m */; };
 		935F7C92293615770033D099 /* TCLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C50293615770033D099 /* TCLoginModel.m */; };
 		935F7C93293615770033D099 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F7C51293615770033D099 /* LoginController.m */; };
+		938345FD2A8A205B0072977E /* TUIStartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938345FB2A8A205A0072977E /* TUIStartPageViewController.m */; };
 		93C8364029F7CA06007F2557 /* ContactsController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8360B29F7CA06007F2557 /* ContactsController_Minimalist.m */; };
 		93C8364129F7CA06007F2557 /* SettingController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8360E29F7CA06007F2557 /* SettingController_Minimalist.m */; };
 		93C8364229F7CA06007F2557 /* ConversationController_Minimalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8361229F7CA06007F2557 /* ConversationController_Minimalist.m */; };
@@ -124,6 +125,8 @@
 		935F7C54293615770033D099 /* TCLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCLoginModel.h; sourceTree = "<group>"; };
 		935F7C56293615770033D099 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		935F7C66293615770033D099 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		938345FB2A8A205A0072977E /* TUIStartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUIStartPageViewController.m; sourceTree = "<group>"; };
+		938345FC2A8A205A0072977E /* TUIStartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUIStartPageViewController.h; sourceTree = "<group>"; };
 		93C8360B29F7CA06007F2557 /* ContactsController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsController_Minimalist.m; sourceTree = "<group>"; };
 		93C8360C29F7CA06007F2557 /* ContactsController_Minimalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsController_Minimalist.h; sourceTree = "<group>"; };
 		93C8360E29F7CA06007F2557 /* SettingController_Minimalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController_Minimalist.m; sourceTree = "<group>"; };
@@ -229,7 +232,6 @@
 				93C8360829F7CA06007F2557 /* TIMAppKit */,
 				935F7C37293615770033D099 /* Private */,
 				935F7C02293615760033D099 /* TUIKitDemo.entitlements */,
-				935F7C2A293615760033D099 /* Resources */,
 				935F7C30293615770033D099 /* PushSound */,
 				935F7C4D293615770033D099 /* Login */,
 				935F7C34293615770033D099 /* Main.storyboard */,
@@ -248,13 +250,6 @@
 				935F7C66293615770033D099 /* Info.plist */,
 			);
 			path = TUIKitDemo;
-			sourceTree = "<group>";
-		};
-		935F7C2A293615760033D099 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		935F7C30293615770033D099 /* PushSound */ = {
@@ -279,6 +274,8 @@
 		935F7C4D293615770033D099 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				938345FC2A8A205A0072977E /* TUIStartPageViewController.h */,
+				938345FB2A8A205A0072977E /* TUIStartPageViewController.m */,
 				935F7C50293615770033D099 /* TCLoginModel.m */,
 				935F7C51293615770033D099 /* LoginController.m */,
 				935F7C54293615770033D099 /* TCLoginModel.h */,
@@ -707,6 +704,7 @@
 				935F7C92293615770033D099 /* TCLoginModel.m in Sources */,
 				935F7C93293615770033D099 /* LoginController.m in Sources */,
 				93C8365129F7CA06007F2557 /* TUIAboutSettingObj.m in Sources */,
+				938345FD2A8A205B0072977E /* TUIStartPageViewController.m in Sources */,
 				93C8364029F7CA06007F2557 /* ContactsController_Minimalist.m in Sources */,
 				93C8364F29F7CA06007F2557 /* TUIIMIntroductionViewController.m in Sources */,
 				93C8365829F7CA06007F2557 /* ConversationController.m in Sources */,

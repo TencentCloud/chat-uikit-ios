@@ -57,12 +57,13 @@
     // Override point for customization after application launch.
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
-    //init
-    [self configFirstInitStyleSelectID];
-    
+    //init Style
+    NSString * initStyleID = @"Minimalist";
+    [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
+    [NSUserDefaults.standardUserDefaults synchronize];
+
     TUIRegisterThemeResourcePath(TUIDemoThemePath, TUIThemeModuleDemo);
     [TUIThemeSelectController applyLastTheme];
-    
     [self setupListener];
     [self setupGlobalUI];
     [self setupConfig];
@@ -143,15 +144,6 @@
     return app;
 }
 
-- (void)configFirstInitStyleSelectID {
-    NSString *styleID = [[NSUserDefaults standardUserDefaults] objectForKey:@"StyleSelectkey"];
-    if (!IS_NOT_EMPTY_NSSTRING(styleID)) {
-        //First Init
-        NSString * initStyleID = @"Minimalist";
-        [[NSUserDefaults standardUserDefaults] setValue:initStyleID forKey:@"StyleSelectkey"];
-        [NSUserDefaults.standardUserDefaults synchronize];
-    }
-}
 - (UIViewController *)getLoginController {
    UIStoryboard *board = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
    LoginController *login = [board instantiateViewControllerWithIdentifier:@"LoginController"];
@@ -198,7 +190,6 @@ void uncaughtExceptionHandler(NSException*exception) {
 }
 
 - (void)tryAutoLogin {
-    self.window.rootViewController = [self getLoginController];
     [[TCLoginModel sharedInstance] getAccessAddressWithSucceedBlock:^(NSDictionary *data) {
         [self autoLoginIfNeeded];
     } failBlock:^(NSInteger errorCode, NSString *errorMsg) {
@@ -206,6 +197,7 @@ void uncaughtExceptionHandler(NSException*exception) {
             [[TCLoginModel sharedInstance] getAccessAddressWithSucceedBlock:^(NSDictionary *data) {
                 [self autoLoginIfNeeded];
             } failBlock:^(NSInteger errorCode, NSString *errorMsg) {
+                self.window.rootViewController = [self getLoginController];
                 [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
             }];
         });

@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name         = 'TUITranslationPlugin'
+  spec.name         = 'TUIVoiceToTextPlugin'
   spec.version      = '7.5.4852'
   spec.platform     = :ios 
   spec.ios.deployment_target = '9.0'
@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://cloud.tencent.com/document/product/269/3794'
   spec.documentation_url = 'https://cloud.tencent.com/document/product/269/9147'
   spec.authors      = 'tencent video cloud'
-  spec.summary      = 'TUITranslationPlugin'
+  spec.summary      = 'TUIVoiceToTextPlugin'
   spec.dependency 'TUICore'
   spec.dependency 'TIMCommon'
   spec.dependency 'TUIChat'

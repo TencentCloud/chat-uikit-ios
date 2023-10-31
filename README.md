@@ -17,8 +17,10 @@ TUIKit is a UI component library based on Tencent Cloud IM SDK. It provides univ
 
 <img src="https://qcloudimg.tencent-cloud.cn/raw/9c893f1a9c6368c82d44586907d5293d.png" style="zoom:50%;"/>
 
+Explore more docs about [Tencent Cloud Chat](https://www.tencentcloud.com/document/product/1047?lang=en&pg=).
+
 ## Run through Demo
-This document introduces how to quickly run through the IM demo on the iOS platform.
+This document introduces how to quickly run through the Chat demo on the iOS platform.
 For the other platforms, please refer to document：
 
 [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
@@ -35,7 +37,7 @@ For the other platforms, please refer to document：
 
 
 ### Step 1. Create an App
-1. Log in to the [IM console](https://intl.cloud.tencent.com/login).
+1. Log in to the [Chat Console](https://console.cloud.tencent.com/avc).
 > If you already have an app, record its SDKAppID and [configure the app](#step2).
 2. On the **Application List** page, click **Create Application**.
 3. In the **Create Application** dialog box, enter the app information and click **Confirm**.
@@ -49,7 +51,7 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 ### Step 3: Download and Configure the Demo Source Code
 
-1. Clone the IM demo project from [GitHub](https://github.com/TencentCloud/chat-uikit-ios).
+1. Clone the Chat demo project from [GitHub](https://github.com/TencentCloud/chat-uikit-ios).
 2. Open the project in the terminal directory and find the `GenerateTestUserSig` file.
 <table>
 <tr>
@@ -76,7 +78,7 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 
 >! In this document, the method to obtain UserSig is to configure a SECRETKEY in the client code. In this method, the SECRETKEY is vulnerable to decompilation and reverse engineering. Once your SECRETKEY is leaked, attackers can steal your Tencent Cloud traffic. Therefore, **this method is only suitable for locally running a demo project and feature debugging**.
->The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your app can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://cloud.tencent.com/document/product/269/32688#GeneratingdynamicUserSig).
+>The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your app can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://www.tencentcloud.com/document/product/1047/34385?lang=en&pg=).
 
 ### Step 4: Compile and Run the Demo (All Features)
 1. Run the following command on the terminal to check the pod version:

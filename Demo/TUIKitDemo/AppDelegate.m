@@ -752,6 +752,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
     TUINavigationController *msgNav = [[TUINavigationController alloc] initWithRootViewController:convVC];
     msgItem.controller = msgNav;
     msgNav.navigationItemBackArrowImage = backimg;
+    msgNav.navigationBackColor = [UIColor whiteColor];
     msgItem.controller.view.backgroundColor = [UIColor d_colorWithColorLight:[UIColor whiteColor] dark:TController_Background_Color_Dark];
     msgItem.badgeView = [[TUIBadgeView alloc] init];
     msgItem.badgeView.clearCallback = ^{
@@ -773,6 +774,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
     contactItem.normalImage = TUIDynamicImage(@"", TUIThemeModuleDemo_Minimalist, [UIImage imageNamed:TUIDemoImagePath_Minimalist(@"contact_normal")]);
     TUINavigationController *contactNav = [[TUINavigationController alloc] initWithRootViewController:[[ContactsController_Minimalist alloc] init]];
     contactNav.navigationItemBackArrowImage = backimg;
+    contactNav.navigationBackColor = [UIColor whiteColor];
     contactItem.controller = contactNav;
     contactItem.controller.view.backgroundColor = [UIColor d_colorWithColorLight:[UIColor whiteColor] dark:TController_Background_Color_Dark];
     contactItem.badgeView = [[TUIBadgeView alloc] init];
@@ -798,6 +800,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
     
     TUINavigationController *setNav = [[TUINavigationController alloc] initWithRootViewController:setVC];
     setNav.navigationItemBackArrowImage = backimg;
+    setNav.navigationBackColor = [UIColor whiteColor];
     setItem.controller = setNav;
     setItem.controller.view.backgroundColor = [UIColor d_colorWithColorLight:[UIColor whiteColor] dark:TController_Background_Color_Dark];
     [items addObject:setItem];
@@ -822,7 +825,10 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
         callsItem.identity = @"callsItem";
         callsItem.selectedImage = selected;
         callsItem.normalImage = normal;
-        callsItem.controller = [[TUINavigationController alloc] initWithRootViewController:callsVc];
+        TUINavigationController *callNav = [[TUINavigationController alloc] initWithRootViewController:callsVc];
+        callNav.navigationBackColor = [UIColor whiteColor];
+        callsItem.controller = callNav;
+        
         return callsItem;
     }
     return nil;

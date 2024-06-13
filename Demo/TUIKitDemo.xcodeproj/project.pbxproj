@@ -49,7 +49,6 @@
 		93C8365629F7CA06007F2557 /* ContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363929F7CA06007F2557 /* ContactsController.m */; };
 		93C8365729F7CA06007F2557 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363C29F7CA06007F2557 /* SettingController.m */; };
 		93C8365829F7CA06007F2557 /* ConversationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C8363E29F7CA06007F2557 /* ConversationController.m */; };
-		CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0BDFA8221D53C60083E1B0 /* Bugly.framework */; };
 		CE48482027019FC800F53B16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE48481F27019FC800F53B16 /* main.m */; };
 		DB74980ADA8B5D39DD7A27F5 /* Pods_TUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6D5FC6689E7035C0A2D6CE /* Pods_TUIKitDemo.framework */; };
 /* End PBXBuildFile section */
@@ -177,7 +176,6 @@
 		93C8363E29F7CA06007F2557 /* ConversationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationController.m; sourceTree = "<group>"; };
 		93C8363F29F7CA06007F2557 /* ConversationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationController.h; sourceTree = "<group>"; };
 		CB6D5FC6689E7035C0A2D6CE /* Pods_TUIKitDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TUIKitDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE0BDFA8221D53C60083E1B0 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		CE2D5CCC248E1B4E000E53E7 /* TUIKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TUIKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE48481D27019FC800F53B16 /* publishToGit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = publishToGit; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE48481F27019FC800F53B16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0BDFA9221D53C60083E1B0 /* Bugly.framework in Frameworks */,
 				DB74980ADA8B5D39DD7A27F5 /* Pods_TUIKitDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				480C761722DCA3C3007495EC /* ImSDK.framework */,
-				CE0BDFA8221D53C60083E1B0 /* Bugly.framework */,
 				CB6D5FC6689E7035C0A2D6CE /* Pods_TUIKitDemo.framework */,
 			);
 			name = Frameworks;

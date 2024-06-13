@@ -44,12 +44,16 @@
 #import <TIMPush/TIMPush.h>
 #import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate () <V2TIMConversationListener, TUILoginListener, TUIThemeSelectControllerDelegate, TUILanguageSelectControllerDelegate,V2TIMAPNSListener, TIMPushDelegate>
+@interface AppDelegate () <V2TIMConversationListener, TUILoginListener, TUIThemeSelectControllerDelegate, TUILanguageSelectControllerDelegate,V2TIMAPNSListener, TIMPushDelegate, V2TIMSDKListener>
 
 @property (nonatomic, strong) TUIContactViewDataProvider *contactDataProvider;
 @property (nonatomic, strong) TUILoginConfig *loginConfig;
 @property (nonatomic, weak) TUITabBarItem *callsRecordItem;
 
+@property (nonatomic, strong) UITabBarController *preloadMainVC;
+@property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSString *userSig;
+@property (nonatomic, assign) int lastLoginResultCode;
 @end
 
 @implementation AppDelegate
@@ -57,6 +61,7 @@
 #pragma mark - Life cycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     app = self;
+    self.lastLoginResultCode = 0;
 
     // Override point for customization after application launch.
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
@@ -69,6 +74,7 @@
     [self setupListener];
     [self setupGlobalUI];
     [self setupConfig];
+    [self tryPreloadMainVC];
     [self tryAutoLogin];
     
     return YES;
@@ -162,16 +168,50 @@
    return nav;
 }
 
-- (void)loginSDK:(NSString *)userID userSig:(NSString *)sig succ:(TSucc)succ fail:(TFail)fail {
-    
-    [TUILogin login:SDKAPPID userID:userID userSig:sig config:self.loginConfig succ:^{
+- (void)applyPrivateBasicInfo {
+    // Subclass override
+}
+
+- (void)tryPreloadMainVC {
+    [[TCLoginModel sharedInstance] loadIsDirectlyLogin];
+    [[TCLoginModel sharedInstance] loadLastLoginInfo];
+    self.userID = [TCLoginModel sharedInstance].userID;
+    self.userSig = [TCLoginModel sharedInstance].userSig;
+    if (!self.userID || !self.userSig) {
+        self.window.rootViewController = [self getLoginController];
+        [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
+        return;
+    }
+    [self applyPrivateBasicInfo];
+
+    self.preloadMainVC = [self getMainController];
+    [TUILogin initWithSdkAppID:SDKAPPID];
+    @weakify(self)
+    [[V2TIMManager sharedInstance] callExperimentalAPI:@"initLocalStorage" param:self.userID succ:^(NSObject *result) {
+        @strongify(self)
+        self.window.rootViewController = self.preloadMainVC;
         [self redpoint_setupTotalUnreadCount];
-        self.window.rootViewController = [self getMainController];
+    } fail:^(int code, NSString *desc) {
+        NSLog(@"%@", [NSString stringWithFormat:@"preloadMainController failed, code:%d desc:%@", code, desc]);
+    }];
+}
+
+- (void)loginSDK:(NSString *)userID userSig:(NSString *)sig succ:(TSucc)succ fail:(TFail)fail {
+    self.userID = userID;
+    self.userSig = sig;
+    [TUILogin login:SDKAPPID userID:self.userID userSig:self.userSig config:self.loginConfig succ:^{
+        if (self.preloadMainVC && [self.window.rootViewController isEqual:self.preloadMainVC]) {
+            // main vc has load
+        } else {
+            self.window.rootViewController = [self getMainController];
+        }
+        [self redpoint_setupTotalUnreadCount];
         [TUITool makeToast:NSLocalizedString(@"AppLoginSucc", nil) duration:1];
         if (succ) {
             succ();
         }
     } fail:^(int code, NSString *msg) {
+        self.lastLoginResultCode = code;
         self.window.rootViewController = [self getLoginController];
         [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
         if (fail) {
@@ -183,6 +223,7 @@
 #pragma mark - Private
 - (void)setupListener {
     [TUILogin addLoginListener:self];
+    [[V2TIMManager sharedInstance] addIMSDKListener:self];
     [[V2TIMManager sharedInstance] addConversationListener:self];
     [[V2TIMManager sharedInstance] setAPNSListener:self];
     
@@ -201,37 +242,7 @@ void uncaughtExceptionHandler(NSException*exception) {
 }
 
 - (void)tryAutoLogin {
-    [[TCLoginModel sharedInstance] getAccessAddressWithSucceedBlock:^(NSDictionary *data) {
-        [self autoLoginIfNeeded];
-    } failBlock:^(NSInteger errorCode, NSString *errorMsg) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [[TCLoginModel sharedInstance] getAccessAddressWithSucceedBlock:^(NSDictionary *data) {
-                [self autoLoginIfNeeded];
-            } failBlock:^(NSInteger errorCode, NSString *errorMsg) {
-                self.window.rootViewController = [self getLoginController];
-                [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
-            }];
-        });
-    }];
-}
-
-- (void)autoLoginIfNeeded {
-    @weakify(self)
-    [[TCLoginModel sharedInstance] autoLoginWithSucceedBlock:^(NSDictionary *data) {
-        @strongify(self)
-        NSString *userSig = data[@"sdkUserSig"];
-        NSString *userID = data[@"userId"];
-        if (userID.length != 0 && userSig.length != 0) {
-            [self loginSDK:userID userSig:userSig succ:nil fail:nil];
-        } else {
-            self.window.rootViewController = [self getLoginController];
-            [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
-        }
-    } failBlock:^(NSInteger errorCode, NSString *errorMsg) {
-        @strongify(self)
-        self.window.rootViewController = [self getLoginController];
-        [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
-    }];
+    [self loginSDK:[TCLoginModel sharedInstance].userID userSig:[TCLoginModel sharedInstance].userSig succ:nil fail:nil];
 }
 
 - (void)onLogoutSucc {
@@ -258,12 +269,20 @@ void uncaughtExceptionHandler(NSException*exception) {
 - (void)setupChatSecurityWarningView {
     NSString *tips = NSLocalizedString(@"ChatSecurityWarning", nil);
     NSString *buttonTitle = NSLocalizedString(@"ChatSecurityWarningReport", nil);
-    TUIWarningView *tipsView = [[TUIWarningView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 0)
+    NSString *gotButtonTitle = NSLocalizedString(@"ChatSecurityWarningGot", nil);
+
+    __block TUIWarningView *tipsView = [[TUIWarningView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 0)
                                                                 tips:tips
                                                          buttonTitle:buttonTitle
                                                         buttonAction:^{
         NSURL *url = [NSURL URLWithString:@"https://cloud.tencent.com/act/event/report-platform"];
         [TUITool openLinkWithURL:url];
+    }
+                                                      gotButtonTitle:gotButtonTitle gotButtonAction:^{
+        tipsView.frame = CGRectZero;;
+        [tipsView removeFromSuperview];
+        [[NSNotificationCenter defaultCenter] postNotificationName:TUICore_TUIChatExtension_ChatViewTopArea_ChangedNotification object:nil];
+    
     }];
     [TUIBaseChatViewController setCustomTopView:tipsView];
 }
@@ -284,24 +303,34 @@ void uncaughtExceptionHandler(NSException*exception) {
     }
     return _loginConfig;
 }
+
 #pragma mark - V2TIMConversationListener
 - (void)onTotalUnreadMessageCountChanged:(UInt64) totalUnreadCount {
     NSLog(@"%s, totalUnreadCount:%llu", __func__, totalUnreadCount);
 }
 
-#pragma mark - TUILoginListener
-- (void)onConnecting {
-    
-}
-
+#pragma mark V2TIMSDKListener
 - (void)onConnectSuccess {
-    
+    BOOL lastLoginIsNetworkError = (self.lastLoginResultCode >= 9501 && self.lastLoginResultCode <= 9525);
+    if (V2TIM_STATUS_LOGOUT == [[V2TIMManager sharedInstance] getLoginStatus]
+        && self.userID.length > 0 &&  self.userSig.length > 0  && lastLoginIsNetworkError) {
+        // The last time login failed due to network reasons, try to login again.
+        self.lastLoginResultCode = 0;
+        [TUILogin login:SDKAPPID userID:self.userID userSig:self.userSig config:self.loginConfig succ:^{
+            [self redpoint_setupTotalUnreadCount];
+            [TUITool makeToast:NSLocalizedString(@"AppLoginSucc", nil) duration:1];
+        } fail:^(int code, NSString * _Nullable msg) {
+            BOOL currentLoginIsNetworkError = (code >= 9501 && code <= 9525);
+            if (!currentLoginIsNetworkError) {
+                self.window.rootViewController = [self getLoginController];
+                [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
+            }
+            self.lastLoginResultCode = code;
+        }];
+    }
 }
 
-- (void)onConnectFailed:(int)code err:(NSString *)err {
-    
-}
-
+#pragma mark - TUILoginListener
 - (void)onUserSigExpired {
     [self onUserStatus:TUser_Status_SigExpired];
 }
@@ -358,14 +387,7 @@ void uncaughtExceptionHandler(NSException*exception) {
     } confirmAction:^(UIAlertAction *action, NSString *content) {
         NSString *userID = [TCLoginModel sharedInstance].userID;
         NSString *userSig = [TCLoginModel sharedInstance].userSig;
-        [self loginSDK:userID userSig:userSig succ:^{
-            NSLog(@"relogin sdk succeed");
-            self.window.rootViewController = [self getMainController];
-        } fail:^(int code, NSString *msg) {
-            NSLog(@"relogin sdk failed, code: %ld, msg: %@", (long)code, msg);
-            self.window.rootViewController = [self getLoginController];
-            [[NSNotificationCenter defaultCenter] postNotificationName: @"TUILoginShowPrivacyPopViewNotfication" object:nil];
-        }];
+        [self loginSDK:userID userSig:userSig succ:nil fail:nil];
     }];
 }
 
@@ -617,6 +639,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
     setItem.selectedImage = TUIDemoDynamicImage(@"tab_me_selected_img", [UIImage imageNamed:@"myself_selected"]);
     setItem.normalImage = TUIDemoDynamicImage(@"tab_me_normal_img", [UIImage imageNamed:@"myself_normal"]);
     SettingController *setVC = [[SettingController alloc] init];
+    setVC.lastLoginUser = self.userID;
     setVC.confirmLogout = ^{
         [TUILogin logout:^{
             [[TCLoginModel sharedInstance] clearLoginedInfo];
@@ -776,6 +799,7 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
     setItem.selectedImage = TUIDynamicImage(@"", TUIThemeModuleDemo_Minimalist, [UIImage imageNamed:TUIDemoImagePath_Minimalist(@"setting_selected")]);
     setItem.normalImage = TUIDynamicImage(@"", TUIThemeModuleDemo_Minimalist, [UIImage imageNamed:TUIDemoImagePath_Minimalist(@"setting_normal")]);
     SettingController_Minimalist *setVC = [[SettingController_Minimalist alloc] init];
+    setVC.lastLoginUser = self.userID;
     setVC.confirmLogout = ^{
         [TUILogin logout:^{
             [[TCLoginModel sharedInstance] clearLoginedInfo];
@@ -826,6 +850,11 @@ typedef void (^confirmHandler)(UIAlertAction *action, NSString *content);
 #pragma mark - TIMPush
 // TIMPush 
 - (int)offlinePushCertificateID {
+    
+    NSInteger kAPNSBusiIdByType =  [NSUserDefaults.standardUserDefaults integerForKey:@"kAPNSBusiIdByType"];
+    if (kAPNSBusiIdByType > 0) {
+        return (int)kAPNSBusiIdByType;
+    }
     return kAPNSBusiId;
 }
 

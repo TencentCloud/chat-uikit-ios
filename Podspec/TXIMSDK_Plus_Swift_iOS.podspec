@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'TXIMSDK_Plus_Swift_iOS'
-  spec.version      = '7.9.5666'
+  spec.version      = '8.0.5895'
   spec.platform     = :ios 
   spec.ios.deployment_target = '8.0'
   spec.license      = { :type => 'Proprietary',
@@ -16,11 +16,14 @@ Pod::Spec.new do |spec|
   
   spec.requires_arc = true
 
-  spec.source = { :http => 'https://im.sdk.cloud.tencent.cn/download/plus/7.9.5666/ImSDK_Plus_Swift_7.9.5666.framework.zip'}
+  spec.source = { :http => 'https://im.sdk.cloud.tencent.cn/download/plus/8.0.5895/ImSDK_Plus_Swift_8.0.5895.framework.zip'}
   spec.preserve_paths = '**/ImSDK_Plus_Swift.framework'
   spec.source_files = '**/ImSDK_Plus_Swift.framework/Headers/*.h'
   spec.public_header_files = '**/ImSDK_Plus_Swift.framework/Headers/*.h'
   spec.vendored_frameworks = '**/ImSDK_Plus_Swift.framework'
+  spec.resource_bundle = {
+    "#{spec.module_name}_Privacy" => '**/ImSDK_Plus_Swift.framework/PrivacyInfo.xcprivacy'
+  }
   spec.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/TXIMSDK_Plus_Swift_iOS/ImSDK_Plus_Swift.framework/Headers/'}
   spec.pod_target_xcconfig = {
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'

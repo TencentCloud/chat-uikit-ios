@@ -41,7 +41,7 @@
 #import "SettingController_Minimalist.h"
 //Minimalist
 
-#import <TIMPush/TIMPush.h>
+#import <TIMPush/TIMPushManager.h>
 #import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate () <V2TIMConversationListener, TUILoginListener, TUIThemeSelectControllerDelegate, TUILanguageSelectControllerDelegate,V2TIMAPNSListener, TIMPushDelegate, V2TIMSDKListener>
@@ -53,7 +53,6 @@
 @property (nonatomic, strong) UITabBarController *preloadMainVC;
 @property (nonatomic, strong) NSString *userID;
 @property (nonatomic, strong) NSString *userSig;
-@property (nonatomic, assign) int lastLoginResultCode;
 @end
 
 @implementation AppDelegate
@@ -185,14 +184,16 @@
     [self applyPrivateBasicInfo];
 
     self.preloadMainVC = [self getMainController];
-    [TUILogin initWithSdkAppID:SDKAPPID];
+    
+    TUILoginConfig *config = [[TUILoginConfig alloc] init];
+    config.initLocalStorageOnly = YES;
     @weakify(self)
-    [[V2TIMManager sharedInstance] callExperimentalAPI:@"initLocalStorage" param:self.userID succ:^(NSObject *result) {
-        @strongify(self)
-        self.window.rootViewController = self.preloadMainVC;
-        [self redpoint_setupTotalUnreadCount];
-    } fail:^(int code, NSString *desc) {
-        NSLog(@"%@", [NSString stringWithFormat:@"preloadMainController failed, code:%d desc:%@", code, desc]);
+    [TUILogin login:SDKAPPID userID:self.userID userSig:self.userSig config:config succ:^{
+      @strongify(self)
+      self.window.rootViewController = self.preloadMainVC;
+      [self redpoint_setupTotalUnreadCount];
+    } fail:^(int code, NSString * _Nullable msg) {
+      NSLog(@"%@", [NSString stringWithFormat:@"preloadMainController failed, code:%d desc:%@", code, msg]);
     }];
 }
 

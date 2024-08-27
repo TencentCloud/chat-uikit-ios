@@ -3,7 +3,7 @@
 //  TCLVBIMDemo
 //
 //  Created by realingzhou on 16/8/22.
-//  Copyright © 2016年 tencent. All rights reserved.
+//  Copyright © 2016 tencent. All rights reserved.
 //
 
 #ifndef TCConstants_h
@@ -66,11 +66,11 @@
 #define kError_HttpError                               -10003
 
 
-#define kError_GroupNotExist                            10010  //该群已解散
-#define kError_HasBeenGroupMember                       10013  //已经是群成员
+#define kError_GroupNotExist                            10010
+#define kError_HasBeenGroupMember                       10013
 
 
-#define  kErrorMsgNetDisconnected  @"网络异常，请检查网络"
+#define  kErrorMsgNetDisconnected
 
 
 #define kVersion  4

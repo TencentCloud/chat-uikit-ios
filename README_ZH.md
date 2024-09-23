@@ -16,7 +16,7 @@
 
 <img src="https://qcloudimg.tencent-cloud.cn/raw/9c893f1a9c6368c82d44586907d5293d.png" style="zoom:50%;"/>
 
-更多信息可查阅 [Tencent Cloud Chat](https://www.tencentcloud.com/document/product/1047).
+更多信息可查阅 [Tencent Cloud Chat](https://trtc.io/document/50061?platform=web&product=chat).
 
 ## 跑通 Demo
 本文介绍如何快速跑通 iOS 平台即时通信 IM 的体验 Demo。
@@ -34,12 +34,12 @@
 
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
 
->为尊重表情设计版权，IM Demo/TUIKit 工程中不包含大表情元素切图，正式上线商用前请您替换为自己设计或拥有版权的其他表情包。下图所示默认的小黄脸表情包版权归腾讯云所有，可有偿授权使用，如需获得授权可 [提交工单](https://console.cloud.tencent.com/workorder/category) 联系我们。
+>为尊重表情设计版权，IM Demo/TUIKit 工程中不包含大表情元素切图，正式上线商用前请您替换为自己设计或拥有版权的其他表情包。下图所示默认的小黄脸表情包版权归腾讯云所有，可有偿授权使用，如需获得授权可 [提交工单](https://console.trtc.io/) 联系我们。
 >
 ><img src="https://qcloudimg.tencent-cloud.cn/image/document/6438e8feb7bba909511e0d798dfaf91d.png" width="300px" />
 >
 ### 步骤1：创建应用
-1. 登录即时通信 IM [控制台](https://console.cloud.tencent.com/avc)。
+1. 登录即时通信 IM [控制台](https://console.trtc.io/)。
 > 如果您已有应用，请记录其 SDKAppID 并 [配置应用](#step2)。
 2. 在【应用列表】页，单击【创建应用接入】。
 3. 在【创建新应用】对话框中，填写新建应用的信息，单击【确认】。
@@ -82,7 +82,7 @@
 
 
 > !本文提到的获取 UserSig 的方案是在客户端代码中配置 SECRETKEY，该方法中 SECRETKEY 很容易被反编译逆向破解，一旦您的密钥泄露，攻击者就可以盗用您的腾讯云流量，因此**该方法仅适合本地跑通 Demo 和功能调试**。
->正确的 UserSig 签发方式是将 UserSig 的计算代码集成到您的服务端，并提供面向 App 的接口，在需要 UserSig 时由您的 App 向业务服务器发起请求获取动态 UserSig。更多详情请参见 [服务端生成 UserSig](https://www.tencentcloud.com/zh/document/product/1047/34385?lang=zh&pg=)。
+>正确的 UserSig 签发方式是将 UserSig 的计算代码集成到您的服务端，并提供面向 App 的接口，在需要 UserSig 时由您的 App 向业务服务器发起请求获取动态 UserSig。更多详情请参见 [服务端生成 UserSig](https://trtc.io/zh/document/34385?product=chat&menulabel=serverapis)。
 
 ### 步骤4：编译运行（全部功能）
 1. 终端执行以下命令，检查 pod 版本。

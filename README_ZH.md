@@ -97,7 +97,7 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 // 更新 pod 本地库
 pod setup
 ```
-2. 终端执行以下命令，加载 ImSDK 库。
+2. 终端执行以下命令，加载 Chat SDK。
 ```
 cd iOS/Demo
 pod install

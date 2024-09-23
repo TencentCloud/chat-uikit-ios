@@ -22,7 +22,7 @@
 本文介绍如何快速跑通 iOS 平台体验 Demo。
 对于其他平台，请参考文档：
 
-- [**chat-uikit-ios**](https://github.com/TencentCloud/chat-uikit-ios)
+- [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
 
 - [**chat-uikit-flutter**](https://github.com/TencentCloud/chat-uikit-flutter)
 

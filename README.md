@@ -17,7 +17,7 @@ TUIKit is a UI component library based on Tencent Cloud IM SDK. It provides univ
 
 <img src="https://qcloudimg.tencent-cloud.cn/raw/9c893f1a9c6368c82d44586907d5293d.png" style="zoom:50%;"/>
 
-Explore more docs about [Tencent Cloud Chat](https://www.tencentcloud.com/document/product/1047?lang=en&pg=).
+Explore more docs about [Tencent Cloud Chat](https://trtc.io/document/50061?platform=web&product=chat).
 
 ## Run through Demo
 This document introduces how to quickly run through the Chat demo on the iOS platform.
@@ -34,13 +34,13 @@ For the other platforms, please refer to document：
 [**chat-uikit-uniapp**](https://github.com/TencentCloud/chat-uikit-uniapp)
 
 [**chat-uikit-wechat**](https://github.com/TencentCloud/chat-uikit-wechat)
-> In respect for the copyright of the emoji design, the Chat Demo/TUIKit project does not include the cutouts of large emoji elements. Please replace them with your own designed or copyrighted emoji packs before the official launch for commercial use. The default small yellow face emoji pack is copyrighted by Tencent Cloud and can be authorized for a fee. If you wish to obtain authorization, please [submit a ticket](https://console.tencentcloud.com/workorder/category?level1_id=29&level2_id=40&source=14&data_title=Chat&step=1) to contact us.
+> In respect for the copyright of the emoji design, the Chat Demo/TUIKit project does not include the cutouts of large emoji elements. Please replace them with your own designed or copyrighted emoji packs before the official launch for commercial use. The default small yellow face emoji pack is copyrighted by Tencent Cloud and can be authorized for a fee. If you wish to obtain authorization, please [submit a ticket](https://console.trtc.io/) to contact us.
 >
 > <img src="https://qcloudimg.tencent-cloud.cn/image/document/6438e8feb7bba909511e0d798dfaf91d.png" width="300px" />
 > 
 
 ### Step 1. Create an App
-1. Log in to the [Chat Console](https://console.cloud.tencent.com/avc).
+1. Log in to the [Chat Console](https://console.trtc.io/).
 > If you already have an app, record its SDKAppID and [configure the app](#step2).
 2. On the **Application List** page, click **Create Application**.
 3. In the **Create Application** dialog box, enter the app information and click **Confirm**.
@@ -81,7 +81,7 @@ After the app is created, an app ID (SDKAppID) will be automatically generated, 
 
 
 >! In this document, the method to obtain UserSig is to configure a SECRETKEY in the client code. In this method, the SECRETKEY is vulnerable to decompilation and reverse engineering. Once your SECRETKEY is leaked, attackers can steal your Tencent Cloud traffic. Therefore, **this method is only suitable for locally running a demo project and feature debugging**.
->The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your app can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://www.tencentcloud.com/document/product/1047/34385?lang=en&pg=).
+>The correct `UserSig` distribution method is to integrate the calculation code of `UserSig` into your server and provide an application-oriented API. When `UserSig` is needed, your app can send a request to the business server for a dynamic `UserSig`. For more information, please see [How do I calculate UserSig on the server?](https://trtc.io/document/34385?product=chat&menulabel=serverapis).
 
 ### Step 4: Compile and Run the Demo (All Features)
 1. Run the following command on the terminal to check the pod version:

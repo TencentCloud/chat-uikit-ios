@@ -22,7 +22,7 @@ Explore more docs about [TUIKit Library Overview](https://trtc.io/document/50062
 ## Running Demo
 This document introduces how to quickly run the Chat demo on the iOS platform.
 For the other platforms, please refer to document：
-- [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-andriod)
+- [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)
 
 - [**chat-uikit-flutter**](https://github.com/TencentCloud/chat-uikit-flutter)
 

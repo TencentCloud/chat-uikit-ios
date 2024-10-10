@@ -1,6 +1,6 @@
 English | [简体中文](./README_ZH.md)
 
-# TIM SDK 7.9.5666 (iOS)
+# TIM SDK 8.2.6325 (iOS)
 
 ## Download IM SDK
 
@@ -14,19 +14,25 @@ English | [简体中文](./README_ZH.md)
   <tr >
      <td style="text-align:center">Objective-C Edition</td>
      <td style="text-align:center">Support Objective-C API</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/7.9.5666/ImSDK_Plus_7.9.5666.framework.zip">ImSDK_Plus.framework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.2.6325/ImSDK_Plus_8.2.6325.framework.zip">ImSDK_Plus.framework</a></td>
   </tr>
     
   <tr >
      <td style="text-align:center">XCFramework Edition</td>
      <td style="text-align:center">Support Objective-C API and Mac catalyst</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/7.9.5666/ImSDK_Plus_7.9.5666.xcframework.zip">ImSDK_Plus.xcframework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.2.6325/ImSDK_Plus_8.2.6325.xcframework.zip">ImSDK_Plus.xcframework</a></td>
   </tr>
 	
   <tr >
      <td style="text-align:center">Swift Edition</td>
      <td style="text-align:center">Support Swift API and Mac catalyst</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/7.9.5666/ImSDK_Plus_Swift_7.9.5666.xcframework.zip">ImSDK_Plus_Swift.xcframework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.2.6325/ImSDK_Plus_Swift_8.2.6325.xcframework.zip">ImSDK_Plus_Swift.xcframework</a></td>
+  </tr>
+
+  <tr >
+     <td style="text-align:center">Apple Vision Pro Edition</td>
+     <td style="text-align:center">Support visionOS and provide Swift API</td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.2.6325/ImSDKForVision_Plus_8.2.6325.xcframework.zip">ImSDKForVision_Plus.xcframework</a></td>
   </tr>
 </table>
 
@@ -42,7 +48,7 @@ English | [简体中文](./README_ZH.md)
   <tr >
      <td style="text-align:center">Quic Plugin</td>
      <td style="text-align:center">Providing axp-quic multiplex transmission protocol to enhance network performance</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/7.9.5666/TIMQuicPlugin_7.9.5666.framework.zip">TIMQuicPlugin.framework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.2.6325/TIMQuicPlugin_8.2.6325.framework.zip">TIMQuicPlugin.framework</a></td>
   </tr>
 </table>
 
@@ -58,6 +64,7 @@ target 'App' do
     pod 'TXIMSDK_Plus_iOS'
     # pod 'TXIMSDK_Plus_iOS_XCFramework'
     # pod 'TXIMSDK_Plus_Swift_iOS_XCFramework'
+    # pod 'TXIMSDK_Plus_Swift_Vision_XCFramework'
 
     # If you need to add the Quic plugin, please uncomment the next line.
     # Note:
@@ -71,4 +78,4 @@ If you need to use the Quic feature in the Swift version of the IMSDK, [please c
 
 If you need more detailed integration guidance, please [refer to the complete integration documentation](https://www.tencentcloud.com/document/product/1047/34307).
 
-In addition, we also provide SDKs for the C and C++ API, which you can download from here，[Download C API Edition](https://im.sdk.qcloud.com/download/plus/7.9.5666/cross_platform/ImSDK_iOS_C_7.9.5666.framework.zip), [Download  C++ API Edition](https://im.sdk.qcloud.com/download/plus/7.9.5666/cross_platform/ImSDK_iOS_CPP_7.9.5666.framework.zip).
+In addition, we also provide SDKs for the C and C++ API, which you can download from here，[Download C API Edition](https://im.sdk.qcloud.com/download/plus/8.2.6325/cross_platform/ImSDK_iOS_C_8.2.6325.framework.zip), [Download  C++ API Edition](https://im.sdk.qcloud.com/download/plus/8.2.6325/cross_platform/ImSDK_iOS_CPP_8.2.6325.framework.zip).

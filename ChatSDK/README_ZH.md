@@ -1,12 +1,12 @@
 [English](./README.md) | 简体中文
 
-# TIM SDK 8.3.6498（iOS）
+# Chat SDK 8.3.6498（iOS）
 
-## 下载 IM SDK
+## 下载 Chat SDK
 
 <table >
   <tr>
-    <th width="180px" style="text-align:center">IM SDK 类型</th>
+    <th width="180px" style="text-align:center">Chat SDK 类型</th>
     <th width="510px" style="text-align:center">简介</th>
     <th width="300px" style="text-align:center">下载地址</th>
   </tr>
@@ -36,11 +36,11 @@
   </tr>
 </table>
 
-## 下载 IM SDK 的插件
+## 下载 Chat SDK 的插件
 
 <table >
   <tr>
-    <th width="180px" style="text-align:center">IM SDK 插件类型</th>
+    <th width="180px" style="text-align:center">Chat SDK 插件类型</th>
     <th width="510px" style="text-align:center">简介</th>
     <th width="300px" style="text-align:center">下载地址</th>
   </tr>
@@ -60,7 +60,7 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'App' do
-    # 添加 IM SDK
+    # 添加 Chat SDK
     pod 'TXIMSDK_Plus_iOS'
     # pod 'TXIMSDK_Plus_iOS_XCFramework'
     # pod 'TXIMSDK_Plus_Swift_iOS_XCFramework'
@@ -68,13 +68,13 @@ target 'App' do
 
     # 如果您需要添加 Quic 插件，请取消下一行的注释
     # 注意：
-    # - 这个插件必须搭配 TXIMSDK_Plus_iOS 或 TXIMSDK_Plus_iOS_XCFramework 版本的 IM SDK 使用，并且插件版本号必须和 IM SDK 版本号相同
+    # - 这个插件必须搭配 TXIMSDK_Plus_iOS 或 TXIMSDK_Plus_iOS_XCFramework 版本的 Chat SDK 使用，并且插件版本号必须和 Chat SDK 版本号相同
     # - 对于 TXIMSDK_Plus_Swift_iOS_XCFramework 版本，不需要添加这个插件，如果您需要在这个版本中使用 Quic 功能，请您联系我们
     # pod 'TXIMSDK_Plus_QuicPlugin'
 end
 ```
 
-如果您需要在 Swift 版本的 IMSDK 中使用 Quic 功能，[请您联系我们](https://zhiliao.qq.com/)。
+如果您需要在 Swift 版本的 ChatSDK 中使用 Quic 功能，[请您联系我们](https://zhiliao.qq.com/)。
 
 如果您需要更详细的集成指引，请 [查看完整的集成文档](https://cloud.tencent.com/document/product/269/75284)。
 

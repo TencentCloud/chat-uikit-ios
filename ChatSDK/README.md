@@ -1,12 +1,12 @@
 English | [简体中文](./README_ZH.md)
 
-# TIM SDK 8.3.6498 (iOS)
+# Chat SDK 8.3.6498 (iOS)
 
-## Download IM SDK
+## Download Chat SDK
 
 <table >
   <tr>
-    <th width="240px" style="text-align:center">IM SDK Type</th>
+    <th width="240px" style="text-align:center">Chat SDK Type</th>
     <th width="460px" style="text-align:center">Introduction</th>
     <th width="300px" style="text-align:center">Download Links</th>
   </tr>
@@ -36,11 +36,11 @@ English | [简体中文](./README_ZH.md)
   </tr>
 </table>
 
-## Download Plugin for IM SDK
+## Download Plugin for Chat SDK
 
 <table >
   <tr>
-    <th width="240px" style="text-align:center">IM SDK Plugin Type</th>
+    <th width="240px" style="text-align:center">Chat SDK Plugin Type</th>
     <th width="460px" style="text-align:center">Introduction</th>
     <th width="300px" style="text-align:center">Download Links</th>
   </tr>
@@ -60,7 +60,7 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'App' do
-    # Add the IM SDK
+    # Add the Chat SDK
     pod 'TXIMSDK_Plus_iOS'
     # pod 'TXIMSDK_Plus_iOS_XCFramework'
     # pod 'TXIMSDK_Plus_Swift_iOS_XCFramework'
@@ -68,13 +68,13 @@ target 'App' do
 
     # If you need to add the Quic plugin, please uncomment the next line.
     # Note:
-    # - This plugin must be used with the TXIMSDK_Plus_iOS or TXIMSDK_Plus_iOS_XCFramework edition of the IM SDK, and the plugin version number must match the IM SDK version number.
+    # - This plugin must be used with the TXIMSDK_Plus_iOS or TXIMSDK_Plus_iOS_XCFramework edition of the Chat SDK, and the plugin version number must match the Chat SDK version number.
     # - For the TXIMSDK_Plus_Swift_iOS_XCFramework edition, there is no need to add this plugin. If you need to use the Quic feature in this edition, please contact us.
     # pod 'TXIMSDK_Plus_QuicPlugin'
 end
 ```
 
-If you need to use the Quic feature in the Swift version of the IMSDK, [please contact us](https://www.tencentcloud.com/document/product/1047/41676).
+If you need to use the Quic feature in the Swift version of the ChatSDK, [please contact us](https://www.tencentcloud.com/document/product/1047/41676).
 
 If you need more detailed integration guidance, please [refer to the complete integration documentation](https://www.tencentcloud.com/document/product/1047/34307).
 

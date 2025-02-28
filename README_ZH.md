@@ -20,6 +20,8 @@
 
 ## 跑通 Demo
 本文介绍如何快速跑通 iOS 平台体验 Demo。
+[<img src="https://im.sdk.qcloud.com/tools/resource/GitHubResource/build_ios_chat_app.png" width="800"/>](https://www.youtube.com/watch?v=th3PHoZkRl4)
+
 对于其他平台，请参考文档：
 
 - [**chat-uikit-android**](https://github.com/TencentCloud/chat-uikit-android)

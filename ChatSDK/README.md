@@ -74,8 +74,8 @@ target 'App' do
 end
 ```
 
-If you need to use the Quic feature in the Swift version of the ChatSDK, [please contact us](https://www.tencentcloud.com/document/product/1047/41676).
+If you need to use the Quic feature in the Swift version of the ChatSDK, [please contact us](https://trtc.io/contact).
 
-If you need more detailed integration guidance, please [refer to the complete integration documentation](https://www.tencentcloud.com/document/product/1047/34307).
+If you need more detailed integration guidance, please [refer to the complete integration documentation](https://trtc.io/document/34307).
 
 In addition, we also provide SDKs for the C and C++ API, which you can download from here，[Download C API Edition](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_C_8.3.6498.framework.zip), [Download  C++ API Edition](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_CPP_8.3.6498.framework.zip).

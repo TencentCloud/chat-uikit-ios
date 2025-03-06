@@ -74,8 +74,8 @@ target 'App' do
 end
 ```
 
-如果您需要在 Swift 版本的 ChatSDK 中使用 Quic 功能，[请您联系我们](https://zhiliao.qq.com/)。
+如果您需要在 Swift 版本的 ChatSDK 中使用 Quic 功能，[请您联系我们](https://trtc.io/contact)。
 
-如果您需要更详细的集成指引，请 [查看完整的集成文档](https://cloud.tencent.com/document/product/269/75284)。
+如果您需要更详细的集成指引，请 [查看完整的集成文档](https://trtc.io/zh/document/34307)。
 
 此外，我们还提供了 C 接口和 C++ 接口的 SDK，您可以从这里下载：[下载 C API 版本](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_C_8.3.6498.framework.zip)、[下载 C++ API 版本](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_CPP_8.3.6498.framework.zip)。

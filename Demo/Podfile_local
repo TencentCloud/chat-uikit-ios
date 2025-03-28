@@ -25,7 +25,7 @@ target 'TUIKitDemo' do
   pod 'TUISearch', :path => "../TUIKit/TUISearch"
   
   # Note:TUIKit plugins need to follow the version.
-  pod 'TIMPush', '8.4.6667'  
+  pod 'TIMPush', '8.5.6864'  
 
   # Other Pod
   pod 'TUICallKit'
@@ -37,7 +37,7 @@ end
 target 'pushservice' do
   use_frameworks!
   use_modular_headers!
-  pod 'TIMPush', '8.4.6667'  
+  pod 'TIMPush', '8.5.6864'  
 end
 
 

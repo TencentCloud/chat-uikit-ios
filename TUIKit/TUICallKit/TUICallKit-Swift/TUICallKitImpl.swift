@@ -19,6 +19,8 @@ import TXLiteAVSDK_Professional
 class TUICallKitImpl: TUICallKit {
     static let instance = TUICallKitImpl()
     let selfUserCallStatusObserver = Observer()
+    let callingVibratorFeature = CallingVibratorFeature()
+    let callingBellFeature = CallingBellFeature()
     
     override init() {
         super.init()
@@ -301,7 +303,7 @@ private extension TUICallKitImpl {
                     TUICallState.instance.audioDevice.value = TUIAudioPlaybackDevice.earpiece
                     CallEngineManager.instance.setAudioPlaybackDevice(device: TUIAudioPlaybackDevice.earpiece)
                     WindowManager.instance.showCallWindow(TUICallState.instance.enableIncomingBanner)
-                } else if TUICallState.instance.selfUser.value.callStatus.value == TUICallStatus.accept {
+                } else if TUICallState.instance.selfUser.value.callStatus.value == TUICallStatus.accept && !WindowManager.instance.isFloating {
                     WindowManager.instance.showCallWindow(false)
                 }
             } else {

@@ -240,7 +240,7 @@
 "TUIKitErrorSVRGroupNotFound" = "The group does not exist.";
 "TUIKitErrorSVRGroupJsonParseFailed" = "Failed to parse the JSON packet. Check whether the packet body conforms to the JSON format.";
 "TUIKitErrorSVRGroupInvalidId" = "The identifier that is used to initiated the operation is invalid. Check whether the identifier of the user who initiated the operation is correct.";
-"TUIKitErrorSVRGroupAllreadyMember" = "The invited user is a group member.";
+"TUIKitErrorSVRGroupAllreadyMember" = "Already a group member";
 "TUIKitErrorSVRGroupFullMemberCount" = "The number of group members has reached the limit. Unable to add the user in the request to the group.";
 "TUIKitErrorSVRGroupInvalidGroupId" = "Invalid group ID. Check whether the group ID is correct.";
 "TUIKitErrorSVRGroupRejectFromThirdParty" = "The app backend rejected this operation via a third-party callback.";
@@ -303,7 +303,7 @@
 "TUIKitErrorWifiNeedAuth" = "Verification is required for Wi-Fi connection.";
 "TUIKitErrorUserCanceled" = "Canceled by user";
 "TUIkitErrorRevokeTimeLimitExceed" = "Timed out recalling the message (default is 2 min).";
-"TUIKitErrorLackUGExt" = "Missing UGC extension pack";
+"TUIKitErrorLackUGExt" = "Missing Multimedia extension pack";
 "TUIKitErrorAutoLoginNeedUserSig" = "Local ticket for auto login expired. userSig is required for manual login.";
 "TUIKitErrorQALNoShortConneAvailable" = "No available SSO for short connections.";
 "TUIKitErrorReqContentAttach" = "Message content is filtered due to security reasons.";

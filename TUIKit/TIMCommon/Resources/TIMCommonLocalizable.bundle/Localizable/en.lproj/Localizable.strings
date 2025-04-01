@@ -68,7 +68,7 @@
 "choose_avatar_for_you" = "The App randomly assigns you a system avatar.";
 "SearchGroupPlaceholder" = "User ID";
 "please_fill_in_verification_information" = "Enter verification information";
-"please_fill_in_remarks_group_info" = "Enter remark and list name";
+"please_fill_in_remarks_group_info" = "Enter remark";
 
 "no_set" = "Not set";
 "no_personal_signature" = "No status";
@@ -757,11 +757,11 @@
 "TIMAppMainTitle" = "TencentCloud·IM";
 "TIMAppMainConnectingTitle" = "Connecting…";
 "TIMAppMainDisconnectTitle" = "Disconnected";
-"TIMAppTabBarItemMessageText" = "Message";
+"TIMAppTabBarItemMessageText" = "Messages";
 "TIMAppTabBarItemContactText" = "Contacts";
 "TIMAppTabBarItemMeText"      = "Settings";
-"TIMAppTabBarItemMessageText_mini" = "Chats";
-"TIMAppTabBarItemContactText_mini" = "Contact";
+"TIMAppTabBarItemMessageText_mini" = "Messages";
+"TIMAppTabBarItemContactText_mini" = "Contacts";
 "TIMAppTabBarItemSettingText_mini" = "Settings";
 "TIMAppTabBarItemCallsRecordText_mini" = "Calls";
 "TIMAppChat" = "Chat";
@@ -807,5 +807,6 @@
 "zh-Hans" = "Simple Chinese";
 "en"      = "English";
 "ar"      = "Arabic";
+"zh-Hant" = "Traditional Chinese";
 "TUIChatFaceGroupAllEmojiName" = "All";
 "TUIChatFaceGroupRecentEmojiName" = "Recently";

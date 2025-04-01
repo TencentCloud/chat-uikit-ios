@@ -251,7 +251,7 @@
 "TUIKitErrorSVRGroupNotFound" = "المجموعة غير موجودة.";
 "TUIKitErrorSVRGroupJsonParseFailed" = "فشل تحليل حزمة JSON، يرجى التحقق من تنسيق الحزمة.";
 "TUIKitErrorSVRGroupInvalidId" = "معرف المستخدم الذي يقوم بالعملية غير صالح، يرجى التحقق من صحة معرف المستخدم الذي يقوم بالعملية.";
-"TUIKitErrorSVRGroupAllreadyMember" = "المستخدم الذي تمت دعوته للانضمام إلى المجموعة هو بالفعل عضو في المجموعة.";
+"TUIKitErrorSVRGroupAllreadyMember" = "عضو في المجموعة بالفعل";
 "TUIKitErrorSVRGroupFullMemberCount" = "المجموعة مكتملة العدد، لا يمكن إضافة المستخدمين المحددين في الطلب إلى المجموعة.";
 "TUIKitErrorSVRGroupInvalidGroupId" = "معرف المجموعة غير صالح، يرجى التحقق من صحة معرف المجموعة.";
 "TUIKitErrorSVRGroupRejectFromThirdParty" = "تم رفض العملية من قبل خلفية التطبيق من خلال رد فعل طرف ثالث.";
@@ -314,7 +314,7 @@
 "TUIKitErrorWifiNeedAuth" = "يتطلب wifi المصادقة";
 "TUIKitErrorUserCanceled" = "ألغى المستخدم";
 "TUIkitErrorRevokeTimeLimitExceed" = "تجاوزت إعادة الرسالة الحد الزمني (الافتراضي 2 دقيقة)";
-"TUIKitErrorLackUGExt" = "يفتقر إلى حزمة UGC الموسعة";
+"TUIKitErrorLackUGExt" = "يفتقر إلى حزمة Multimedia الموسعة";
 "TUIKitErrorAutoLoginNeedUserSig" = "تسجيل الدخول التلقائي، انتهت صلاحية التذكرة المحلية، يتطلب تسجيل الدخول اليدوي باستخدام userSig";
 "TUIKitErrorQALNoShortConneAvailable" = "لا يوجد اتصال قصير SSO متاح";
 "TUIKitErrorReqContentAttach" = "ضربة أمنية لمحتوى الرسالة";

@@ -17,6 +17,7 @@
 #import "TUIContactButtonCell_Minimalist.h"
 #import "TUIContactConversationCellData.h"
 #import "TUIFriendRequestViewController_Minimalist.h"
+#import "TUIContactConfig.h"
 
 @interface TUIUserProfileController_Minimalist () <TUIContactProfileCardDelegate_Minimalist>
 @property NSMutableArray<NSArray *> *dataList;
@@ -101,36 +102,36 @@
 
     if (self.actionType == PCA_ADD_FRIEND_MINI) {
         [[V2TIMManager sharedInstance] checkFriend:@[ self.userFullInfo.userID ]
-            checkType:V2TIM_FRIEND_TYPE_BOTH
-            succ:^(NSArray<V2TIMFriendCheckResult *> *resultList) {
-              if (resultList.count == 0) {
-                  return;
-              }
-              V2TIMFriendCheckResult *result = resultList.firstObject;
-              if (result.relationType == V2TIM_FRIEND_RELATION_TYPE_IN_MY_FRIEND_LIST || result.relationType == V2TIM_FRIEND_RELATION_TYPE_BOTH_WAY) {
-                  return;
-              }
-
-              [self.dataList addObject:({
-                                 NSMutableArray *inlist = @[].mutableCopy;
-                                 [inlist addObject:({
-                                             TUIContactButtonCellData_Minimalist *data = TUIContactButtonCellData_Minimalist.new;
-                                             data.title = TIMCommonLocalizableString(FriendAddTitle);
-                                             data.style = ButtonBule;
-                                             data.textColor = [UIColor tui_colorWithHex:@"147AFF"];
-                                             data.cbuttonSelector = @selector(onAddFriend);
-                                             data.reuseId = @"ButtonCell";
-                                             data.hideSeparatorLine = YES;
-                                             data;
-                                         })];
-                                 inlist;
-                             })];
-
-              [self.tableView reloadData];
+                                         checkType:V2TIM_FRIEND_TYPE_BOTH
+                                              succ:^(NSArray<V2TIMFriendCheckResult *> *resultList) {
+            if (resultList.count == 0) {
+              return;
             }
-            fail:^(int code, NSString *desc) {
-              NSLog(@"");
-            }];
+            V2TIMFriendCheckResult *result = resultList.firstObject;
+            if (result.relationType == V2TIM_FRIEND_RELATION_TYPE_IN_MY_FRIEND_LIST || result.relationType == V2TIM_FRIEND_RELATION_TYPE_BOTH_WAY) {
+              return;
+            }
+            if (![[TUIContactConfig sharedConfig] isItemHiddenInContactConfig:TUIContactConfigItem_AddFriend]) {
+                [self.dataList addObject:({
+                    NSMutableArray *inlist = @[].mutableCopy;
+                    [inlist addObject:({
+                        TUIContactButtonCellData_Minimalist *data = TUIContactButtonCellData_Minimalist.new;
+                        data.title = TIMCommonLocalizableString(FriendAddTitle);
+                        data.style = ButtonBule;
+                        data.textColor = [UIColor tui_colorWithHex:@"147AFF"];
+                        data.cbuttonSelector = @selector(onAddFriend);
+                        data.reuseId = @"ButtonCell";
+                        data.hideSeparatorLine = YES;
+                        data;
+                    })];
+                    inlist;
+                })];
+            }
+            [self.tableView reloadData];
+        }
+                                              fail:^(int code, NSString *desc) {
+            NSLog(@"");
+        }];
     }
 
     if (self.actionType == PCA_PENDENDY_CONFIRM_MINI) {
@@ -252,19 +253,39 @@
 }
 
 - (void)onAgreeFriend {
-    [self.pendency agree];
+    __weak typeof(self)weakSelf = self;
+    [self.pendency agreeWithSuccess:^{
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(int code, NSString * _Nonnull msg) {
+        
+    }];
 }
 
 - (void)onRejectFriend {
-    [self.pendency reject];
+    __weak typeof(self)weakSelf = self;
+    [self.pendency rejectWithSuccess:^{
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(int code, NSString * _Nonnull msg) {
+        
+    }];
 }
 
 - (void)onAgreeGroup {
-    [self.groupPendency accept];
+    __weak typeof(self)weakSelf = self;
+    [self.groupPendency agreeWithSuccess:^{
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(int code, NSString * _Nonnull msg) {
+        
+    }];;
 }
 
 - (void)onRejectGroup {
-    [self.groupPendency reject];
+    __weak typeof(self)weakSelf = self;
+    [self.groupPendency rejectWithSuccess:^{
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    } failure:^(int code, NSString * _Nonnull msg) {
+        
+    }];
 }
 
 - (UIView *)toastView {

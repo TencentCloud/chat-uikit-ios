@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onSelectPhotoMoreCellData;
 - (void)onTakePictureMoreCellData;
 - (void)onTakeVideoMoreCellData;
+- (void)onMultimediaRecordMoreCellData;
 - (void)onSelectFileMoreCellData;
 
 @end
@@ -55,6 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Group
 + (void)getGroupInfoWithGroupID:(NSString *)groupID SuccBlock:(void (^)(V2TIMGroupInfoResult *groupResult))succ failBlock:(nullable V2TIMFail)fail;
 
++ (void)insertLocalTipsMessage:(NSString *)content chatID:(NSString *)chatID isGroup:(BOOL)isGroup;
 @end
 
 NS_ASSUME_NONNULL_END

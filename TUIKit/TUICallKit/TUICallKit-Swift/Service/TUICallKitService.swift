@@ -36,16 +36,22 @@ extension TUICallKitService {
         guard let param = param else {
             return nil
         }
-        
-        if param.isEmpty {
-            return nil
-        }
-        
+                
         if method == TUICore_TUICallingService_EnableFloatWindowMethod {
             guard let enableFloatWindow = param[TUICore_TUICallingService_EnableFloatWindowMethod_EnableFloatWindow] as? Bool else {
                 return nil
             }
             TUICallKit.createInstance().enableFloatWindow(enable: enableFloatWindow)
+        } else if method == TUICore_TUICallingService_EnableIncomingBannerMethod {
+            guard let enableIncomingBanner = param[TUICore_TUICallingService_EnableIncomingBannerMethod_EnableIncomingBanner] as? Bool else {
+                return nil
+            }
+            TUICallKit.createInstance().enableIncomingBanner(enable: enableIncomingBanner)
+        } else if method == TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod {
+            guard let enableVirtualBackground = param[TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod_EnableVirtualBackgroundForCall] as? Bool else {
+                return nil
+            }
+            TUICallKit.createInstance().enableVirtualBackground(enable: enableVirtualBackground)
         } else if method == TUICore_TUICallingService_ShowCallingViewMethod {
             guard let userIDs = param[TUICore_TUICallingService_ShowCallingViewMethod_UserIDsKey] as? [ String],
                   let mediaTypeIndex = param[TUICore_TUICallingService_ShowCallingViewMethod_CallTypeKey] as? String else {
@@ -78,18 +84,8 @@ extension TUICallKitService {
             } fail: { code, message in
                 
             }
-        } else if method == TUICore_TUICallingService_SetAudioPlaybackDeviceMethod {
-            let key = TUICore_TUICallingService_SetAudioPlaybackDevice_AudioPlaybackDevice
-            guard let audioPlaybackDevice = param[key] as? TUIAudioPlaybackDevice else {
-                return nil
-            }
-            
-            TUICallState.instance.audioDevice.value = audioPlaybackDevice
-        } else if method == TUICore_TUICallingService_SetIsMicMuteMethod {
-            guard let isMicMute = param[TUICore_TUICallingService_SetIsMicMuteMethod_IsMicMute] as? Bool else {
-                return nil
-            }
-            TUICallState.instance.isMicMute.value = !isMicMute
+        } else {
+            CallEngineManager.instance.voipDataSyncHandler.onCall(method, param: param)
         }
         
         return nil

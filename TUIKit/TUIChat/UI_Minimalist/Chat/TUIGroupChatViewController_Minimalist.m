@@ -164,7 +164,8 @@
         self.groupPinList = groupPinList;
         [[NSNotificationCenter defaultCenter] postNotificationName:TUICore_TUIChatExtension_ChatViewTopArea_ChangedNotification object:nil];
         if (self.pinPageVC) {
-            self.pinPageVC.groupPinList = groupPinList;
+            NSMutableArray *formatGroupPinList = [NSMutableArray arrayWithArray:groupPinList.reverseObjectEnumerator.allObjects];
+            self.pinPageVC.groupPinList = formatGroupPinList;
             self.pinPageVC.canRemove = [self.messageController isCurrentUserRoleSuperAdminInGroup];
             if (groupPinList.count > 0) {
                 [self reloadPopPinPage];
@@ -354,16 +355,18 @@
         if ([self.navigationController.topViewController isKindOfClass:NSClassFromString(@"TUISelectGroupMemberViewController_Minimalist")]) {
             return;
         }
+        //When pushing a new VC, the keyboard needs to be hidden.
+        [self.inputController reset];
         __weak typeof(self) weakSelf = self;
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
-        param[TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_GroupID] = self.conversationData.groupID;
-        param[TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Name] = TIMCommonLocalizableString(TUIKitAtSelectMemberTitle);
-        param[TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_OptionalStyle] = @(1);
+        param[TUICore_TUIContactObjectFactory_SelectGroupMemberVC_GroupID] = self.conversationData.groupID;
+        param[TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Name] = TIMCommonLocalizableString(TUIKitAtSelectMemberTitle);
+        param[TUICore_TUIContactObjectFactory_SelectGroupMemberVC_OptionalStyle] = @(1);
         [self.navigationController
-            pushViewController:TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Minimalist
+            pushViewController:TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Minimalist
                          param:param
                      forResult:^(NSDictionary *_Nonnull param) {
-                       NSArray<TUIUserModel *> *modelList = [param tui_objectForKey:TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_ResultUserList
+                       NSArray<TUIUserModel *> *modelList = [param tui_objectForKey:TUICore_TUIContactObjectFactory_SelectGroupMemberVC_ResultUserList
                                                                             asClass:NSArray.class];
                        NSMutableString *atText = [[NSMutableString alloc] init];
                        for (int i = 0; i < modelList.count; i++) {

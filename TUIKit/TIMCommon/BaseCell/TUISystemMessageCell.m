@@ -21,10 +21,8 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _messageLabel = [[UILabel alloc] init];
-        _messageLabel.font = [UIFont systemFontOfSize:13];
-        _messageLabel.textColor = [UIColor d_systemGrayColor];
         _messageLabel.textAlignment = NSTextAlignmentCenter;
-        _messageLabel.numberOfLines = 1;
+        _messageLabel.numberOfLines = 0;
         _messageLabel.backgroundColor = [UIColor clearColor];
         _messageLabel.layer.cornerRadius = 3;
         [_messageLabel.layer setMasksToBounds:YES];
@@ -51,7 +49,7 @@
     if(self.messageLabel.superview) {
         [self.messageLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(self.container);
-            make.size.mas_equalTo(self.messageLabel.frame.size);
+            make.leading.trailing.mas_equalTo(self.container);
         }];
     }
 }
@@ -60,17 +58,21 @@
 {
     [super fillWithData:data];
     self.systemData = data;
+    
+    self.messageLabel.textColor = TUISystemMessageCellData.textColor ? : data.contentColor;
+    self.messageLabel.font = TUISystemMessageCellData.textFont ? : data.contentFont;
+    self.messageLabel.backgroundColor = TUISystemMessageCellData.textBackgroundColor ? : [UIColor clearColor];
     self.messageLabel.attributedText = data.attributedString;
+    
     self.nameLabel.hidden = YES;
     self.avatarView.hidden = YES;
     self.retryView.hidden = YES;
     [self.indicator stopAnimating];
+    
     // tell constraints they need updating
     [self setNeedsUpdateConstraints];
-
     // update constraints now so we can animate the change
     [self updateConstraintsIfNeeded];
-
     [self layoutIfNeeded];
 }
 
@@ -94,7 +96,7 @@
     
     static CGSize maxSystemSize;
     if (CGSizeEqualToSize(maxSystemSize, CGSizeZero)) {
-        maxSystemSize = CGSizeMake(TSystemMessageCell_Text_Width_Max, MAXFLOAT);
+        maxSystemSize = CGSizeMake(Screen_Width, MAXFLOAT);
     }
     CGSize size = [systemCellData.attributedString.string textSizeIn:maxSystemSize font:systemCellData.contentFont];
     size.height += 10;

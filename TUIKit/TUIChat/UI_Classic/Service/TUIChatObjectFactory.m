@@ -12,6 +12,8 @@
 #import "TUIChatConfig.h"
 #import "TUIChatDefine.h"
 #import "TUIGroupChatViewController.h"
+#import "TUIChatShortcutMenuView.h"
+#import "TUIGroupInfoController.h"
 
 @interface TUIChatObjectFactory () <TUIObjectProtocol>
 
@@ -35,6 +37,10 @@
     if ([method isEqualToString:TUICore_TUIChatObjectFactory_ChatViewController_Classic]) {
         return [self createChatViewControllerParam:param];
     }
+    else if ([method isEqualToString:TUICore_TUIContactObjectFactory_GetGroupInfoVC_Classic]) {
+        return [self createGroupInfoController:[param tui_objectForKey:TUICore_TUIContactObjectFactory_GetGroupInfoVC_GroupID asClass:NSString.class]];
+    }
+
     return nil;
 }
 
@@ -95,7 +101,7 @@
     }
     
     if ([isEnableRoomInfoStr isEqualToString:@"0"]) {
-        conversationModel.enabelRoom = NO;
+        conversationModel.enableRoom = NO;
     }
     if ([isLimitedPortraitOrientationStr isEqualToString:@"1"]) {
         conversationModel.isLimitedPortraitOrientation = YES;
@@ -129,7 +135,6 @@
         conversationModel.enableAlbum = NO;
     }
     
-    
     TUIBaseChatViewController *chatVC = nil;
     if (conversationModel.groupID.length > 0) {
         chatVC = [[TUIGroupChatViewController alloc] init];
@@ -143,4 +148,10 @@
     return chatVC;
 }
 
+
+- (UIViewController *)createGroupInfoController:(NSString *)groupID {
+    TUIGroupInfoController *vc = [[TUIGroupInfoController alloc] init];
+    vc.groupId = groupID;
+    return vc;
+}
 @end

@@ -254,14 +254,9 @@
     }
 
     if (offsetY > TMessageController_Header_Height) {
-        if (scrollToBoom) {
-            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]
-                                  atScrollPosition:UITableViewScrollPositionBottom
-                                          animated:NO];
-        } else {
-            [self.tableView scrollRectToVisible:CGRectMake(0, offsetY, Screen_Width, self.tableView.bounds.size.height)
-                                       animated:NO];
-        }
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]
+                              atScrollPosition:UITableViewScrollPositionMiddle
+                                      animated:YES];
     }
 }
 
@@ -476,7 +471,7 @@
     /**
      * When viewing historical messages, if you scroll more than two screens, after receiving a new message, add a "xxx new message" bottom-banner-tips
      */
-    if (self.isInVC && self.tableView.contentSize.height - self.tableView.contentOffset.y >= Screen_Height * 2.0) {
+    if (self.tableView.contentSize.height - self.tableView.contentOffset.y >= Screen_Height * 2.0) {
         [self.receiveMsgs addObject:uiMsg];
         TUIChatSmallTongue *tongue = [[TUIChatSmallTongue alloc] init];
         tongue.type = TUIChatSmallTongueType_ReceiveNewMsg;

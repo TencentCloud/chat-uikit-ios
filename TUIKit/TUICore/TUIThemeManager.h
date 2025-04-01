@@ -62,7 +62,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUIConversationDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleConversation, defaultHex)
 #define TUIConversationGroupDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleConversationGroup, defaultHex)
 #define TUIContactDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleContact, defaultHex)
-#define TUIGroupDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleGroup, defaultHex)
 #define TUISearchDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleSearch, defaultHex)
 #define TUICallKitDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleCalling, defaultHex)
 #define TUIPollDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModulePoll, defaultHex)
@@ -71,6 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUITranslationDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleTranslation, defaultHex)
 #define TUIVoiceToTextDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleVoiceToText, defaultHex)
 #define TUICustomerServicePluginDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleCustomerService, defaultHex)
+#define TUIMultimediaPluginDynamicColor(colorKey, defaultHex) TUIDynamicColor(colorKey, TUIThemeModuleMultimedia, defaultHex)
 
 /**
  * Get dynamic image that change with theme
@@ -80,7 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUIChatBundleThemeImage(imageKey, defaultImageName) TUIChatDynamicImage(imageKey, TUIChatCommonBundleImage(defaultImageName))
 #define TUIConversationBundleThemeImage(imageKey, defaultImageName) TUIConversationDynamicImage(imageKey, TUIConversationCommonBundleImage(defaultImageName))
 #define TUIContactBundleThemeImage(imageKey, defaultImageName) TUIContactDynamicImage(imageKey, TUIContactCommonBundleImage(defaultImageName))
-#define TUIGroupBundleThemeImage(imageKey, defaultImageName) TUIGroupDynamicImage(imageKey, TUIGroupCommonBundleImage(defaultImageName))
 #define TUISearchBundleThemeImage(imageKey, defaultImageName) TUISearchDynamicImage(imageKey, TUISearchCommonBundleImage(defaultImageName))
 #define TUICallingBundleThemeImage(imageKey, defaultImageName) TUICallingDynamicImage(imageKey, TUICallingCommonBundleImage(defaultImageName))
 #define TUIPollBundleThemeImage(imageKey, defaultImageName) TUIPollDynamicImage(imageKey, TUIPollCommonBundleImage(defaultImageName))
@@ -90,6 +89,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUIVoiceToTextBundleThemeImage(imageKey, defaultImageName) TUIVoiceToTextDynamicImage(imageKey, TUIVoiceToTextCommonBundleImage(defaultImageName))
 #define TUICustomerServicePluginBundleThemeImage(imageKey,defaultImageName) \
     TUICustomerServicePluginDynamicImage(imageKey,TUICustomerServicePluginCommonBundleImage(defaultImageName))
+#define TUIMultimediaPluginBundleThemeImage(imageKey, defaultImageName) \
+    TUIMultimediaPluginDynamicImage(imageKey, TUIMultimediaPluginCommonBundleImage(defaultImageName))
 
 #define TUIDynamicImage(imageKey, themeModule, defaultImg) [TUITheme dynamicImage:imageKey module:themeModule defaultImage:defaultImg]
 #define TUIDemoDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleDemo, defaultImg)
@@ -98,7 +99,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUIConversationDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleConversation, defaultImg)
 #define TUIConversationGroupDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleConversationGroup, defaultImg)
 #define TUIContactDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleContact, defaultImg)
-#define TUIGroupDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleGroup, defaultImg)
 #define TUISearchDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleSearch, defaultImg)
 #define TUICallingDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleCalling, defaultImg)
 #define TUIPollDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModulePoll, defaultImg)
@@ -107,6 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUITranslationDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleTranslation, defaultImg)
 #define TUIVoiceToTextDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleVoiceToText, defaultImg)
 #define TUICustomerServicePluginDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleCustomerService, defaultImg)
+#define TUIMultimediaPluginDynamicImage(imageKey, defaultImg) TUIDynamicImage(imageKey, TUIThemeModuleMultimedia, defaultImg)
 
 #define __TUIDefaultBundleImage(imageBundlePath) [UIImage imageWithContentsOfFile:imageBundlePath]
 #define TUIDemoCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIDemoImagePath(imageName))
@@ -114,7 +115,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUIChatCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIChatImagePath(imageName))
 #define TUIConversationCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIConversationImagePath(imageName))
 #define TUIContactCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIContactImagePath(imageName))
-#define TUIGroupCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIGroupImagePath(imageName))
 #define TUISearchCommonBundleImage(imageName) __TUIDefaultBundleImage(TUISearchImagePath(imageName))
 #define TUICallingCommonBundleImage(imageName) __TUIDefaultBundleImage(TUICallingImagePath(imageName))
 #define TUIPollCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIPollImagePath(imageName))
@@ -123,6 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define TUITranslationCommonBundleImage(imageName) __TUIDefaultBundleImage(TUITranslationImagePath(imageName))
 #define TUIVoiceToTextCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIVoiceToTextImagePath(imageName))
 #define TUICustomerServicePluginCommonBundleImage(imageName) __TUIDefaultBundleImage(TUICustomerServicePluginImagePath(imageName))
+#define TUIMultimediaPluginCommonBundleImage(imageName) __TUIDefaultBundleImage(TUIMultimediaPluginImagePath(imageName))
 
 /**
  * The module of the theme
@@ -134,7 +135,7 @@ typedef NS_ENUM(NSInteger, TUIThemeModule) {
     TUIThemeModuleChat = 0x1 << 2,
     TUIThemeModuleConversation = 0x1 << 3,
     TUIThemeModuleContact = 0x1 << 4,
-    TUIThemeModuleGroup = 0x1 << 5,
+    TUIThemeModuleGroup = 0x1 << 5, // The TUIGroup component has been removed in version 8.4
     TUIThemeModuleSearch = 0x1 << 6,
     TUIThemeModuleCalling = 0x1 << 7,
 
@@ -143,7 +144,7 @@ typedef NS_ENUM(NSInteger, TUIThemeModule) {
     TUIThemeModuleChat_Minimalist = 0x1 << 10,
     TUIThemeModuleConversation_Minimalist = 0x1 << 11,
     TUIThemeModuleContact_Minimalist = 0x1 << 12,
-    TUIThemeModuleGroup_Minimalist = 0x1 << 13,
+    TUIThemeModuleGroup_Minimalist = 0x1 << 13, // The TUIGroup component has been removed in version 8.4
     TUIThemeModuleSearch_Minimalist = 0x1 << 14,
     TUIThemeModuleCalling_Minimalist = 0x1 << 15,
 
@@ -158,6 +159,8 @@ typedef NS_ENUM(NSInteger, TUIThemeModule) {
     TUIThemeModuleChatBot = 0x1 << 23,
     
     TUIThemeModuleRoomKit = 0x1 << 24,
+
+    TUIThemeModuleMultimedia = 0x1 << 25,
 };
 
 @interface TUITheme : NSObject

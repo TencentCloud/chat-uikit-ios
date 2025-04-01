@@ -115,6 +115,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 #define Screen_Width [UIScreen mainScreen].bounds.size.width
 #define Screen_Height [UIScreen mainScreen].bounds.size.height
+#define System_Version [[UIDevice currentDevice] systemVersion]
 #define Is_Iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define Is_IPhoneX (Screen_Width >= 375.0f && Screen_Height >= 812.0f && Is_Iphone)
 #define StatusBar_Height (Is_IPhoneX ? (44.0) : (20.0))
@@ -140,7 +141,6 @@
 #define TUIConversationGroupBundle @"TUIConversationGroup"
 #define TUIConversationMarkBundle @"TUIConversationMark"
 #define TUIContactBundle @"TUIContact"
-#define TUIGroupBundle @"TUIGroup"
 #define TUISearchBundle @"TUISearch"
 #define TUIPollBundle @"TUIPoll"
 #define TUIGroupNoteBundle @"TUIGroupNote"
@@ -148,15 +148,16 @@
 #define TUITranslationBundle @"TUITranslation"
 #define TUIVoiceToTextBundle @"TUIVoiceToText"
 #define TUICustomerServicePluginBundle @"TUICustomerServicePlugin"
+#define TUIMultimediaPluginBundle @"TUIMultimedia"
 
 #define TUIKitLocalizableBundle @"TUIKitLocalizable"
 #define TUICoreLocalizableBundle TUIKitLocalizableBundle
 #define TUIChatLocalizableBundle @"TUIChatLocalizable"
 #define TUIConversationLocalizableBundle @"TUIConversationLocalizable"
 #define TUIContactLocalizableBundle @"TUIContactLocalizable"
-#define TUIGroupLocalizableBundle @"TUIGroupLocalizable"
 #define TUISearchLocalizableBundle @"TUISearchLocalizable"
 #define TIMCommonLocalizableBundle @"TIMCommonLocalizable"
+#define TUIMultimediaPluginLocalizableBundle @"TUIMultimediaPluginLocalizable"
 
 #define TUIDemoBundle_Key_Class @"TUIKit"
 #define TUICoreBundle_Key_Class @"TUICore"
@@ -167,7 +168,6 @@
 #define TUIConversationGroupBundle_Key_Class @"TUIConversationGroupService"
 #define TUIConversationMarkBundle_Key_Class @"TUIConversationMarkService"
 #define TUIContactBundle_Key_Class @"TUIContactService"
-#define TUIGroupBundle_Key_Class @"TUIGroupService"
 #define TUISearchBundle_Key_Class @"TUISearchService"
 #define TUIPollBundle_Key_Class @"TUIPollService"
 #define TUIGroupNoteBundle_Key_Class @"TUIGroupNoteService"
@@ -178,6 +178,7 @@
 #define TUIChatLocalizableBundle_Key_Class @"TUIChatService"
 #define TIMCommonLocalizableBundle_Key_Class @"TIMConfig"
 #define TUICustomerServicePluginBundle_Key_Class @"TUICustomerServicePluginService"
+#define TUIMultimediaPluginBundle_Key_Class @"TUIMultimediaService"
 
 static inline NSString *getTUIFrameWorkName(NSString *bundleKeyClass) {
     if ([bundleKeyClass isEqualToString:TUICoreBundle_Key_Class] || [bundleKeyClass isEqualToString:TUIKitLocalizableBundle_Key_Class]) {
@@ -200,9 +201,6 @@ static inline NSString *getTUIFrameWorkName(NSString *bundleKeyClass) {
     if ([bundleKeyClass isEqualToString:TUIContactBundle_Key_Class]) {
         return @"TUIContact";
     }
-    if ([bundleKeyClass isEqualToString:TUIGroupBundle_Key_Class]) {
-        return @"TUIGroup";
-    }
     if ([bundleKeyClass isEqualToString:TUISearchBundle_Key_Class]) {
         return @"TUISearch";
     }
@@ -223,6 +221,9 @@ static inline NSString *getTUIFrameWorkName(NSString *bundleKeyClass) {
     }
     if ([bundleKeyClass isEqualToString:TUICustomerServicePluginBundle_Key_Class]) {
         return @"TUICustomerServicePlugin";
+    }
+    if ([bundleKeyClass isEqualToString:TUIMultimediaPluginBundle_Key_Class]) {
+        return @"TUIMultimediaPlugin";
     }
     return @"";
 }
@@ -262,7 +263,6 @@ static inline NSString *getTUIGetBundlePath(NSString *bundleName, NSString *bund
 #define TUIConversationThemePath TUIBundlePath(@"TUIConversationTheme", TUIConversationBundle_Key_Class)
 #define TUIConversationGroupTheme TUIBundlePath(@"TUIConversationGroupTheme", TUIConversationGroupBundle_Key_Class)
 #define TUIContactThemePath TUIBundlePath(@"TUIContactTheme", TUIContactBundle_Key_Class)
-#define TUIGroupThemePath TUIBundlePath(@"TUIGroupTheme", TUIGroupBundle_Key_Class)
 #define TUISearchThemePath TUIBundlePath(@"TUISearchTheme", TUISearchBundle_Key_Class)
 #define TUIPollThemePath TUIBundlePath(@"TUIPollTheme", TUIPollBundle_Key_Class)
 #define TUIGroupNoteThemePath TUIBundlePath(@"TUIGroupNoteTheme", TUIGroupNoteBundle_Key_Class)
@@ -271,6 +271,7 @@ static inline NSString *getTUIGetBundlePath(NSString *bundleName, NSString *bund
 #define TUIVoiceToTextThemePath TUIBundlePath(@"TUIVoiceToTextTheme", TUIVoiceToTextBundle_Key_Class)
 #define TUICallKitThemePath TUIBundlePath(@"TUICallKitTheme", TUICallKitBundle_Key_Class)
 #define TUICustomerServicePluginThemePath TUIBundlePath(@"TUICustomerServicePluginTheme",TUICustomerServicePluginBundle_Key_Class)
+#define TUIMultimediaPluginThemePath TUIBundlePath(@"TUIMultimediaTheme",TUIMultimediaPluginBundle_Key_Class)
 
 static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
     if ([bundleName isEqualToString:TUIChatLocalizableBundle] || [bundleName isEqualToString:TUIChatFaceBundle]) {
@@ -295,7 +296,6 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUIConversationMarkImagePath(imageName) \
     [TUIBundlePath(TUIConversationMarkBundle, TUIConversationMarkBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIContactImagePath(imageName) [TUIBundlePath(TUIContactBundle, TUIContactBundle_Key_Class) stringByAppendingPathComponent:imageName]
-#define TUIGroupImagePath(imageName) [TUIBundlePath(TUIGroupBundle, TUIGroupBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUISearchImagePath(imageName) [TUIBundlePath(TUISearchBundle, TUISearchBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIPollImagePath(imageName) [TUIBundlePath(TUIPollBundle, TUIPollBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIGroupNoteImagePath(imageName) [TUIBundlePath(TUIGroupNoteBundle, TUIGroupNoteBundle_Key_Class) stringByAppendingPathComponent:imageName]
@@ -304,6 +304,8 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUIVoiceToTextImagePath(imageName) [TUIBundlePath(TUIVoiceToTextBundle, TUIVoiceToTextBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUICustomerServicePluginImagePath(imageName) \
     [TUIBundlePath(TUICustomerServicePluginBundle,TUICustomerServicePluginBundle_Key_Class) stringByAppendingPathComponent:imageName]
+#define TUIMultimediaPluginImagePath(imageName) \
+    [TUIBundlePath(TUIMultimediaPluginBundle,TUIMultimediaPluginBundle_Key_Class) stringByAppendingPathComponent:imageName]
 
 //-----Minimalist-------
 #define TUIDemoBundle_Minimalist @"TUIDemo_Minimalist"
@@ -312,15 +314,11 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUIChatFaceBundle_Minimalist @"TUIChatFace_Minimalist"
 #define TUIConversationBundle_Minimalist @"TUIConversation_Minimalist"
 #define TUIContactBundle_Minimalist @"TUIContact_Minimalist"
-#define TUIGroupBundle_Minimalist @"TUIGroup_Minimalist"
 #define TUISearchBundle_Minimalist @"TUISearch_Minimalist"
 #define TUIPollBundle_Minimalist @"TUIPoll_Minimalist"
 #define TUIGroupNoteBundle_Minimalist @"TUIGroupNote_Minimalist"
 #define TUITranslationBundle_Minimalist @"TUITranslation_Minimalist"
 #define TUIVoiceToTextBundle_Minimalist @"TUIVoiceToText_Minimalist"
-// #define TUIKitLocalizableBundle  @"TUIKitLocalizable"
-
-// #define TUIKitLocalizable(bundleName) [NSBundle bundleWithPath:TUIBundlePath(bundleName, TUIKitLocalizableBundle_Key_Class)]
 
 #define TUIDemoImagePath_Minimalist(imageName) [TUIBundlePath(TUIDemoBundle_Minimalist, TUIDemoBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUICoreImagePath_Minimalist(imageName) [TUIBundlePath(TUICoreBundle_Minimalist, TUICoreBundle_Key_Class) stringByAppendingPathComponent:imageName]
@@ -331,7 +329,6 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
     [TUIBundlePath(TUIConversationBundle_Minimalist, TUIConversationBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIContactImagePath_Minimalist(imageName) \
     [TUIBundlePath(TUIContactBundle_Minimalist, TUIContactBundle_Key_Class) stringByAppendingPathComponent:imageName]
-#define TUIGroupImagePath_Minimalist(imageName) [TUIBundlePath(TUIGroupBundle_Minimalist, TUIGroupBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUISearchImagePath_Minimalist(imageName) [TUIBundlePath(TUISearchBundle_Minimalist, TUISearchBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIPollImagePath_Minimalist(imageName) [TUIBundlePath(TUIPollBundle_Minimalist, TUIPollBundle_Key_Class) stringByAppendingPathComponent:imageName]
 #define TUIGroupNoteImagePath_Minimalist(imageName) \
@@ -696,6 +693,7 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 
 #define TUICore_TUIChatService_SendMessageMethod @"TUICore_TUIChatService_SendMessageMethod"
 #define TUICore_TUIChatService_SendMessageMethod_MsgKey @"TUICore_TUIChatService_SendMessageMethod_MsgKey"
+#define TUICore_TUIChatService_SendMessageMethod_PlaceHolderUIMsgKey @"TUICore_TUIChatService_SendMessageMethod_PlaceHolderUIMsgKey"
 
 #define TUICore_TUIChatService_SendMessageMethodWithoutUpdateUI @"TUICore_TUIChatService_SendMessageMethodWithoutUpdateUI"
 #define TUICore_TUIChatService_SendMessageMethodWithoutUpdateUI_MsgKey @"TUICore_TUIChatService_SendMessageMethodWithoutUpdateUI_MsgKey"
@@ -806,6 +804,22 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUIChatExtension_ChatVCBottomContainer_ClassicExtensionID @"TUICore_TUIChatExtension_ChatVCBottomContainer_ClassicExtensionID"
 #define TUICore_TUIChatExtension_ChatVCBottomContainer_VC @"TUICore_TUIChatExtension_ChatVCBottomContainer_VC"
 #define TUICore_TUIChatExtension_ChatVCBottomContainer_UserID @"TUICore_TUIChatExtension_ChatVCBottomContainer_UserID"
+
+// Chat Infopage UI extension
+#define TUICore_TUIChatExtension_GroupProfileMemberListExtension_ClassicExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileMemberListExtension_ClassicExtensionID"
+#define TUICore_TUIChatExtension_GroupProfileMemberListExtension_MinimalistExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileMemberListExtension_MinimalistExtensionID"
+
+#define TUICore_TUIChatExtension_GroupProfileSettingsItemExtension_ClassicExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileSettingsItemExtension_ClassicExtensionID"
+#define TUICore_TUIChatExtension_GroupProfileSettingsItemExtension_MinimalistExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileSettingsItemExtension_MinimalistExtensionID"
+
+#define TUICore_TUIChatExtension_GroupProfileBottomItemExtension_ClassicExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileBottomItemExtension_ClassicExtensionID"
+#define TUICore_TUIChatExtension_GroupProfileBottomItemExtension_MinimalistExtensionID \
+    @"TUICore_TUIChatExtension_GroupProfileBottomItemExtension_MinimalistExtensionID"
 
 #pragma mark - TUICore_TUIChat_ObjectFactory
 #define TUICore_TUIChatObjectFactory @"TUICore_TUIChatObjectFactory"
@@ -927,6 +941,11 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #pragma mark - TUICore_TUIContact_Service
 #define TUICore_TUIContactService @"TUICore_TUIContactService"
 #define TUICore_TUIContactService_Minimalist @"TUICore_TUIContactService_Minimalist"
+#define TUICore_TUIContactService_CreateGroupMethod @"TUICore_TUIContactService_CreateGroupMethod"
+#define TUICore_TUIContactService_CreateGroupMethod_GroupTypeKey @"TUICore_TUIContactService_CreateGroupMethod_GroupTypeKey"
+#define TUICore_TUIContactService_CreateGroupMethod_OptionKey @"TUICore_TUIContactService_CreateGroupMethod_OptionKey"
+#define TUICore_TUIContactService_CreateGroupMethod_ContactsKey @"TUICore_TUIContactService_CreateGroupMethod_ContactsKey"
+#define TUICore_TUIContactService_CreateGroupMethod_CompletionKey @"TUICore_TUIContactService_CreateGroupMethod_CompletionKey"
 
 #pragma mark - TUICore_TUIContact_Notify
 #define TUICore_TUIContactNotify @"TUICore_TUIContactNotify"
@@ -934,6 +953,8 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUIContactNotify_UpdateConversationBackgroundImageSubKey @"TUICore_TUIContactNotify_UpdateConversationBackgroundImageSubKey"
 #define TUICore_TUIContactNotify_UpdateConversationBackgroundImageSubKey_ConversationID \
     @"TUICore_TUIContactNotify_UpdateConversationBackgroundImageSubKey_ConversationID"
+
+#define TUICore_TUIContactNotify_OnAddMemebersClickSubKey @"TUICore_TUIContactNotify_OnAddMemebersClickSubKey"
 
 #pragma mark - TUICore_TUIContact_Extension
 // UI extension for the action menus in the friend profile page
@@ -960,14 +981,28 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUIContactExtension_ContactMenu_MinimalistExtensionID @"TUICore_TUIContactExtension_ContactMenu_MinimalistExtensionID"
 #define TUICore_TUIContactExtension_ContactMenu_Nav @"TUICore_TUIContactExtension_ContactMenu_Nav"
 
+// UI extension for the action menus in the group infomation page
+#define TUICore_TUIContactExtension_GroupInfoCardActionMenu_MinimalistExtensionID \
+    @"TUICore_TUIContactExtension_GroupInfoCardActionMenu_MinimalistExtensionID"
+#define TUICore_TUIContactExtension_GroupInfoCardActionMenu_GroupID \
+    @"TUICore_TUIContactExtension_GroupInfoCardActionMenu_GroupID"
+#define TUICore_TUIContactExtension_GroupInfoCardActionMenu_FilterVideoCall \
+    @"TUICore_TUIContactExtension_GroupInfoCardActionMenu_FilterVideoCall"
+#define TUICore_TUIContactExtension_GroupInfoCardActionMenu_FilterAudioCall \
+    @"TUICore_TUIContactExtension_GroupInfoCardActionMenu_FilterAudioCall"
+#define TUICore_TUIContactExtension_GroupInfoCardActionMenu_PushVC \
+    @"TUICore_TUIContactExtension_GroupInfoCardActionMenu_PushVC"
+
 #pragma mark - TUICore_TUIContact_ObjectFactory
 #define TUICore_TUIContactObjectFactory @"TUICore_TUIContactObjectFactory"
 #define TUICore_TUIContactObjectFactory_Minimalist @"TUICore_TUIContactObjectFactory_Minimalist"
 
 #define TUICore_TUIContactObjectFactory_GetContactControllerMethod @"TUICore_TUIContactObjectFactory_GetContactControllerMethod"
 
-#define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod @"TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod"
-#define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_TitleKey @"TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_TitleKey"
+#define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod \
+    @"TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod"
+#define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_TitleKey \
+    @"TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_TitleKey"
 #define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_MaxSelectCount \
     @"TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_MaxSelectCount"
 #define TUICore_TUIContactObjectFactory_GetContactSelectControllerMethod_SourceIdsKey \
@@ -999,6 +1034,13 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUIContactObjectFactory_GetUserOrFriendProfileVCMethod_SuccKey @"TUICore_TUIContactObjectFactory_GetUserOrFriendProfileVCMethod_SuccKey"
 #define TUICore_TUIContactObjectFactory_GetUserOrFriendProfileVCMethod_FailKey @"TUICore_TUIContactObjectFactory_GetUserOrFriendProfileVCMethod_FailKey"
 
+#define TUICore_TUIContactObjectFactory_GetGroupMemberVCMethod @"TUICore_TUIContactObjectFactory_GetGroupMemberVCMethod"
+
+
+#define TUICore_TUIContactObjectFactory_GetGroupRequestViewControllerMethod @"TUICore_TUIContactObjectFactory_GetGroupRequestViewControllerMethod"
+#define TUICore_TUIContactObjectFactory_GetGroupRequestViewControllerMethod_GroupInfoKey \
+    @"TUICore_TUIContactObjectFactory_GetGroupRequestViewControllerMethod_GroupInfoKey"
+
 #pragma mark - TUICore_TUIContact_ObjectFactory_Route
 // Route to user profile page
 #define TUICore_TUIContactObjectFactory_UserProfileController_Classic @"TUICore_TUIContactObjectFactory_UserProfileController_Classic"
@@ -1007,54 +1049,24 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUIContactObjectFactory_UserProfileController_PendencyData @"TUICore_TUIContactObjectFactory_UserProfileController_PendencyData"
 #define TUICore_TUIContactObjectFactory_UserProfileController_ActionType @"TUICore_TUIContactObjectFactory_UserProfileController_ActionType"
 
-#pragma mark - TUICore_TUIGroup_Service
-#define TUICore_TUIGroupService @"TUICore_TUIGroupService"
-#define TUICore_TUIGroupService_Minimalist @"TUICore_TUIGroupService_Minimalist"
-
-#define TUICore_TUIGroupService_CreateGroupMethod @"TUICore_TUIGroupService_CreateGroupMethod"
-#define TUICore_TUIGroupService_CreateGroupMethod_GroupTypeKey @"TUICore_TUIGroupService_CreateGroupMethod_GroupTypeKey"
-#define TUICore_TUIGroupService_CreateGroupMethod_OptionKey @"TUICore_TUIGroupService_CreateGroupMethod_OptionKey"
-#define TUICore_TUIGroupService_CreateGroupMethod_ContactsKey @"TUICore_TUIGroupService_CreateGroupMethod_ContactsKey"
-#define TUICore_TUIGroupService_CreateGroupMethod_CompletionKey @"TUICore_TUIGroupService_CreateGroupMethod_CompletionKey"
-
-#pragma mark - TUICore_TUIGroup_Notify
-#define TUICore_TUIGroupNotify @"TUICore_TUIContactNotify"
-
-#define TUICore_TUIGroupNotify_UpdateConversationBackgroundImageSubKey @"TUICore_TUIGroupNotify_UpdateConversationBackgroundImageSubKey"
-#define TUICore_TUIGroupNotify_UpdateConversationBackgroundImageSubKey_ConversationID \
-    @"TUICore_TUIGroupNotify_UpdateConversationBackgroundImageSubKey_ConversationID"
-
-#pragma mark - TUICore_TUIGroup_Extension
-// UI extension for the action menus in the group infomation page
-#define TUICore_TUIGroupExtension_GroupInfoCardActionMenu_MinimalistExtensionID @"TUICore_TUIGroupExtension_GroupInfoCardActionMenu_MinimalistExtensionID"
-#define TUICore_TUIGroupExtension_GroupInfoCardActionMenu_GroupID @"TUICore_TUIGroupExtension_GroupInfoCardActionMenu_GroupID"
-#define TUICore_TUIGroupExtension_GroupInfoCardActionMenu_FilterVideoCall @"TUICore_TUIGroupExtension_GroupInfoCardActionMenu_FilterVideoCall"
-#define TUICore_TUIGroupExtension_GroupInfoCardActionMenu_FilterAudioCall @"TUICore_TUIGroupExtension_GroupInfoCardActionMenu_FilterAudioCall"
-#define TUICore_TUIGroupExtension_GroupInfoCardActionMenu_PushVC @"TUICore_TUIGroupExtension_GroupInfoCardActionMenu_PushVC"
-
-#pragma mark - TUICore_TUIGroup_ObjectFactory
-#define TUICore_TUIGroupObjectFactory @"TUICore_TUIGroupObjectFactory"
-#define TUICore_TUIGroupObjectFactory_Minimalist @"TUICore_TUIGroupObjectFactory_Minimalist"
-
-#define TUICore_TUIGroupObjectFactory_GetGroupRequestViewControllerMethod @"TUICore_TUIGroupObjectFactory_GetGroupRequestViewControllerMethod"
-#define TUICore_TUIGroupObjectFactory_GetGroupRequestViewControllerMethod_GroupInfoKey \
-    @"TUICore_TUIGroupObjectFactory_GetGroupRequestViewControllerMethod_GroupInfoKey"
-
-#pragma mark - TUICore_TUIGroup_ObjectFactory_Route
 // Route to the page for selecting group member
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Classic @"TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Classic"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Minimalist @"TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Minimalist"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_GroupID @"TUICore_TUIGroupService_GetSelectGroupMemberViewControllerMethod"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_Name @"TUICore_TUIGroupService_GetSelectGroupMemberViewControllerMethod_NameKey"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_OptionalStyle @"TUICore_TUIGroupService_GetSelectGroupMemberViewControllerMethod_optionalStyleKey"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_SelectedUserIDList \
-    @"TUICore_TUIGroupService_GetSelectGroupMemberViewControllerMethod_SelectedUserIDListKey"
-#define TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_ResultUserList @"TUICore_TUIGroupObjectFactory_SelectGroupMemberVC_ResultUserList"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Classic \
+    @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Classic"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Minimalist \
+    @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Minimalist"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_GroupID \
+    @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_GroupID"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Name \
+    @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_Name"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_OptionalStyle @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_OptionalStyle"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_SelectedUserIDList \
+    @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_SelectedUserIDList"
+#define TUICore_TUIContactObjectFactory_SelectGroupMemberVC_ResultUserList @"TUICore_TUIContactObjectFactory_SelectGroupMemberVC_ResultUserList"
 
 // Route to group info page
-#define TUICore_TUIGroupObjectFactory_GetGroupInfoVC_Classic @"TUICore_TUIGroupObjectFactory_GetGroupInfoVC_Classic"
-#define TUICore_TUIGroupObjectFactory_GetGroupInfoVC_Minimalist @"TUICore_TUIGroupObjectFactory_GetGroupInfoVC_Minimalist"
-#define TUICore_TUIGroupObjectFactory_GetGroupInfoVC_GroupID @"TUICore_TUIGroupObjectFactory_GetGroupInfoVC_GroupID"
+#define TUICore_TUIContactObjectFactory_GetGroupInfoVC_Classic @"TUICore_TUIContactObjectFactory_GetGroupInfoVC_Classic"
+#define TUICore_TUIContactObjectFactory_GetGroupInfoVC_Minimalist @"TUICore_TUIContactObjectFactory_GetGroupInfoVC_Minimalist"
+#define TUICore_TUIContactObjectFactory_GetGroupInfoVC_GroupID @"TUICore_TUIContactObjectFactory_GetGroupInfoVC_GroupID"
 
 #pragma mark - TUICore_TUICallKit_TUICallingService
 #define TUICore_TUICallingService @"TUICore_TUICallingService"
@@ -1075,10 +1087,18 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUICallingService_EnableFloatWindowMethod @"TUICore_TUICallingService_EnableFloatWindowMethod"
 #define TUICore_TUICallingService_EnableFloatWindowMethod_EnableFloatWindow @"TUICore_TUICallingService_EnableFloatWindowMethod_EnableFloatWindow"
 
+#define TUICore_TUICallingService_EnableIncomingBannerMethod @"TUICore_TUICallingService_EnableIncomingBannerMethod"
+#define TUICore_TUICallingService_EnableIncomingBannerMethod_EnableIncomingBanner @"TUICore_TUICallingService_EnableIncomingBannerMethod_EnableIncomingBanner"
+
+#define TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod @"TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod"
+#define TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod_EnableVirtualBackgroundForCall @"TUICore_TUICallingService_EnableVirtualBackgroundForCallMethod_EnableVirtualBackgroundForCall"
+
 #define TUICore_TUICallingService_SetAudioPlaybackDeviceMethod @"TUICore_TUICallingService_SetAudioPlaybackDeviceMethod"
 #define TUICore_TUICallingService_SetAudioPlaybackDevice_AudioPlaybackDevice @"TUICore_TUICallingService_SetAudioPlaybackDevice_AudioPlaybackDevice"
 #define TUICore_TUICallingService_SetIsMicMuteMethod @"TUICore_TUICallingService_SetIsMicMuteMethod"
 #define TUICore_TUICallingService_SetIsMicMuteMethod_IsMicMute @"TUICore_TUICallingService_SetIsMicMuteMethod_IsMicMute"
+#define TUICore_TUICallingService_HangupMethod @"TUICore_TUICallingService_HangupMethod"
+#define TUICore_TUICallingService_AcceptMethod @"TUICore_TUICallingService_AcceptMethod"
 
 #pragma mark - TUICore_TUICallKit_TUIAudioMessageRecordService
 #define TUICore_TUIAudioMessageRecordService @"TUIAudioMessageRecordService"
@@ -1239,6 +1259,19 @@ static inline NSBundle *getTUIGetLocalizable(NSString *bundleName) {
 #define TUICore_TUICallKitVoIPExtensionNotify @"TUICore_TUICallKitVoIPExtension_Notify"
 #define TUICore_TUICore_TUICallKitVoIPExtensionNotify_OpenMicrophoneSubKey @"TUICore_TUICore_TUICallKitVoIPExtensionNotify_OpenMicrophoneSubKey"
 #define TUICore_TUICore_TUICallKitVoIPExtensionNotify_CloseMicrophoneSubKey @"TUICore_TUICore_TUICallKitVoIPExtensionNotify_CloseMicrophoneSubKey"
+
+#pragma mark - TUICore_TUIVoIPExtension_Notify
+#define TUICore_TUIVoIPExtensionNotify @"TUICore_TUIVoIPExtension_Notify"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_MuteSubKey @"TUICore_TUICore_TUIVoIPExtensionNotify_MuteSubKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_MuteSubKey_IsMuteKey @"TUICore_TUICore_TUIVoIPExtensionNotify_MuteSubKey_IsMuteKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_EndSubKey @"TUICore_TUICore_TUIVoIPExtensionNotify_EndSubKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_ConnectedKey @"TUICore_TUICore_TUIVoIPExtensionNotify_ConnectedKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey @"TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_InviterIdKey @"TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_InviterIdKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_InviteeListKey @"TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_InviteeListKey"
+#define TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_GroupIDKey @"TUICore_TUICore_TUIVoIPExtensionNotify_UpdateInfoSubKey_GroupIDKey"
+
+
 
 /////////////////////////////////////////////////////////////////////////////////
 //

@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'TUIConversation'
-  spec.version      = '8.1.6116'
-  spec.platform     = :ios 
+  spec.version      = '8.5.6864'
+  spec.platform     = :ios
   spec.ios.deployment_target = '9.0'
   spec.license      = { :type => 'Proprietary',
       :text => <<-LICENSE

@@ -36,7 +36,7 @@ class TUICallState: NSObject {
         return enable
     }()
     
-    var enableFloatWindow: Bool = false
+    var enableFloatWindow: Bool = true
     var showVirtualBackgroundButton = false
     var enableIncomingBanner = false
     
@@ -119,12 +119,14 @@ extension TUICallState: TUICallObserver {
             }
         }
         
-        let _ = CallingBellFeature.instance.startPlayMusic(type: .CallingBellTypeCalled)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            CallEngineManager.instance.updateVoIPInfo(callerId: callerId, calleeList: calleeIdList, groupId: groupId ?? "")
+        }
     }
     
     func onCallCancelled(callerId: String) {
-        CallingBellFeature.instance.stopPlayMusic()
         cleanState()
+        CallEngineManager.instance.closeVoIP()
     }
     
     func onKickedOffline() {
@@ -165,6 +167,12 @@ extension TUICallState: TUICallObserver {
             break
         }
         
+        if TUICallState.instance.scene.value == .single {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                UIWindow.getTopFullscreenWindow()?.makeToast(TUICallKitLocalize(key: "TUICallKit.otherPartyHangup"), duration: 0.6)
+            }
+        }
+        
         if TUICallState.instance.remoteUserList.value.isEmpty {
             cleanState()
         }
@@ -178,6 +186,12 @@ extension TUICallState: TUICallObserver {
         where TUICallState.instance.remoteUserList.value[index].id.value == userId {
             TUICallState.instance.remoteUserList.value.remove(at: index)
             break
+        }
+        
+        if TUICallState.instance.scene.value == .single {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                UIWindow.getTopFullscreenWindow()?.makeToast(TUICallKitLocalize(key: "TUICallKit.otherPartyReject"), duration: 0.6)
+            }
         }
         
         if TUICallState.instance.remoteUserList.value.isEmpty {
@@ -212,6 +226,12 @@ extension TUICallState: TUICallObserver {
         where TUICallState.instance.remoteUserList.value[index].id.value == userId {
             TUICallState.instance.remoteUserList.value.remove(at: index)
             break
+        }
+        
+        if TUICallState.instance.scene.value == .single {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                UIWindow.getTopFullscreenWindow()?.makeToast(TUICallKitLocalize(key: "TUICallKit.otherPartyNoResponse"), duration: 0.6)
+            }
         }
         
         let callEvent = TUICallEvent(eventType: .TIP, event: .USER_NO_RESPONSE, param: [EVENT_KEY_USER_ID: userId])
@@ -307,20 +327,20 @@ extension TUICallState: TUICallObserver {
             TUICallState.instance.timeCount.value += 1
         }
         
-        CallingBellFeature.instance.stopPlayMusic()
         CallEngineManager.instance.setAudioPlaybackDevice(device: TUICallState.instance.audioDevice.value)
         if TUICallState.instance.isMicMute.value == false {
             CallEngineManager.instance.openMicrophone()
         } else {
             CallEngineManager.instance.closeMicrophone()
         }
-        
+
         showAntiFraudReminder()
+        CallEngineManager.instance.callBegin()
     }
     
     func onCallEnd(roomId: TUIRoomId, callMediaType: TUICallMediaType, callRole: TUICallRole, totalTime: Float) {
-        CallingBellFeature.instance.stopPlayMusic()
         cleanState()
+        CallEngineManager.instance.closeVoIP()
     }
     
     func onCallMediaTypeChanged(oldCallMediaType: TUICallMediaType, newCallMediaType: TUICallMediaType) {
@@ -384,4 +404,5 @@ extension TUICallState {
             TUICore.callService(TUICore_PrivacyService, method: TUICore_PrivacyService_CallKitAntifraudReminderMethod, param: nil)
         }
     }
+    
 }

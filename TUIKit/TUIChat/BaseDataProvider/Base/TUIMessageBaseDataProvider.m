@@ -38,6 +38,7 @@
 @property(nonatomic, strong) V2TIMGroupMemberFullInfo *groupSelfInfo;
 @property(nonatomic, strong) NSMutableArray<V2TIMMessage *> *groupPinList;
 @property(nonatomic, assign) V2TIMGroupMemberRole changedRole;
+@property(nonatomic, strong) V2TIMGroupInfo *groupInfo;
 @end
 
 @implementation TUIMessageBaseDataProvider
@@ -622,11 +623,13 @@
                        }
                       if (placeholderCellData) {
                           NSInteger row = [self.uiMsgs indexOfObject:placeholderCellData];
-                          [self replaceUIMsg:uiMsg atIndex:row];
-                          [self.dataSource dataProviderDataSourceChange:self
-                                                               withType:TUIMessageBaseDataProviderDataSourceChangeTypeReload
-                                                                atIndex:row
-                                                              animation:NO];
+                          if (row != NSNotFound) {
+                              [self replaceUIMsg:uiMsg atIndex:row];
+                              [self.dataSource dataProviderDataSourceChange:self
+                                                                   withType:TUIMessageBaseDataProviderDataSourceChangeTypeReload
+                                                                    atIndex:row
+                                                                  animation:NO];
+                          }
                       }
                       else {
                           if (dateMsg) {
@@ -640,7 +643,7 @@
                           [self.dataSource dataProviderDataSourceChange:self
                                                                withType:TUIMessageBaseDataProviderDataSourceChangeTypeInsert
                                                                 atIndex:(self.uiMsgs.count - 1)
-                                                              animation:self];
+                                                              animation:YES];
                       }
 
                        [self.dataSource dataProviderDataSourceDidChange:self];
@@ -930,7 +933,29 @@
     }
 
 }
+- (void)loadGroupInfo:(dispatch_block_t)callback {
+    if (self.conversationModel.groupID.length == 0) {
+        if (callback) {
+            callback();
+        }
+        return;
+    }
+    __weak typeof(self) weakSelf = self;
 
+    [[V2TIMManager sharedInstance] getGroupsInfo:@[ self.conversationModel.groupID ]
+        succ:^(NSArray<V2TIMGroupInfoResult *> *groupResultList) {
+            if (groupResultList.count == 1) {
+                V2TIMGroupInfo *info = groupResultList[0].info;
+                weakSelf.groupInfo = info;
+            }
+            if (callback) {
+                callback();
+            }
+        }
+        fail:^(int code, NSString *msg) {
+          [TUITool makeToastError:code msg:msg];
+        }];
+}
 - (void)getSelfInfoInGroup:(dispatch_block_t)callback {
     NSString *loginUserID = [[V2TIMManager sharedInstance] getLoginUser];
     if (loginUserID.length == 0) {
@@ -939,7 +964,7 @@
         }
         return;
     }
-    if (!self.conversationModel.enabelRoom) {
+    if (!self.conversationModel.enableRoom) {
         if (callback) {
             callback();
         }
@@ -952,6 +977,12 @@
           for (V2TIMGroupMemberFullInfo *item in memberList) {
               if ([item.userID isEqualToString:loginUserID]) {
                   weakSelf.groupSelfInfo = item;
+                  if ([weakSelf.groupInfo.owner isEqualToString:loginUserID]) {
+                      weakSelf.changedRole = V2TIM_GROUP_MEMBER_ROLE_SUPER;
+                  }
+                  else {
+                      weakSelf.changedRole = item.role;
+                  }
                   break;
               }
           }
@@ -971,7 +1002,7 @@
     if (self.changedRole != V2TIM_GROUP_MEMBER_UNDEFINED) {
         return (self.changedRole == V2TIM_GROUP_MEMBER_ROLE_ADMIN || self.changedRole == V2TIM_GROUP_MEMBER_ROLE_SUPER);
     }
-    return (self.groupSelfInfo.role == V2TIM_GROUP_MEMBER_ROLE_ADMIN || self.groupSelfInfo.role == V2TIM_GROUP_MEMBER_ROLE_SUPER) ;
+    return ([self.groupInfo.owner isEqualToString:[[V2TIMManager sharedInstance] getLoginUser]] ||self.groupSelfInfo.role == V2TIM_GROUP_MEMBER_ROLE_ADMIN || self.groupSelfInfo.role == V2TIM_GROUP_MEMBER_ROLE_SUPER) ;
 }
 
 - (BOOL)isCurrentMessagePin:(NSString *)msgID {
@@ -1013,6 +1044,9 @@
 }
 
 - (void)onGroupMessagePinned:(NSString *)groupID message:(V2TIMMessage *)message isPinned:(BOOL)isPinned opUser:(V2TIMGroupMemberInfo *)opUser {
+    if (![groupID isEqualToString:self.conversationModel.groupID]) {
+        return;
+    }
     if (isPinned) {
         //add
         [self.groupPinList addObject:message];
@@ -1142,6 +1176,9 @@ static const int kOfflinePushVersion = 1;
         pushInfo.AndroidSound = TUIConfig.defaultConfig.enableCustomRing ? @"private_ring" : nil;
         pushInfo.AndroidHuaWeiCategory = @"IM";
         pushInfo.AndroidVIVOCategory = @"IM";
+        pushInfo.AndroidHonorImportance = @"NORMAL";
+        pushInfo.iOSInterruptionLevel = @"time-sensitive";
+        pushInfo.enableIOSBackgroundNotification = NO;
     }
 
     if ([self isGroupCommunity:conversationData.groupType groupID:conversationData.groupID] ||

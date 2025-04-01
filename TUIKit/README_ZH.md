@@ -4,33 +4,31 @@
 
 ## 下载地址
 
-[最新 TUIChat 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIChat.zip)
+[最新 TUIChat 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIChat.zip)
 
-[最新 TUIConversation 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIConversation.zip)
+[最新 TUIConversation 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIConversation.zip)
 
-[最新 TUIContact 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIContact.zip)
+[最新 TUIContact 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIContact.zip)
 
-[最新 TUIGroup 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIGroup.zip)
+[最新 TUISearch 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUISearch.zip)
 
-[最新 TUISearch 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUISearch.zip)
+[最新 TUITranslationPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUITranslationPlugin.zip)
 
-[最新 TUIOfflinePush 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIOfflinePush.zip)
+[最新 TUIVoiceToTextPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIVoiceToTextPlugin.zip)
 
-[最新 TUITranslationPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUITranslationPlugin.zip)
+[最新 TUICustomerServicePlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUICustomerServicePlugin.zip)
 
-[最新 TUIVoiceToTextPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIVoiceToTextPlugin.zip)
+[最新 TUIEmojiPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIEmojiPlugin.zip)
 
-[最新 TUICustomerServicePlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUICustomerServicePlugin.zip)
+[最新 TUIMultimediaPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIMultimediaPlugin.zip)
 
-[最新 TUIEmojiPlugin 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIEmojiPlugin.zip)
+[最新 TUICore 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUICore.zip)
 
-[最新 TUICore 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUICore.zip)
+[最新 TIMCommon 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TIMCommon.zip)
 
-[最新 TIMCommon 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TIMCommon.zip)
+[最新 TUICallKit 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUICallKit.zip)
 
-[最新 TUICallKit 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUICallKit.zip)
-
-[最新 TUIRoomKit 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.1.6116/ios/TUIRoomKit.zip)
+[最新 TUIRoomKit 下载](https://im.sdk.cloud.tencent.cn/download/tuikit/8.5.6864/ios/TUIRoomKit.zip)
 
 
 ## 交流&反馈

@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'TUICore'
-  spec.version      = '8.1.6116'
+  spec.version      = '8.5.6864'
   spec.platform     = :ios
   spec.ios.deployment_target = '9.0'
   spec.license      = { :type => 'Proprietary',
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
   spec.default_subspec = 'ImSDK_Plus'
   
   spec.subspec 'ImSDK_Plus' do |plus|
-      plus.dependency 'TXIMSDK_Plus_iOS'
+      plus.dependency 'TXIMSDK_Plus_iOS_XCFramework'
       plus.dependency 'TUICore/Base'
   end
   

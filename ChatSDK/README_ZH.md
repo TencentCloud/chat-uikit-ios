@@ -1,6 +1,6 @@
 [English](./README.md) | 简体中文
 
-# Chat SDK 8.3.6498（iOS）
+# Chat SDK 8.5.6864（iOS）
 
 ## 下载 Chat SDK
 
@@ -14,25 +14,25 @@
   <tr >
      <td style="text-align:center">Objective-C 版本</td>
      <td style="text-align:center">支持 Objective-C API</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.3.6498/ImSDK_Plus_8.3.6498.framework.zip">ImSDK_Plus.framework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.5.6864/ImSDK_Plus_8.5.6864.framework.zip">ImSDK_Plus.framework</a></td>
   </tr>
     
   <tr >
      <td style="text-align:center">XCFramework 版本</td>
      <td style="text-align:center">支持 Objective-C API 和 Mac catalyst</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.3.6498/ImSDK_Plus_8.3.6498.xcframework.zip">ImSDK_Plus.xcframework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.5.6864/ImSDK_Plus_8.5.6864.xcframework.zip">ImSDK_Plus.xcframework</a></td>
   </tr>
 	
   <tr >
      <td style="text-align:center">Swift 版本</td>
      <td style="text-align:center">支持 Swift API 和 Mac catalyst</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.3.6498/ImSDK_Plus_Swift_8.3.6498.xcframework.zip">ImSDK_Plus_Swift.xcframework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.5.6864/ImSDK_Plus_Swift_8.5.6864.xcframework.zip">ImSDK_Plus_Swift.xcframework</a></td>
   </tr>
 
   <tr >
      <td style="text-align:center">Apple Vision Pro 版本</td>
      <td style="text-align:center">支持 visionOS 并提供 Swift API</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.3.6498/ImSDKForVision_Plus_8.3.6498.xcframework.zip">ImSDKForVision_Plus.xcframework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.5.6864/ImSDKForVision_Plus_8.5.6864.xcframework.zip">ImSDKForVision_Plus.xcframework</a></td>
   </tr>
 </table>
 
@@ -48,7 +48,7 @@
   <tr >
      <td style="text-align:center">Quic 插件</td>
      <td style="text-align:center">提供 axp-quic 多路传输协议，弱网抗性更优</td>
-     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.3.6498/TIMQuicPlugin_8.3.6498.framework.zip">TIMQuicPlugin.framework</a></td>
+     <td style="text-align:center"><a href="https://im.sdk.qcloud.com/download/plus/8.5.6864/TIMQuicPlugin_8.5.6864.framework.zip">TIMQuicPlugin.framework</a></td>
   </tr>
 </table>
 
@@ -78,4 +78,4 @@ end
 
 如果您需要更详细的集成指引，请 [查看完整的集成文档](https://trtc.io/zh/document/34307)。
 
-此外，我们还提供了 C 接口和 C++ 接口的 SDK，您可以从这里下载：[下载 C API 版本](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_C_8.3.6498.framework.zip)、[下载 C++ API 版本](https://im.sdk.qcloud.com/download/plus/8.3.6498/cross_platform/ImSDK_iOS_CPP_8.3.6498.framework.zip)。
+此外，我们还提供了 C 接口和 C++ 接口的 SDK，您可以从这里下载：[下载 C API 版本](https://im.sdk.qcloud.com/download/plus/8.5.6864/cross_platform/ImSDK_iOS_C_8.5.6864.framework.zip)、[下载 C++ API 版本](https://im.sdk.qcloud.com/download/plus/8.5.6864/cross_platform/ImSDK_iOS_CPP_8.5.6864.framework.zip)。

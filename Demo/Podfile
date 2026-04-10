@@ -49,7 +49,7 @@ post_install do |installer|
             
             #Fix Xcode15 other links  flag  -ld64
             xcode_version = `xcrun xcodebuild -version | grep Xcode | cut -d' ' -f2`.to_f
-            if xcode_version >= 15
+            if xcode_version >= 15 && xcode_version < 16
               xcconfig_path = config.base_configuration_reference.real_path
               xcconfig = File.read(xcconfig_path)
               if xcconfig.include?("OTHER_LDFLAGS") == false
